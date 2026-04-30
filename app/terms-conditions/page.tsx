@@ -19,9 +19,9 @@ export default function TermsConditions() {
           </p>
 
           <p>
-            Syarat dan Ketentuan ini ("Syarat") mengatur penggunaan situs web Patuh Data dan layanan konsultasi yang 
-            disediakan oleh <strong>PT PATUHDATA SOLUSI NUSANTARA</strong> ("Kami", "Perusahaan"). Dengan mengakses situs web kami 
-            atau menggunakan layanan kami, Anda ("Pengguna", "Klien") menyetujui untuk terikat oleh Syarat dan Ketentuan ini.
+            Syarat dan Ketentuan ini (&quot;Syarat&quot;) mengatur penggunaan situs web Patuh Data dan layanan konsultasi yang 
+            disediakan oleh <strong>PT PATUHDATA SOLUSI NUSANTARA</strong> (&quot;Kami&quot;, &quot;Perusahaan&quot;). Dengan mengakses situs web kami 
+            atau menggunakan layanan kami, Anda (&quot;Pengguna&quot;, &quot;Klien&quot;) menyetujui untuk terikat oleh Syarat dan Ketentuan ini.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">1. Layanan yang Diberikan</h2>

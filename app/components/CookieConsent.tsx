@@ -32,7 +32,7 @@ export default function CookieConsent() {
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-900 mb-2">Pemberitahuan Penggunaan Cookie</h3>
           <p className="text-sm text-gray-600">
-            Kami menggunakan cookie untuk meningkatkan pengalaman Anda di situs web kami, menganalisis lalu lintas situs, dan menyajikan konten yang disesuaikan. Dengan mengklik "Terima", Anda menyetujui penggunaan cookie kami sesuai dengan{' '}
+            Kami menggunakan cookie untuk meningkatkan pengalaman Anda di situs web kami, menganalisis lalu lintas situs, dan menyajikan konten yang disesuaikan. Dengan mengklik &quot;Terima&quot;, Anda menyetujui penggunaan cookie kami sesuai dengan{' '}
             <Link href="/privacy-policy" className="text-blue-600 hover:text-blue-800 underline">
               Kebijakan Privasi
             </Link>{' '}
