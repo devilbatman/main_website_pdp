@@ -1,58 +1,35 @@
-export default function Logo({ className = "h-10" }: { className?: string }) {
+export default function Logo({ className = "h-10 text-white", fill = "currentColor" }: { className?: string, fill?: string }) {
   return (
     <svg
-      viewBox="0 0 1400 600"
+      viewBox="0 0 450 100"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      {/* Shield with PDP and checkmark */}
-      <g>
-        {/* Shield outline */}
-        <path
-          d="M180 140 C180 140, 160 140, 160 160 L160 340 C160 380, 180 420, 280 480 C380 420, 400 380, 400 340 L400 160 C400 140, 380 140, 380 140 L180 140 Z"
-          fill="transparent"
-          stroke="white"
-          strokeWidth="20"
-        />
+      <defs>
+        <linearGradient id="pdGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#1E3A8A" /> {/* blue-900 */}
+          <stop offset="100%" stopColor="#3B82F6" /> {/* blue-500 */}
+        </linearGradient>
+      </defs>
 
-        {/* Inner shield fill */}
-        <path
-          d="M190 160 C190 160, 175 160, 175 175 L175 340 C175 375, 190 410, 280 465 C370 410, 385 375, 385 340 L385 175 C385 160, 370 160, 370 160 L190 160 Z"
-          fill="black"
-        />
-
-        {/* PDP text inside shield */}
-        <text
-          x="200"
-          y="310"
-          fontFamily="Arial, sans-serif"
-          fontSize="120"
-          fontWeight="bold"
-          fill="white"
-        >
-          PDP
-        </text>
-
-        {/* Checkmark */}
-        <path
-          d="M240 280 L265 305 L315 240"
-          stroke="white"
-          strokeWidth="18"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          fill="none"
-        />
+      {/* The abstract pd logo mark */}
+      <g stroke="url(#pdGradient)" strokeWidth="14" fill="none" strokeLinecap="round">
+        {/* p shape */}
+        <path d="M 30 85 V 35 A 22 20 0 0 1 30 75" />
+        {/* d shape */}
+        <path d="M 64 15 V 65 A 22 20 0 0 1 64 25" />
       </g>
 
       {/* patuhdata.id text */}
       <text
-        x="440"
-        y="380"
-        fontFamily="Arial, sans-serif"
-        fontSize="160"
-        fontWeight="bold"
-        fill="white"
+        x="110"
+        y="68"
+        fontFamily="system-ui, -apple-system, sans-serif"
+        fontSize="48"
+        fontWeight="800"
+        fill={fill}
+        letterSpacing="-1"
       >
         patuhdata.id
       </text>

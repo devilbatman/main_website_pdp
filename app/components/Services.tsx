@@ -66,7 +66,7 @@ export default function Services() {
             Layanan <span className="text-blue-600">Kami</span>
           </h2>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Solusi komprehensif untuk memenuhi kepatuhan Undang-Undang Perlindungan Data Pribadi
+            Solusi komprehensif untuk memastikan kepatuhan Undang-Undang Perlindungan Data Pribadi dan memitigasi risiko denda hingga 2% dari pendapatan.
           </p>
         </div>
 

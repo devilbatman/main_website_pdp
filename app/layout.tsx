@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import CookieConsent from "./components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Patuh Data - Konsultan Profesional Kepatuhan UU PDP Indonesia",
@@ -36,6 +37,7 @@ export default function RootLayout({
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}
         {children}
+        <CookieConsent />
       </body>
     </html>
   );

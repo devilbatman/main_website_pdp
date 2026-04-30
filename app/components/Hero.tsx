@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -22,15 +23,13 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Kepatuhan <span className="text-blue-300">UU PDP</span>
-            <br />
-            yang Terpercaya
+            Mitra Spesialis Kepatuhan <br />
+            <span className="text-blue-300">UU PDP</span> Anda
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Konsultan profesional untuk membantu bisnis Anda memenuhi persyaratan
-            Undang-Undang Perlindungan Data Pribadi Indonesia
+          <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto">
+            Lindungi bisnis Anda dari sanksi administratif dan denda hingga 2% dari pendapatan tahunan. Kami adalah butik konsultan terpercaya untuk implementasi UU PDP yang efektif dan terukur.
           </p>
 
           {/* CTA Buttons */}
@@ -49,19 +48,21 @@ export default function Hero() {
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-24">
-            <div className="bg-white/10 backdrop-blur-sm border border-blue-400/20 rounded-lg p-6">
-              <div className="text-4xl font-bold text-blue-300 mb-2">100+</div>
-              <div className="text-blue-100">Klien Terlayani</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm border border-blue-400/20 rounded-lg p-6">
-              <div className="text-4xl font-bold text-blue-300 mb-2">5+</div>
-              <div className="text-blue-100">Tahun Pengalaman</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm border border-blue-400/20 rounded-lg p-6">
-              <div className="text-4xl font-bold text-blue-300 mb-2">100%</div>
-              <div className="text-blue-100">Tingkat Kepuasan</div>
+          {/* Brands */}
+          <div className="mt-24 pt-8 border-t border-blue-400/20">
+            <p className="text-blue-200 text-sm font-medium mb-8 tracking-wider uppercase">
+              Brand yang pernah ditangani oleh konsultan kami
+            </p>
+            <div className="flex justify-center items-center gap-8 flex-wrap">
+              <div className="bg-white rounded-lg p-4 transition-transform hover:scale-105 shadow-md">
+                <Image
+                  src="/blibli.jpg"
+                  alt="Blibli"
+                  width={120}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>

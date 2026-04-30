@@ -3,23 +3,24 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full bg-blue-900/95 backdrop-blur-sm z-50 border-b border-blue-500/20">
+    <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-32">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="relative h-20 w-[420px]">
+              <div className="relative h-28 w-[500px]">
                 <Image
-                  src="/logo-transparent.png"
+                  src="/patuhdata.png"
                   alt="Patuh Data Logo"
                   fill
-                  className="object-contain object-left"
+                  className="object-contain object-left scale-110 origin-left"
                   priority
                 />
               </div>
@@ -28,18 +29,18 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#beranda" className="text-white hover:text-blue-300 transition-colors">
+            <Link href="#beranda" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Beranda
             </Link>
-            <Link href="#layanan" className="text-white hover:text-blue-300 transition-colors">
+            <Link href="#layanan" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Layanan
             </Link>
-            <Link href="#tentang" className="text-white hover:text-blue-300 transition-colors">
+            <Link href="#tentang" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Tentang Kami
             </Link>
             <Link
               href="#konsultasi"
-              className="px-6 py-2 gradient-blue text-white font-semibold rounded-md hover:opacity-90 transition-opacity"
+              className="px-6 py-2.5 gradient-blue text-white font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md"
             >
               Hubungi Kami
             </Link>
@@ -49,7 +50,7 @@ export default function Navigation() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-blue-300 focus:outline-none"
+              className="text-gray-700 hover:text-blue-600 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -73,32 +74,32 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-blue-900 border-t border-blue-500/20">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
+          <div className="px-2 pt-2 pb-4 space-y-1">
             <Link
               href="#beranda"
-              className="block px-3 py-2 text-white hover:text-blue-300 transition-colors"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Beranda
             </Link>
             <Link
               href="#layanan"
-              className="block px-3 py-2 text-white hover:text-blue-300 transition-colors"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Layanan
             </Link>
             <Link
               href="#tentang"
-              className="block px-3 py-2 text-white hover:text-blue-300 transition-colors"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Tentang Kami
             </Link>
             <Link
               href="#konsultasi"
-              className="block mx-3 my-2 px-4 py-2 gradient-blue text-white font-semibold rounded-md text-center"
+              className="block mx-3 mt-4 mb-2 px-4 py-3 gradient-blue text-white font-semibold rounded-lg text-center shadow-md"
               onClick={() => setIsOpen(false)}
             >
               Hubungi Kami

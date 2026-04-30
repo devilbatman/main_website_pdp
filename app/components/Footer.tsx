@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -10,17 +11,27 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="md:col-span-2">
-            <div className="relative h-16 w-96 mb-4">
-              <Image
-                src="/logo-transparent.png"
-                alt="Patuh Data Logo"
-                fill
-                className="object-contain object-left"
-              />
-            </div>
-            <p className="text-blue-100 mb-4 max-w-md">
+            <h3 className="text-2xl font-bold text-white mb-6">patuhdata.id</h3>
+            <p className="text-blue-100 mb-6 max-w-md">
               Konsultan profesional untuk kepatuhan Undang-Undang Perlindungan Data Pribadi Indonesia. Membantu bisnis Anda melindungi data pribadi dengan tepat.
             </p>
+
+            {/* Certification Badge */}
+            <div className="mb-6 flex items-center bg-blue-800/50 rounded-lg p-3 w-fit border border-blue-500/30">
+              <div className="relative h-14 w-14 bg-white rounded shadow-sm mr-4 shrink-0">
+                <Image
+                  src="/iso27001lead.png"
+                  alt="ISO 27001 Lead Auditor"
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
+              <div className="text-sm">
+                <p className="font-bold text-white mb-0.5">Sertifikasi Internasional</p>
+                <p className="text-blue-200">Dipimpin oleh ISO 27001 Lead Auditor</p>
+              </div>
+            </div>
+
             <div className="flex space-x-4">
               <a
                 href="https://linkedin.com"
@@ -90,8 +101,8 @@ export default function Footer() {
                 <svg className="w-5 h-5 text-blue-300 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:info@patuhdata.id" className="hover:text-blue-300">
-                  info@patuhdata.id
+                <a href="mailto:richardr@patuhdata.id" className="hover:text-blue-300">
+                  richardr@patuhdata.id
                 </a>
               </li>
               <li className="flex items-start">
@@ -107,7 +118,13 @@ export default function Footer() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span>Jakarta, Indonesia</span>
+                <span>
+                  <strong>PT PATUHDATA SOLUSI NUSANTARA</strong><br />
+                  INFINITI OFFICE<br />
+                  Jl. Permata Regency Jl. H. Kelik, RT.1/RW.6, Srengseng,<br />
+                  Kec. Kembangan, Kota Jakarta Barat,<br />
+                  Daerah Khusus Ibukota Jakarta 11630
+                </span>
               </li>
             </ul>
           </div>
@@ -119,12 +136,12 @@ export default function Footer() {
             &copy; {currentYear} Patuh Data. Seluruh hak cipta dilindungi.
           </p>
           <div className="flex space-x-6 text-sm">
-            <a href="#" className="text-blue-100 hover:text-blue-300 transition-colors">
+            <Link href="/privacy-policy" className="text-blue-100 hover:text-blue-300 transition-colors">
               Kebijakan Privasi
-            </a>
-            <a href="#" className="text-blue-100 hover:text-blue-300 transition-colors">
+            </Link>
+            <Link href="/terms-conditions" className="text-blue-100 hover:text-blue-300 transition-colors">
               Syarat & Ketentuan
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -60,7 +60,7 @@ export default function ConsultationForm() {
                 Konsultasikan Masalah <span className="text-blue-600">Kepatuhan</span> Anda
               </h2>
               <p className="text-xl text-gray-700 mb-8">
-                Kami adalah konsultan profesional yang siap membantu organisasi Anda memenuhi persyaratan UU PDP dengan solusi yang tepat dan terukur.
+                Kami adalah butik konsultan spesialis yang siap mendampingi organisasi Anda memenuhi persyaratan UU PDP, memastikan keamanan data, dan secara proaktif mencegah risiko denda maksimal 2% dari total pendapatan tahunan.
               </p>
 
               {/* Benefits */}
@@ -102,7 +102,7 @@ export default function ConsultationForm() {
                     </svg>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    <strong className="text-blue-900">Hasil Terpercaya</strong> - Track record membantu 100+ organisasi mencapai kepatuhan
+                    <strong className="text-blue-900">Hasil Terpercaya</strong> - Berpengalaman membantu organisasi ternama mencapai kepatuhan
                   </p>
                 </div>
               </div>
@@ -115,7 +115,7 @@ export default function ConsultationForm() {
                     <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:info@patuhdata.id" className="hover:text-blue-600">info@patuhdata.id</a>
+                    <a href="mailto:richardr@patuhdata.id" className="hover:text-blue-600">richardr@patuhdata.id</a>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
