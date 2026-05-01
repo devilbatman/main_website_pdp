@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://patuhdata.id",
   },
+  icons: {
+    icon: "/iconpatuhdata.ico",
+    shortcut: "/iconpatuhdata.ico",
+    apple: "/iconpatuhdata.ico",
+  },
 };
 
 export default function RootLayout({

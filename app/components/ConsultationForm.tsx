@@ -14,39 +14,87 @@ export default function ConsultationForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear error for the field being edited
+    if (formErrors[e.target.name]) {
+      setFormErrors({
+        ...formErrors,
+        [e.target.name]: ''
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const errors: Record<string, string> = {};
+    if (!formData.name.trim()) errors.name = 'Nama lengkap wajib diisi';
+    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = 'Email tidak valid';
+    }
+    if (!formData.phone.trim() || !/^(\+62|62|0)[0-9]{8,13}$/.test(formData.phone)) {
+      errors.phone = 'Nomor telepon tidak valid (contoh: +628...)';
+    }
+    if (!formData.company.trim()) errors.company = 'Nama perusahaan wajib diisi';
+    if (!formData.industry) errors.industry = 'Industri wajib dipilih';
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
     setIsSubmitting(true);
+    setSubmitStatus('idle');
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        industry: '',
-        message: ''
+    const accessKey = 'b1454cc6-bdd9-48f4-b161-45d5fdbc19e1';
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          from_name: 'Patuh Data Website',
+          subject: `Konsultasi Baru: ${formData.name} (${formData.company})`,
+          ...formData
+        }),
       });
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus('idle');
-      }, 5000);
-    }, 1500);
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          industry: '',
+          message: ''
+        });
+      } else {
+        console.error('Web3Forms Error:', result);
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -157,6 +205,11 @@ export default function ConsultationForm() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {submitStatus === 'error' && (
+                  <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
+                    Terjadi kesalahan saat mengirim pesan. Silakan coba lagi atau hubungi kami langsung melalui email.
+                  </div>
+                )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                     Nama Lengkap *
@@ -167,10 +220,10 @@ export default function ConsultationForm() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-black"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.name ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
                     placeholder="John Doe"
                   />
+                  {formErrors.name && <p className="text-red-500 text-xs mt-1">{formErrors.name}</p>}
                 </div>
 
                 <div>
@@ -183,10 +236,10 @@ export default function ConsultationForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-black"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.email ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
                     placeholder="john@perusahaan.com"
                   />
+                  {formErrors.email && <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>}
                 </div>
 
                 <div>
@@ -199,10 +252,10 @@ export default function ConsultationForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-black"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.phone ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
                     placeholder="+62 812 3456 7890"
                   />
+                  {formErrors.phone && <p className="text-red-500 text-xs mt-1">{formErrors.phone}</p>}
                 </div>
 
                 <div>
@@ -215,10 +268,10 @@ export default function ConsultationForm() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-500 focus:outline-none transition-colors text-black"
+                    className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.company ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
                     placeholder="PT Contoh Indonesia"
                   />
+                  {formErrors.company && <p className="text-red-500 text-xs mt-1">{formErrors.company}</p>}
                 </div>
 
                 <div>

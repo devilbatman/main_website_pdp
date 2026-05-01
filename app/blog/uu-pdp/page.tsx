@@ -257,7 +257,7 @@ export default function BlogUUPDP() {
               href="/#konsultasi"
               className="inline-flex items-center px-10 py-5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200 hover:-translate-y-1"
             >
-              Dapatkan Audit Kesenjangan Gratis
+              Dapatkan Gap Assessment sekarang
               <svg className="w-6 h-6 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -267,20 +267,20 @@ export default function BlogUUPDP() {
 
         {/* Sidebar / More Articles (Simplified as Footer for now) */}
         <aside className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-           <div className="grid md:grid-cols-2 gap-8">
-              <Link href="/blog/badan-pdp-2026" className="group bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-all cursor-pointer block">
-                <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Artikel Terkait</h4>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                  Update 2026: Pembentukan Badan Pelindungan Data Pribadi
-                </h3>
-              </Link>
-              <Link href="/blog/strategi-kepatuhan-korporasi" className="group bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-all cursor-pointer block">
-                <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Strategi Korporasi</h4>
-                <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
-                  7 Langkah Taktis Mencapai Kepatuhan UU PDP Menyeluruh
-                </h3>
-              </Link>
-           </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Link href="/blog/badan-pdp-2026" className="group bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-all cursor-pointer block">
+              <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Artikel Terkait</h4>
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                Update 2026: Pembentukan Badan Pelindungan Data Pribadi
+              </h3>
+            </Link>
+            <Link href="/blog/strategi-kepatuhan-korporasi" className="group bg-white p-8 rounded-3xl border border-slate-100 hover:border-blue-200 transition-all cursor-pointer block">
+              <h4 className="text-slate-400 text-xs font-bold uppercase tracking-widest mb-4">Strategi Korporasi</h4>
+              <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                7 Langkah Taktis Mencapai Kepatuhan UU PDP Menyeluruh
+              </h3>
+            </Link>
+          </div>
         </aside>
       </div>
     </>

@@ -11,16 +11,16 @@ export default function Navigation() {
   return (
     <nav className="fixed w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-32">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="relative h-28 w-[500px]">
+              <div className="relative h-10 w-[240px] md:h-12 md:w-[280px]">
                 <Image
                   src="/patuhdata.png"
                   alt="Patuh Data Logo"
                   fill
-                  className="object-contain object-left scale-110 origin-left"
+                  className="object-contain object-left"
                   priority
                 />
               </div>
@@ -39,7 +39,7 @@ export default function Navigation() {
               Tentang Kami
             </Link>
             <Link href="/blog/uu-pdp" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Wawasan PDP
+              Article
             </Link>
             <Link
               href="#konsultasi"
@@ -105,7 +105,7 @@ export default function Navigation() {
               className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Wawasan PDP
+              Article
             </Link>
             <Link
               href="#konsultasi"
