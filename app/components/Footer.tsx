@@ -86,6 +86,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog/uu-pdp" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  Wawasan PDP
+                </Link>
+              </li>
+              <li>
                 <Link href="#konsultasi" className="text-blue-100 hover:text-blue-300 transition-colors">
                   Konsultasi
                 </Link>

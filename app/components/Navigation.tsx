@@ -38,6 +38,9 @@ export default function Navigation() {
             <Link href="#tentang" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Tentang Kami
             </Link>
+            <Link href="/blog/uu-pdp" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Wawasan PDP
+            </Link>
             <Link
               href="#konsultasi"
               className="px-6 py-2.5 gradient-blue text-white font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md"
@@ -96,6 +99,13 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               Tentang Kami
+            </Link>
+            <Link
+              href="/blog/uu-pdp"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Wawasan PDP
             </Link>
             <Link
               href="#konsultasi"
