@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from './Logo';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,23 +28,29 @@ export default function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="#beranda" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/#beranda" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Beranda
             </Link>
-            <Link href="#layanan" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Layanan
+            <Link href="/#tantangan" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Tantangan
             </Link>
-            <Link href="#tentang" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+            <Link href="/#framework" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Framework
+            </Link>
+            <Link href="/#layanan" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Solusi
+            </Link>
+            <Link href="/#industries" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
+              Industries
+            </Link>
+            <Link href="/#tentang" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
               Tentang Kami
             </Link>
-            <Link href="/blog/uu-pdp" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">
-              Article
-            </Link>
             <Link
-              href="#konsultasi"
+              href="/#konsultasi"
               className="px-6 py-2.5 gradient-blue text-white font-semibold rounded-lg hover:opacity-90 transition-opacity shadow-md"
             >
-              Hubungi Kami
+              Konsultasi
             </Link>
           </div>
 
@@ -80,39 +85,53 @@ export default function Navigation() {
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-2 pt-2 pb-4 space-y-1">
             <Link
-              href="#beranda"
+              href="/#beranda"
               className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Beranda
             </Link>
             <Link
-              href="#layanan"
+              href="/#tantangan"
               className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Layanan
+              Tantangan
             </Link>
             <Link
-              href="#tentang"
+              href="/#framework"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Framework
+            </Link>
+            <Link
+              href="/#layanan"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Solusi
+            </Link>
+            <Link
+              href="/#industries"
+              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              Industries
+            </Link>
+            <Link
+              href="/#tentang"
               className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               Tentang Kami
             </Link>
             <Link
-              href="/blog/uu-pdp"
-              className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 rounded-md transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Article
-            </Link>
-            <Link
-              href="#konsultasi"
+              href="/#konsultasi"
               className="block mx-3 mt-4 mb-2 px-4 py-3 gradient-blue text-white font-semibold rounded-lg text-center shadow-md"
               onClick={() => setIsOpen(false)}
             >
-              Hubungi Kami
+              Konsultasi
             </Link>
           </div>
         </div>

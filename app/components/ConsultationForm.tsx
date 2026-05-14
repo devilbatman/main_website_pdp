@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
 
 export default function ConsultationForm() {
   const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ export default function ConsultationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const formRef = useRef<HTMLDivElement>(null);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -46,37 +49,41 @@ export default function ConsultationForm() {
     return Object.keys(errors).length === 0;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+    e.stopPropagation();
+
     if (!validateForm()) {
       return;
     }
-    
+
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
     const accessKey = 'b1454cc6-bdd9-48f4-b161-45d5fdbc19e1';
-    
+
     try {
+      const formDataObj = new FormData();
+      formDataObj.append('access_key', accessKey);
+      formDataObj.append('from_name', 'Patuh Data Website');
+      formDataObj.append('subject', `Konsultasi Baru: ${formData.name} (${formData.company})`);
+      
+      // Append all form data
+      Object.entries(formData).forEach(([key, value]) => {
+        formDataObj.append(key, value);
+      });
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          access_key: accessKey,
-          from_name: 'Patuh Data Website',
-          subject: `Konsultasi Baru: ${formData.name} (${formData.company})`,
-          ...formData
-        }),
+        body: formDataObj
       });
 
       const result = await response.json();
 
       if (result.success) {
         setSubmitStatus('success');
+        formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
         setFormData({
           name: '',
           email: '',
@@ -86,11 +93,11 @@ export default function ConsultationForm() {
           message: ''
         });
       } else {
-        console.error('Web3Forms Error:', result);
+        console.error('Web3Forms Error Response:', result);
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Network or Submission Error:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -98,17 +105,18 @@ export default function ConsultationForm() {
   };
 
   return (
-    <section id="konsultasi" className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section id="konsultasi" ref={formRef} className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 scroll-mt-24">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Side - Information */}
           <div>
             <div className="sticky top-24">
               <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
-                Konsultasikan Masalah <span className="text-blue-600">Kepatuhan</span> Anda
+                Start Your <span className="text-blue-600">Operational Readiness</span>
               </h2>
               <p className="text-xl text-gray-700 mb-8">
-                Kami adalah butik konsultan spesialis yang siap mendampingi organisasi Anda memenuhi persyaratan UU PDP, memastikan keamanan data, dan secara proaktif mencegah risiko denda maksimal 2% dari total pendapatan tahunan.
+                Diskusikan tantangan tata kelola data dan operasional bisnis bersama PatuhData.
               </p>
 
               {/* Benefits */}
@@ -120,7 +128,7 @@ export default function ConsultationForm() {
                     </svg>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    <strong className="text-blue-900">Tim Profesional</strong> - Konsultan bersertifikat dengan pengalaman mendalam dalam UU PDP
+                    <strong className="text-blue-900">Schedule Consultation</strong> - Diskusi awal untuk memahami kebutuhan operasional Anda
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -130,7 +138,7 @@ export default function ConsultationForm() {
                     </svg>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    <strong className="text-blue-900">Solusi Terukur</strong> - Implementasi praktis yang disesuaikan dengan bisnis Anda
+                    <strong className="text-blue-900">Contact Us</strong> - Bicarakan risiko data, AI governance, dan vendor readiness
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -140,7 +148,7 @@ export default function ConsultationForm() {
                     </svg>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    <strong className="text-blue-900">Dukungan Penuh</strong> - Pendampingan dari awal hingga kepatuhan tercapai
+                    <strong className="text-blue-900">Operational Readiness</strong> - Arah awal menuju proses yang lebih terstruktur
                   </p>
                 </div>
                 <div className="flex items-start">
@@ -150,7 +158,7 @@ export default function ConsultationForm() {
                     </svg>
                   </div>
                   <p className="ml-3 text-gray-700">
-                    <strong className="text-blue-900">Hasil Terpercaya</strong> - Berpengalaman membantu organisasi ternama mencapai kepatuhan
+                    <strong className="text-blue-900">Practical Scope</strong> - Fokus pada tata kelola yang bisa dijalankan sehari-hari
                   </p>
                 </div>
               </div>
@@ -163,7 +171,7 @@ export default function ConsultationForm() {
                     <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
-                    <a href="mailto:richardr@patuhdata.id" className="hover:text-blue-600">richardr@patuhdata.id</a>
+                    <a href="mailto:support@patuhdata.id" className="hover:text-blue-600">support@patuhdata.id</a>
                   </div>
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -186,25 +194,65 @@ export default function ConsultationForm() {
           {/* Right Side - Form */}
           <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-10">
             {submitStatus === 'success' ? (
-              <div className="text-center py-12">
-                <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-10 h-10 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <div className="text-center py-12 animate-in fade-in zoom-in duration-700 relative overflow-hidden">
+                {/* Particle Burst */}
+                {[...Array(12)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="particle bg-blue-500"
+                    style={{
+                      left: '50%',
+                      top: '40%',
+                      marginLeft: `${(i - 6) * 15}px`,
+                      animationDelay: `${i * 0.05}s`,
+                      backgroundColor: i % 2 === 0 ? '#3b82f6' : '#10b981'
+                    }}
+                  />
+                ))}
+                
+                <div className="w-28 h-28 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner animate-scale-in border-4 border-white">
+                  <svg className="w-16 h-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path 
+                      className="animate-draw"
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={3} 
+                      d="M5 13l4 4L19 7" 
+                    />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-blue-900 mb-4">Terima Kasih!</h3>
-                <p className="text-gray-700 mb-6">
-                  Permintaan konsultasi Anda telah diterima. Tim kami akan menghubungi Anda dalam 1-2 hari kerja.
+                <h3 className="text-3xl font-extrabold text-blue-900 mb-4 tracking-tight">Pesan Terkirim!</h3>
+                <p className="text-gray-600 mb-10 text-lg max-w-sm mx-auto leading-relaxed">
+                  Terima kasih, <span className="text-blue-600 font-bold">{formData.name}</span>. Tim ahli kami akan segera menghubungi Anda dalam waktu <span className="font-semibold">1x24 jam</span>.
                 </p>
-                <button
-                  onClick={() => setSubmitStatus('idle')}
-                  className="text-blue-600 hover:text-blue-700 font-semibold"
-                >
-                  Kirim Permintaan Lain
-                </button>
+                <div className="space-y-4 max-w-xs mx-auto">
+                  <button
+                    onClick={() => setSubmitStatus('idle')}
+                    className="w-full py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-xl hover:shadow-blue-200 active:scale-95"
+                  >
+                    Kirim Pesan Lainnya
+                  </button>
+
+                  <p className="text-sm text-gray-400 italic">
+                    Salinan pesan ini juga seharusnya masuk ke folder spam Anda jika tidak ada di inbox.
+                  </p>
+                </div>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="relative space-y-6">
+                {/* Form Loading Overlay */}
+                {isSubmitting && (
+                  <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px] z-10 flex items-center justify-center rounded-xl">
+                    <div className="flex flex-col items-center">
+                      <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
+                      <p className="mt-4 text-blue-900 font-semibold animate-pulse">Memproses permintaan Anda...</p>
+                    </div>
+                  </div>
+                )}
+
+                {/* Honeypot Spam Protection */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
+
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
                     Terjadi kesalahan saat mengirim pesan. Silakan coba lagi atau hubungi kami langsung melalui email.
@@ -316,9 +364,24 @@ export default function ConsultationForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 gradient-blue text-white font-bold rounded-lg hover:opacity-90 transition-all hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                  className="w-full px-8 py-4 gradient-blue text-white font-bold rounded-lg hover:opacity-90 transition-all hover:scale-[1.02] active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed shadow-lg flex items-center justify-center gap-3 group"
                 >
-                  {isSubmitting ? 'Mengirim...' : 'Hubungi Kami Sekarang'}
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      <span>Sedang Mengirim...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Hubungi Kami Sekarang</span>
+                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                      </svg>
+                    </>
+                  )}
                 </button>
 
                 <p className="text-xs text-gray-500 text-center">

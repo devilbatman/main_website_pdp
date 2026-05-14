@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from './Logo';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,8 +12,17 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-white mb-6">patuhdata.id</h3>
             <p className="text-blue-100 mb-6 max-w-md">
-              Konsultan profesional untuk kepatuhan Undang-Undang Perlindungan Data Pribadi Indonesia. Membantu bisnis Anda melindungi data pribadi dengan tepat.
+              PatuhData adalah partner tata kelola data dan operational compliance untuk bisnis modern di Indonesia.
             </p>
+            <div className="mb-6 rounded-lg border border-blue-500/30 bg-blue-800/40 p-3 w-fit">
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-300 mb-1">Produk kami</p>
+              <a href="https://bincang.ai" target="_blank" rel="noopener noreferrer" className="font-bold text-white hover:text-blue-200">
+                bincang.ai
+              </a>
+              <p className="text-sm text-blue-100 mt-1">
+                Solusi percakapan AI untuk layanan pelanggan dan operasional bisnis.
+              </p>
+            </div>
 
             {/* Certification Badge */}
             <div className="mb-6 flex items-center bg-blue-800/50 rounded-lg p-3 w-fit border border-blue-500/30">
@@ -71,27 +79,37 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-4 text-blue-300">Tautan Cepat</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#beranda" className="text-blue-100 hover:text-blue-300 transition-colors">
+                <Link href="/#beranda" className="text-blue-100 hover:text-blue-300 transition-colors">
                   Beranda
                 </Link>
               </li>
               <li>
-                <Link href="#layanan" className="text-blue-100 hover:text-blue-300 transition-colors">
-                  Layanan
+                <Link href="/#tantangan" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  Tantangan
                 </Link>
               </li>
               <li>
-                <Link href="#tentang" className="text-blue-100 hover:text-blue-300 transition-colors">
+                <Link href="/#framework" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  Framework
+                </Link>
+              </li>
+              <li>
+                <Link href="/#layanan" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  Solusi
+                </Link>
+              </li>
+              <li>
+                <Link href="/#industries" className="text-blue-100 hover:text-blue-300 transition-colors">
+                  Industries
+                </Link>
+              </li>
+              <li>
+                <Link href="/#tentang" className="text-blue-100 hover:text-blue-300 transition-colors">
                   Tentang Kami
                 </Link>
               </li>
               <li>
-                <Link href="/blog/uu-pdp" className="text-blue-100 hover:text-blue-300 transition-colors">
-                  Article
-                </Link>
-              </li>
-              <li>
-                <Link href="#konsultasi" className="text-blue-100 hover:text-blue-300 transition-colors">
+                <Link href="/#konsultasi" className="text-blue-100 hover:text-blue-300 transition-colors">
                   Konsultasi
                 </Link>
               </li>
@@ -106,8 +124,8 @@ export default function Footer() {
                 <svg className="w-5 h-5 text-blue-300 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <a href="mailto:richardr@patuhdata.id" className="hover:text-blue-300">
-                  richardr@patuhdata.id
+                <a href="mailto:support@patuhdata.id" className="hover:text-blue-300">
+                  support@patuhdata.id
                 </a>
               </li>
               <li className="flex items-start">

@@ -16,20 +16,18 @@ export default function Hero() {
         <div className="text-center">
           {/* Badge */}
           <div className="inline-flex items-center px-4 py-2 bg-blue-400/10 border border-blue-400/30 rounded-full mb-8">
-            <span className="text-blue-300 text-sm font-semibold">
-              Konsultan Profesional Kepatuhan Data Pribadi
-            </span>
+            <span className="text-blue-300 text-sm font-semibold">Operationalizing Trust</span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Mitra Spesialis Kepatuhan <br />
-            <span className="text-blue-300">UU PDP</span> Anda
+            Operational Data Governance <br />
+            <span className="text-blue-300">untuk Bisnis Modern</span>
           </h1>
 
           {/* Subheading */}
           <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto">
-            Lindungi bisnis Anda dari sanksi administratif dan denda hingga 2% dari pendapatan tahunan. Kami adalah butik konsultan terpercaya untuk implementasi UU PDP yang efektif dan terukur.
+            PatuhData membantu organisasi mengelola risiko data, kesiapan UU PDP, dan tata kelola AI menjadi proses operasional yang praktis dan scalable.
           </p>
 
           {/* CTA Buttons */}
@@ -38,13 +36,13 @@ export default function Hero() {
               href="#konsultasi"
               className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:opacity-90 transition-all hover:scale-105 text-lg shadow-lg"
             >
-              Konsultasi Sekarang
+              Schedule Assessment
             </Link>
             <Link
-              href="#layanan"
+              href="#konsultasi"
               className="px-8 py-4 bg-blue-600/50 border-2 border-blue-400/30 text-white font-semibold rounded-lg hover:bg-blue-600/70 transition-all text-lg backdrop-blur-sm"
             >
-              Pelajari Layanan Kami
+              Konsultasi Awal
             </Link>
           </div>
 

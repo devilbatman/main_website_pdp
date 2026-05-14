@@ -99,7 +99,7 @@ export default function CookiesPolicy() {
             </p>
             <div className="bg-blue-50 p-6 rounded-xl mt-4 border border-blue-100 text-blue-900">
               <p className="font-bold text-lg mb-4">Informasi Kontak Patuh Data</p>
-              <p className="mb-2"><strong>Email:</strong> <a href="mailto:richardr@patuhdata.id" className="underline hover:text-blue-700">richardr@patuhdata.id</a></p>
+              <p className="mb-2"><strong>Email:</strong> <a href="mailto:support@patuhdata.id" className="underline hover:text-blue-700">support@patuhdata.id</a></p>
               <p className="mb-2"><strong>Telepon:</strong> <a href="tel:+6285183064580" className="underline hover:text-blue-700">+62 851 8306 4580</a></p>
               <p className="mb-0 leading-relaxed">
                 <strong>Alamat:</strong><br />

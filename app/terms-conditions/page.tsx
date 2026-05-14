@@ -83,7 +83,7 @@ export default function TermsConditions() {
             <p>Jl. Permata Regency Jl. H. Kelik, RT.1/RW.6, Srengseng,</p>
             <p>Kec. Kembangan, Kota Jakarta Barat,</p>
             <p className="mb-4">Daerah Khusus Ibukota Jakarta 11630</p>
-            <p><strong>Email:</strong> richardr@patuhdata.id</p>
+            <p><strong>Email:</strong> support@patuhdata.id</p>
             <p><strong>WhatsApp/Telepon:</strong> +62 851 8306 4580</p>
           </div>
 
