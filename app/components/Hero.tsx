@@ -1,84 +1,67 @@
-import Link from 'next/link';
-import Image from 'next/image';
+'use client';
+
+import TrackedLink from './TrackedLink';
+import PreliminaryGapSummaryPreview from './PreliminaryGapSummaryPreview';
+import FadeIn from './motion/FadeIn';
 
 export default function Hero() {
   return (
-    <section id="beranda" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `repeating-linear-gradient(45deg, #3b82f6 0, #3b82f6 1px, transparent 0, transparent 50%)`,
-          backgroundSize: '10px 10px'
-        }}></div>
-      </div>
+    <section id="hero" className="gradient-mesh pt-28 pb-16 md:pt-36 md:pb-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-14">
+          <div>
+            <FadeIn>
+              <p className="mb-5 inline-flex items-center rounded-full border border-slate-200 bg-white/80 px-3.5 py-1.5 text-xs font-medium text-slate-600 shadow-sm backdrop-blur-sm">
+                UU PDP · Sektor keuangan · Kepatuhan operasional
+              </p>
+            </FadeIn>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div className="text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 bg-blue-400/10 border border-blue-400/30 rounded-full mb-8">
-            <span className="text-blue-300 text-sm font-semibold">Operationalizing Trust</span>
-          </div>
+            <FadeIn delay={0.05}>
+              <h1 className="text-balance text-4xl font-semibold leading-[1.12] tracking-tight text-slate-900 sm:text-5xl lg:text-[3.15rem]">
+                Tata Kelola Data untuk Sektor Keuangan Indonesia
+              </h1>
+            </FadeIn>
 
-          {/* Main Heading */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Operational Data Governance <br />
-            <span className="text-blue-300">untuk Bisnis Modern</span>
-          </h1>
+            <FadeIn delay={0.08}>
+              <p className="mt-5 text-lg font-medium leading-snug text-slate-800 md:text-xl">
+                Kedalaman regulasi. Kontrol operasional. Khusus sektor keuangan.
+              </p>
+            </FadeIn>
 
-          {/* Subheading */}
-          <p className="text-xl sm:text-2xl text-blue-100 mb-12 max-w-4xl mx-auto">
-            PatuhData membantu organisasi mengelola risiko data, kesiapan UU PDP, dan tata kelola AI menjadi proses operasional yang praktis dan scalable.
-          </p>
+            <FadeIn delay={0.1}>
+              <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600">
+                PatuhData membantu bank, BPR, dan fintech memetakan gap UU PDP, risiko vendor, dan bukti
+                audit—selaras ekspektasi pengawasan sektor keuangan dan siap dieksekusi tim Anda.
+              </p>
+            </FadeIn>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              href="#konsultasi"
-              className="px-8 py-4 bg-white text-blue-700 font-bold rounded-lg hover:opacity-90 transition-all hover:scale-105 text-lg shadow-lg"
-            >
-              Schedule Assessment
-            </Link>
-            <Link
-              href="#konsultasi"
-              className="px-8 py-4 bg-blue-600/50 border-2 border-blue-400/30 text-white font-semibold rounded-lg hover:bg-blue-600/70 transition-all text-lg backdrop-blur-sm"
-            >
-              Konsultasi Awal
-            </Link>
-          </div>
-
-          {/* Brands */}
-          <div className="mt-24 pt-8 border-t border-blue-400/20">
-            <p className="text-blue-200 text-sm font-medium mb-8 tracking-wider uppercase">
-              Brand yang pernah ditangani oleh konsultan kami
-            </p>
-            <div className="flex justify-center items-center gap-8 flex-wrap">
-              <div className="bg-white rounded-lg p-4 transition-transform hover:scale-105 shadow-md">
-                <Image
-                  src="/blibli.jpg"
-                  alt="Blibli"
-                  width={120}
-                  height={60}
-                  className="object-contain"
-                />
+            <FadeIn delay={0.14}>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <TrackedLink
+                  href="/layanan/pdp-readiness-assessment"
+                  eventName="cta_click"
+                  eventParams={{ location: 'hero', label: 'gap_assessment_pdp' }}
+                  className="btn-primary px-7 py-3.5 text-base"
+                >
+                  Gap Assessment UU PDP
+                </TrackedLink>
+                <TrackedLink
+                  href="#services"
+                  eventName="cta_click"
+                  eventParams={{ location: 'hero', label: 'see_services' }}
+                  className="btn-secondary px-7 py-3.5 text-base"
+                >
+                  Lihat Layanan
+                </TrackedLink>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </FadeIn>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg
-          className="w-6 h-6 text-blue-300"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
+          </div>
+
+          <FadeIn delay={0.06} direction="none">
+            <PreliminaryGapSummaryPreview />
+          </FadeIn>
+        </div>
       </div>
     </section>
   );

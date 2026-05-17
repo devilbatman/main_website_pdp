@@ -1,102 +1,129 @@
-import Link from 'next/link';
+import type { Metadata } from 'next';
+import LegalPageLayout from '../components/LegalPageLayout';
 
-export const metadata = {
-  title: 'Syarat & Ketentuan | Patuh Data',
-  description: 'Syarat dan Ketentuan layanan konsultasi PT PATUHDATA SOLUSI NUSANTARA.',
+export const metadata: Metadata = {
+  title: 'Syarat & Ketentuan',
+  description:
+    'Ketentuan penggunaan situs web PatuhData dan layanan konsultasi tata kelola profesional.',
 };
 
-export default function TermsConditions() {
+export default function TermsConditionsPage() {
   return (
-    <div className="min-h-screen bg-gray-50 pt-24 pb-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 border-b border-gray-200 pb-6">
-          Syarat dan Ketentuan (Terms & Conditions)
-        </h1>
-        
-        <div className="prose prose-blue max-w-none text-gray-600 space-y-6">
-          <p className="text-sm text-gray-500">
-            <strong>Terakhir diperbarui:</strong> {new Date().toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
+    <LegalPageLayout
+      title="Syarat &amp; Ketentuan"
+      description="Ketentuan penggunaan patuhdata.id dan layanan profesional PatuhData."
+    >
+      <p>
+        Syarat &amp; Ketentuan ini (&quot;Ketentuan&quot;) mengatur akses Anda ke patuhdata.id dan
+        penggunaan layanan yang disediakan oleh <strong>PT PatuhData Solusi Nusantara</strong>{' '}
+        (&quot;PatuhData&quot;, &quot;kami&quot;). Dengan menggunakan situs atau layanan kami, Anda
+        menyetujui Ketentuan ini. Jika tidak setuju, mohon tidak menggunakan situs atau layanan.
+      </p>
 
-          <p>
-            Syarat dan Ketentuan ini (&quot;Syarat&quot;) mengatur penggunaan situs web Patuh Data dan layanan konsultasi yang 
-            disediakan oleh <strong>PT PATUHDATA SOLUSI NUSANTARA</strong> (&quot;Kami&quot;, &quot;Perusahaan&quot;). Dengan mengakses situs web kami 
-            atau menggunakan layanan kami, Anda (&quot;Pengguna&quot;, &quot;Klien&quot;) menyetujui untuk terikat oleh Syarat dan Ketentuan ini.
-          </p>
+      <h2>1. Tentang layanan kami</h2>
+      <p>
+        PatuhData menyediakan tata kelola operasional, risiko vendor, kesiapan UU PDP, dan advisory
+        terkait untuk bisnis di Indonesia. Ruang lingkup, deliverable, biaya, dan jadwal spesifik
+        diatur dalam proposal, statement of work, atau perjanjian layanan terpisah dengan klien.
+        Ketentuan ini bersifat umum; bila kontrak tertulis bertentangan, yang berlaku adalah kontrak.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">1. Layanan yang Diberikan</h2>
-          <p>
-            Kami menyediakan layanan konsultasi, audit, pelatihan, dan pendampingan kepatuhan terkait Undang-Undang Nomor 27 Tahun 2022 tentang 
-            Pelindungan Data Pribadi (UU PDP). Detail spesifik dari layanan akan diuraikan lebih lanjut dalam Kontrak Kerja atau Proposal Layanan 
-            yang disepakati terpisah antara Kami dan Klien.
-          </p>
+      <h2>2. Penggunaan situs</h2>
+      <p>Anda setuju menggunakan situs kami hanya untuk tujuan yang sah. Anda tidak boleh:</p>
+      <ul>
+        <li>Mencoba akses tidak sah ke sistem atau data kami.</li>
+        <li>Mengirim malware, spam, atau kode berbahaya.</li>
+        <li>Mengambil atau menyalin konten dalam skala besar tanpa izin tertulis.</li>
+        <li>Menyesatkan mengenai identitas atau afiliasi Anda saat menghubungi kami.</li>
+      </ul>
+      <p>
+        Konten di situs ini (teks, grafik, metodologi, kerangka kerja) dimiliki PatuhData atau dilisensi
+        kepada kami dan dilindungi hukum kekayaan intelektual.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">2. Tanggung Jawab Klien</h2>
-          <ul className="list-disc pl-6 space-y-2">
-            <li>Memberikan informasi, data, dan dokumen yang akurat, relevan, dan terkini yang diperlukan untuk pelaksanaan layanan.</li>
-            <li>Memastikan bahwa pengungkapan informasi apa pun kepada Kami tidak melanggar perjanjian kerahasiaan atau hukum yang berlaku.</li>
-            <li>Bekerja sama secara aktif selama proses konsultasi atau audit untuk kelancaran pelaksanaan layanan.</li>
-          </ul>
+      <h2>3. Bukan nasihat profesional hanya dari situs</h2>
+      <p>
+        Artikel, wawasan, dan informasi umum di patuhdata.id bersifat edukatif. Itu bukan nasihat hukum,
+        regulasi, atau audit untuk situasi spesifik Anda. Nasihat hukum formal diberikan hanya dalam
+        engagement dengan ruang lingkup dan ketentuan ketergantungan yang disepakati.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">3. Kerahasiaan (Confidentiality)</h2>
-          <p>
-            Kami berkomitmen penuh untuk menjaga kerahasiaan seluruh informasi dan data bisnis Klien yang kami terima dalam pelaksanaan layanan, 
-            termasuk namun tidak terbatas pada struktur operasional, data pribadi, dan temuan audit. Kami akan menandatangani Perjanjian 
-            Kerahasiaan (Non-Disclosure Agreement/NDA) tersendiri sebelum memulai proyek apa pun.
-          </p>
+      <h2>4. Pertanyaan dan assessment</h2>
+      <p>
+        Mengirim formulir konsultasi tidak otomatis membentuk hubungan klien atau kewajiban
+        menyediakan layanan. Kami berhak menolak engagement di luar keahlian kami, yang menimbulkan
+        konflik kepentingan, atau tidak selaras dengan kebijakan kami.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">4. Hak Kekayaan Intelektual</h2>
-          <p>
-            Seluruh materi, metodologi, kerangka kerja, templat, dan laporan yang kami sediakan selama pelaksanaan layanan adalah 
-            Hak Kekayaan Intelektual milik Kami, kecuali dinyatakan sebaliknya. Klien diberikan hak eksklusif terbatas untuk menggunakan 
-            dokumen tersebut hanya untuk kepentingan internal perusahaan Klien dan tidak diperkenankan untuk didistribusikan ke pihak ketiga 
-            tanpa izin tertulis dari Kami.
-          </p>
+      <h2>5. Tanggung jawab klien</h2>
+      <p>Saat menggunakan layanan kami, Anda setuju untuk:</p>
+      <ul>
+        <li>Memberikan informasi yang akurat dan tepat waktu yang diperlukan untuk engagement.</li>
+        <li>Menunjuk stakeholder internal yang memiliki wewenang mengambil keputusan.</li>
+        <li>Memastikan pengungkapan kepada kami tidak melanggar kerahasiaan kepada pihak ketiga.</li>
+        <li>Menerapkan rekomendasi dengan risiko Anda sendiri, dengan kepemilikan keputusan bisnis akhir.</li>
+      </ul>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">5. Batasan Tanggung Jawab (Limitation of Liability)</h2>
-          <p>
-            Meskipun Kami akan memberikan upaya dan keahlian profesional terbaik kami dalam memberikan layanan terkait kepatuhan UU PDP, 
-            keputusan akhir dan implementasi kebijakan sepenuhnya berada di tangan Klien. Kami tidak bertanggung jawab atas kerugian tidak langsung, 
-            denda administratif, atau tuntutan hukum yang diakibatkan oleh kelalaian atau kegagalan Klien dalam mengimplementasikan 
-            rekomendasi kami.
-          </p>
+      <h2>6. Kerahasiaan</h2>
+      <p>
+        Kami memperlakukan informasi klien sebagai rahasia. Untuk proyek formal, kami biasanya
+        menandatangani perjanjian kerahasiaan bersama (NDA) sebelum menerima data sensitif. Personel
+        kami terikat kewajiban kerahasiaan profesional.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">6. Hukum yang Berlaku dan Penyelesaian Sengketa</h2>
-          <p>
-            Syarat dan Ketentuan ini tunduk dan ditafsirkan berdasarkan hukum Republik Indonesia. Segala sengketa yang timbul dari atau 
-            terkait dengan Syarat ini akan diselesaikan secara musyawarah mufakat terlebih dahulu. Apabila tidak tercapai mufakat, maka sengketa 
-            akan diselesaikan melalui Pengadilan Negeri Jakarta Barat.
-          </p>
+      <h2>7. Kekayaan intelektual</h2>
+      <p>
+        Kecuali disepakati lain secara tertulis, PatuhData tetap memiliki metodologi, template, kerangka
+        kerja, dan materi praeksisting yang digunakan dalam deliverable. Klien mendapat lisensi terbatas
+        untuk menggunakan deliverable khusus proyek untuk keperluan internal bisnis, tanpa hak menjual
+        kembali, mensublisensikan, atau mempublikasikan tanpa persetujuan.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">7. Perubahan Syarat dan Ketentuan</h2>
-          <p>
-            Kami berhak untuk mengubah atau memperbarui Syarat dan Ketentuan ini dari waktu ke waktu. Setiap perubahan akan berlaku efektif 
-            setelah kami memposting versi yang diperbarui di situs web ini. Penggunaan situs web secara berkelanjutan setelah perubahan 
-            menandakan persetujuan Anda terhadap Syarat yang baru.
-          </p>
+      <h2>8. Pembatasan tanggung jawab</h2>
+      <p>
+        Sepanjang diizinkan hukum Indonesia, PatuhData tidak bertanggung jawab atas kerugian tidak
+        langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan situs atau layanan,
+        termasuk kehilangan laba, denda regulator, atau pelanggaran data yang disebabkan kegagalan klien
+        menerapkan kontrol yang disepakati. Total tanggung jawab kami dalam suatu engagement dibatasi
+        pada biaya yang dibayar untuk engagement tersebut, kecuali tanggung jawab tidak dapat dibatasi
+        menurut hukum.
+      </p>
 
-          <h2 className="text-xl font-semibold text-gray-900 mt-8 mb-4">8. Kontak Kami</h2>
-          <p>Jika Anda memiliki pertanyaan mengenai Syarat dan Ketentuan ini, Anda dapat menghubungi kami melalui:</p>
-          <div className="bg-gray-100 p-6 rounded-lg mt-4 text-gray-800">
-            <p className="font-semibold mb-2">PT PATUHDATA SOLUSI NUSANTARA</p>
-            <p>INFINITI OFFICE</p>
-            <p>Jl. Permata Regency Jl. H. Kelik, RT.1/RW.6, Srengseng,</p>
-            <p>Kec. Kembangan, Kota Jakarta Barat,</p>
-            <p className="mb-4">Daerah Khusus Ibukota Jakarta 11630</p>
-            <p><strong>Email:</strong> support@patuhdata.id</p>
-            <p><strong>WhatsApp/Telepon:</strong> +62 851 8306 4580</p>
-          </div>
+      <h2>9. Ganti rugi</h2>
+      <p>
+        Anda setuju mengganti rugi PatuhData atas klaim yang timbul dari penyalahgunaan situs oleh Anda,
+        pelanggaran Ketentuan ini, atau penyediaan informasi yang melanggar hukum atau tidak akurat
+        kepada kami.
+      </p>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition-colors">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-              </svg>
-              Kembali ke Beranda
-            </Link>
-          </div>
-        </div>
+      <h2>10. Tautan pihak ketiga</h2>
+      <p>
+        Situs kami dapat menaut ke situs eksternal. Kami tidak bertanggung jawab atas konten atau
+        praktik privasi mereka.
+      </p>
+
+      <h2>11. Hukum yang mengatur dan sengketa</h2>
+      <p>
+        Ketentuan ini tunduk pada hukum Republik Indonesia. Sengketa akan diselesaikan terlebih dahulu
+        melalui negosiasi itikad baik. Jika tidak tercapai, sengketa diserahkan kepada pengadilan yang
+        berwenang di Jakarta Barat, kecuali hukum wajib menentukan lain.
+      </p>
+
+      <h2>12. Perubahan</h2>
+      <p>
+        Kami dapat merevisi Ketentuan ini dari waktu ke waktu. Ketentuan yang diperbarui berlaku ketika
+        dipublikasikan di halaman ini. Penggunaan situs yang berkelanjutan berarti Anda menerima revisi.
+      </p>
+
+      <h2>13. Kontak</h2>
+      <div className="rounded-xl border border-slate-200 bg-slate-50 p-6 text-slate-800">
+        <p className="font-semibold text-slate-900">PT PatuhData Solusi Nusantara</p>
+        <p className="mt-2 text-sm leading-relaxed">INFINITI OFFICE, Jakarta Barat 11630, Indonesia</p>
+        <p className="mt-3 text-sm">
+          <a href="mailto:support@patuhdata.id">support@patuhdata.id</a> ·{' '}
+          <a href="tel:+6285183064580">+62 851 8306 4580</a>
+        </p>
       </div>
-    </div>
+    </LegalPageLayout>
   );
 }

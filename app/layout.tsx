@@ -1,28 +1,34 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import CookieConsent from "./components/CookieConsent";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 const siteUrl = "https://patuhdata.id";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "PatuhData - Operational Data Governance untuk Bisnis Modern",
+    default: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
     template: "%s | PatuhData",
   },
   description:
-    "PatuhData membantu organisasi mengelola risiko data, kesiapan UU PDP, tata kelola AI, vendor risk, dan operational compliance menjadi proses operasional yang praktis.",
+    "Tata kelola data untuk bank & fintech. Kedalaman UU PDP, kontrol operasional, dan bukti audit untuk institusi keuangan.",
   keywords: [
     "PatuhData",
-    "operational data governance",
-    "UU PDP",
-    "konsultan UU PDP",
-    "PDP readiness assessment",
-    "AI governance",
-    "vendor risk review",
-    "operational compliance",
-    "tata kelola data",
+    "tata kelola data Indonesia",
+    "UU PDP regulator",
+    "audit log kepatuhan",
+    "pemantauan keamanan Wazuh",
+    "risiko vendor",
+    "kesiapan Badan PDP",
+    "kepatuhan operasional",
     "Indonesia",
   ],
   authors: [{ name: "PatuhData" }],
@@ -43,32 +49,32 @@ export const metadata: Metadata = {
     canonical: siteUrl,
   },
   openGraph: {
-    title: "PatuhData - Operational Data Governance untuk Bisnis Modern",
+    title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
     description:
-      "Mengelola risiko data, kesiapan UU PDP, dan tata kelola AI menjadi proses operasional yang praktis dan scalable.",
+      "UU PDP untuk bank & fintech. Gap assessment, tata kelola vendor, bukti audit operasional.",
     url: siteUrl,
     siteName: "PatuhData",
     locale: "id_ID",
     type: "website",
     images: [
       {
-        url: "/patuhdata.png",
-        width: 1200,
-        height: 630,
-        alt: "PatuhData - Operational Data Governance",
+        url: "/logo.png",
+        width: 985,
+        height: 341,
+        alt: "PatuhData — Kedalaman regulasi. Kontrol terlindungi.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PatuhData - Operational Data Governance",
-    description: "Tata kelola data dan operational compliance untuk bisnis modern di Indonesia.",
-    images: ["/patuhdata.png"],
+    title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
+    description:
+      "UU PDP untuk bank & fintech. Gap assessment, vendor governance, bukti audit.",
+    images: ["/logo.png"],
   },
   icons: {
-    icon: "/iconpatuhdata.ico",
-    shortcut: "/iconpatuhdata.ico",
-    apple: "/iconpatuhdata.ico",
+    icon: [{ url: "/logoico.ico", type: "image/x-icon" }],
+    shortcut: "/logoico.ico",
   },
 };
 
@@ -78,23 +84,30 @@ const structuredData = {
   name: "PatuhData",
   legalName: "PT PATUHDATA SOLUSI NUSANTARA",
   url: siteUrl,
-  logo: `${siteUrl}/patuhdata.png`,
+  logo: `${siteUrl}/logo.png`,
+  sameAs: ["https://www.linkedin.com/company/patuhdata-id"],
   description:
-    "Partner tata kelola data dan operational compliance untuk bisnis modern di Indonesia.",
+    "Tata kelola data untuk sektor keuangan Indonesia. Kedalaman UU PDP, kontrol operasional, dan bukti audit untuk bank, BPR, dan fintech.",
   founder: {
     "@type": "Person",
     name: "Richard Rusli",
+    jobTitle: "Founder",
+    url: "https://www.linkedin.com/in/richard-r-b51120129/",
+    sameAs: ["https://www.linkedin.com/in/richard-r-b51120129/"],
+    description:
+      "Tech Lead dengan pengalaman governance dan lingkungan perusahaan bersertifikasi ISO 27001. Fokus gap assessment UU PDP dan tata kelola data sektor keuangan.",
   },
   areaServed: {
     "@type": "Country",
     name: "Indonesia",
   },
   serviceType: [
-    "PDP Readiness Assessment",
-    "Operational Data Governance",
-    "AI Governance Readiness",
-    "Vendor Risk Review",
-    "Advisory and Retainer",
+    "Gap Assessment UU PDP",
+    "Tata Kelola Data Operasional",
+    "Kesiapan Tata Kelola AI",
+    "Tinjauan Risiko Vendor",
+    "Kesiapan Orkestrasi Risiko",
+    "Advisory dan retainer",
   ],
   address: {
     "@type": "PostalAddress",
@@ -119,8 +132,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id">
-      <body className="antialiased">
+    <html lang="id" className={inter.variable}>
+      <body className={`${inter.className} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

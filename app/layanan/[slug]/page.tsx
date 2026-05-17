@@ -1,63 +1,74 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/app/components/Footer';
 import Navigation from '@/app/components/Navigation';
+import ServicePageTracker from '@/app/components/ServicePageTracker';
+import TrackedLink from '@/app/components/TrackedLink';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import { getServiceBySlug, services } from '@/data/services';
+import { getServiceImagery } from '@/lib/serviceImagery';
+import { getServiceCta } from '@/lib/serviceCta';
+import PdpGapFramework from '@/app/components/PdpGapFramework';
+import PdpTemplatesUseCases from '@/app/components/PdpTemplatesUseCases';
 
 const siteUrl = 'https://patuhdata.id';
+
+const defaultFaqs = [
+  {
+    question: 'Apakah hanya laporan?',
+    answer: 'Tidak. Deliverable dipakai tim Anda: prioritas, owner, dan bukti yang bisa ditindaklanjuti.',
+  },
+  {
+    question: 'Berapa lama?',
+    answer: 'Biasanya 2–4 minggu, tergantung ruang lingkup proses dan jumlah vendor.',
+  },
+];
+
+const pdpFaqs = [
+  ...defaultFaqs,
+  {
+    question: 'Apa itu 52 kontrol?',
+    answer:
+      'Matriks operasional PatuhData yang memetakan tata kelola, consent, hak subjek, keamanan, insiden, vendor, retensi, transfer, dan dokumentasi—diselaraskan prinsip UU PDP. Bukan checklist resmi regulator.',
+  },
+  {
+    question: 'Template apa yang disertakan?',
+    answer:
+      'Antara lain: register 52 kontrol, ROPA, gap register, vendor checklist, preliminary summary, roadmap 90 hari, dan indeks bukti audit—disesuaikan profil institusi Anda.',
+  },
+];
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export function generateStaticParams() {
-  return services.map((service) => ({
-    slug: service.slug,
-  }));
+  return services.map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
+  if (!service) return { title: 'Layanan Tidak Ditemukan' };
 
-  if (!service) {
-    return {
-      title: 'Layanan Tidak Ditemukan',
-    };
-  }
-
+  const imagery = getServiceImagery(slug);
   const url = `${siteUrl}/layanan/${service.slug}`;
 
   return {
-    title: `${service.title} untuk Bisnis Indonesia`,
-    description: service.heroDescription,
+    title: `${service.title} | PatuhData`,
+    description: service.description,
     keywords: service.keywords,
-    alternates: {
-      canonical: url,
-    },
+    alternates: { canonical: url },
     openGraph: {
       title: `${service.title} | PatuhData`,
-      description: service.heroDescription,
+      description: service.description,
       url,
       siteName: 'PatuhData',
       locale: 'id_ID',
       type: 'website',
-      images: [
-        {
-          url: '/patuhdata.png',
-          width: 1200,
-          height: 630,
-          alt: `${service.title} - PatuhData`,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: `${service.title} | PatuhData`,
-      description: service.heroDescription,
-      images: ['/patuhdata.png'],
+      images: [{ url: imagery.hero, width: 1200, height: 630, alt: imagery.heroAlt }],
     },
   };
 }
@@ -65,207 +76,152 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
+  if (!service) notFound();
 
-  if (!service) {
-    notFound();
-  }
-
-  const serviceUrl = `${siteUrl}/layanan/${service.slug}`;
-  const serviceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: service.title,
-    description: service.heroDescription,
-    provider: {
-      '@type': 'ProfessionalService',
-      name: 'PatuhData',
-      url: siteUrl,
-    },
-    areaServed: {
-      '@type': 'Country',
-      name: 'Indonesia',
-    },
-    url: serviceUrl,
-    serviceType: service.title,
-  };
+  const imagery = getServiceImagery(slug);
+  const cta = getServiceCta(slug);
+  const isPdpGap = slug === 'pdp-readiness-assessment';
+  const pageFaqs = isPdpGap ? pdpFaqs : defaultFaqs;
 
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
-      />
+      <ServicePageTracker service={service.slug} />
 
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 pt-36 pb-24 text-white">
-          <div className="absolute inset-0 opacity-10">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage:
-                  'repeating-linear-gradient(45deg, #3b82f6 0, #3b82f6 1px, transparent 0, transparent 50%)',
-                backgroundSize: '10px 10px',
-              }}
-            />
-          </div>
-
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section className="gradient-mesh border-b border-slate-200/80 pt-28 pb-12 md:pt-36 md:pb-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Link
-              href="/#layanan"
-              className="mb-8 inline-flex items-center text-sm font-semibold text-blue-200 hover:text-white"
+              href="/layanan"
+              className="mb-8 inline-flex text-sm font-medium text-slate-600 hover:text-slate-900"
             >
-              <span className="mr-2">&larr;</span>
-              Kembali ke Solusi PatuhData
+              ← Semua layanan
             </Link>
 
-            <div className="max-w-4xl">
-              <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-blue-200">
-                Solusi PatuhData
-              </p>
-              <h1 className="mb-8 text-4xl font-bold leading-tight md:text-6xl">
-                {service.title}
-              </h1>
-              <p className="max-w-3xl text-xl leading-relaxed text-blue-100 md:text-2xl">
-                {service.heroDescription}
-              </p>
-
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-                <Link
-                  href="/#konsultasi"
-                  className="rounded-lg bg-white px-8 py-4 text-center text-lg font-bold text-blue-800 shadow-lg transition-all hover:scale-105 hover:opacity-90"
-                >
-                  Schedule Assessment
-                </Link>
-                <Link
-                  href="/#framework"
-                  className="rounded-lg border-2 border-blue-300/40 bg-blue-600/30 px-8 py-4 text-center text-lg font-semibold text-white backdrop-blur-sm transition-all hover:bg-blue-600/60"
-                >
-                  Lihat Framework
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20">
-          <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8">
-            <div>
-              <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
-                Overview
-              </p>
-              <h2 className="mb-6 text-3xl font-bold text-blue-950 md:text-5xl">
-                Dari assessment menjadi implementasi yang bisa dijalankan.
-              </h2>
-              <p className="text-lg leading-relaxed text-slate-700">
-                {service.intro}
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-blue-100 bg-blue-50 p-8">
-              <h3 className="mb-5 text-2xl font-bold text-blue-950">Cocok untuk</h3>
-              <ul className="space-y-4">
-                {service.idealFor.map((item) => (
-                  <li key={item} className="flex gap-3 text-slate-700">
-                    <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-600 text-white">
-                      <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="mb-12 max-w-3xl">
-              <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
-                Scope
-              </p>
-              <h2 className="text-3xl font-bold text-blue-950 md:text-5xl">
-                Apa yang akan Anda dapatkan
-              </h2>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-              {service.deliverables.map((item) => (
-                <div key={item} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
-                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-100 text-blue-700">
-                    <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-lg font-semibold leading-relaxed text-slate-800">{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-12 lg:grid-cols-2">
+            <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
               <div>
-                <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
-                  Process
+                <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-600">
+                  Layanan PatuhData
                 </p>
-                <h2 className="mb-8 text-3xl font-bold text-blue-950 md:text-5xl">
-                  Cara kami bekerja
-                </h2>
-                <div className="space-y-5">
-                  {service.process.map((item, index) => (
-                    <div key={item} className="flex gap-4 rounded-2xl border border-slate-200 p-5">
-                      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-600 font-bold text-white">
-                        {index + 1}
-                      </span>
-                      <p className="pt-2 text-slate-700">{item}</p>
-                    </div>
-                  ))}
-                </div>
+                <h1 className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
+                  {service.title}
+                </h1>
+                <p className="mt-4 text-lg text-slate-600">{service.heroDescription}</p>
+                <TrackedLink
+                  href="/#assessment"
+                  eventName="cta_click"
+                  eventParams={{ location: 'service_hero', service: slug, label: cta.eventLabel }}
+                  className="btn-primary mt-6 px-7 py-3.5"
+                >
+                  {cta.label}
+                </TrackedLink>
               </div>
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+                <Image
+                  src={imagery.hero}
+                  alt={imagery.heroAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="rounded-3xl bg-blue-950 p-8 text-white">
-                <p className="mb-4 text-sm font-bold uppercase tracking-[0.3em] text-blue-200">
-                  Outcomes
-                </p>
-                <h2 className="mb-8 text-3xl font-bold md:text-4xl">
-                  Hasil yang dituju
-                </h2>
-                <ul className="space-y-5">
-                  {service.outcomes.map((item) => (
-                    <li key={item} className="flex gap-3 text-blue-50">
-                      <span className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-300/20 text-blue-100">
-                        <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
+        <section className="py-14 md:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+              <div>
+                {isPdpGap && (
+                  <p className="mb-3 text-sm font-semibold text-brand-600">Layanan inti · Gap assessment</p>
+                )}
+                <p className="text-slate-600">{service.intro}</p>
+
+                <h2 className="mt-10 text-lg font-semibold text-slate-900">Yang Anda dapatkan</h2>
+                <ul className="mt-4 space-y-2">
+                  {service.deliverables.map((item) => (
+                    <li key={item} className="flex gap-2 text-sm text-slate-600">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
                       {item}
                     </li>
                   ))}
                 </ul>
+
+                <h2 className="mt-10 text-lg font-semibold text-slate-900">Cara kerja</h2>
+                <ol className="mt-4 space-y-3">
+                  {service.process.map((step, i) => (
+                    <li key={step} className="flex gap-3 text-sm text-slate-600">
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-slate-900 text-xs font-semibold text-white">
+                        {i + 1}
+                      </span>
+                      {step}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+
+              <div>
+                <div className="relative mb-8 aspect-[4/3] overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+                  <Image
+                    src={imagery.challenge}
+                    alt={imagery.challengeAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                  />
+                </div>
+
+                <div className="card-premium p-6">
+                  <h2 className="text-lg font-semibold text-slate-900">Hasil</h2>
+                  <ul className="mt-4 space-y-2">
+                    {service.outcomes.map((item) => (
+                      <li key={item} className="text-sm text-slate-600">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-6 space-y-4">
+                  {pageFaqs.map((faq) => (
+                    <div key={faq.question} className="rounded-xl border border-slate-200 p-4">
+                      <p className="text-sm font-semibold text-slate-900">{faq.question}</p>
+                      <p className="mt-1 text-sm text-slate-600">{faq.answer}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-gradient-to-br from-blue-900 to-blue-700 py-20 text-white">
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <h2 className="mb-6 text-3xl font-bold md:text-5xl">
-              Siap menilai kesiapan operasional Anda?
+        {isPdpGap && (
+          <>
+            <PdpGapFramework />
+            <PdpTemplatesUseCases />
+          </>
+        )}
+
+        <section className="border-t border-slate-200 bg-slate-50/80 py-14">
+          <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">
+            <h2 className="text-2xl font-semibold text-slate-900">
+              {isPdpGap ? 'Butuh gap assessment UU PDP?' : 'Diskusikan kebutuhan Anda'}
             </h2>
-            <p className="mb-10 text-xl leading-relaxed text-blue-100">
-              Mulai dari assessment, temuan, sampai prioritas implementasi yang realistis untuk bisnis Anda.
+            <p className="mt-3 text-slate-600">
+              {isPdpGap
+                ? 'Kami petakan gap operasional terhadap UU PDP dan prioritas perbaikan.'
+                : 'Ceritakan ruang lingkup—kami sesuaikan pendekatan.'}
             </p>
-            <Link
-              href="/#konsultasi"
-              className="inline-flex rounded-lg bg-white px-8 py-4 text-lg font-bold text-blue-800 shadow-lg transition-all hover:scale-105 hover:opacity-90"
+            <TrackedLink
+              href="/#assessment"
+              eventName="cta_click"
+              eventParams={{ location: 'service_bottom', service: slug, label: cta.eventLabel }}
+              className="btn-primary mt-6 px-8 py-3.5"
             >
-              Schedule Assessment
-            </Link>
+              {cta.label}
+            </TrackedLink>
           </div>
         </section>
       </main>

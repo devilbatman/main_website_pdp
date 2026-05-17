@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import { trackEvent } from '@/lib/analytics';
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
   const phoneNumber = '6285183064580'; // Format: country code + number without +
-  const message = 'Halo Patuh Data, saya ingin berkonsultasi mengenai kepatuhan UU PDP untuk organisasi saya. Bisakah kita diskusi lebih lanjut?';
+  const message = 'Halo PatuhData, saya tertarik dengan Gap Assessment UU PDP / konsultasi tata kelola. Bisakah kita diskusi lebih lanjut?';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -18,7 +19,8 @@ export default function WhatsAppButton() {
         className="fixed bottom-6 right-6 z-50 group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
-        aria-label="Chat via WhatsApp"
+        onClick={() => trackEvent('whatsapp_click', { location: 'floating_button' })}
+        aria-label="Chat lewat WhatsApp"
       >
         {/* Tooltip */}
         <div

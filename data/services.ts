@@ -13,49 +13,98 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    slug: 'pdp-readiness-assessment',
-    title: 'PDP Readiness Assessment',
-    description: 'Assessment kesiapan operasional dan identifikasi risiko implementasi UU PDP.',
+    slug: 'risk-orchestration-readiness',
+    title: 'Risk Orchestration Readiness',
+    description:
+      'Membangun risk register, ownership, remediation workflow, dan evidence tracking untuk risiko data, AI, vendor, dan compliance.',
     heroDescription:
-      'Membantu organisasi memahami posisi kesiapan UU PDP melalui assessment proses, data flow, kontrol, dan temuan prioritas.',
+      'Ubah temuan gap menjadi risk register, owner, workflow perbaikan, dan bukti siap audit.',
     intro:
-      'Layanan ini memetakan kondisi operasional organisasi terhadap kebutuhan kepatuhan UU PDP. Fokusnya bukan hanya dokumen hukum, tetapi bagaimana data dikumpulkan, digunakan, dibagikan, diamankan, dan dipertanggungjawabkan dalam proses bisnis sehari-hari.',
+      'Dari daftar temuan ke risiko yang terpantau: prioritas, owner, status perbaikan, dan evidence untuk audit atau review manajemen.',
     idealFor: [
-      'Perusahaan yang mulai menyiapkan kepatuhan UU PDP',
-      'Tim legal, compliance, risk, IT, dan operations yang perlu menyelaraskan proses',
-      'Bisnis digital yang mengelola data pelanggan, pasien, pengguna, atau karyawan',
+      'Banyak temuan, belum ada tracking terpusat',
+      'Legal, compliance, risk, IT, dan operations butuh satu sumber risiko',
+      'Persiapan audit atau review manajemen',
     ],
     deliverables: [
-      'Pemetaan area risiko dan prioritas perbaikan',
-      'Gap assessment terhadap proses data utama',
-      'Ringkasan temuan dan rekomendasi implementasi',
-      'Roadmap awal untuk operational readiness',
+      'Risk register untuk risiko data, AI, vendor, dan compliance',
+      'Model prioritas risiko berdasarkan impact, urgency, owner, dan readiness',
+      'Remediation workflow dengan status, target waktu, dan action owner',
+      'Evidence tracking untuk keputusan, SOP, approval, dan bukti implementasi',
     ],
     process: [
-      'Review proses pengumpulan, penggunaan, penyimpanan, dan pembagian data',
-      'Identifikasi gap pada kebijakan, SOP, akses, vendor, dan kontrol operasional',
-      'Prioritisasi temuan berdasarkan risiko dan dampak bisnis',
-      'Penyusunan rekomendasi yang bisa langsung ditindaklanjuti',
+      'Menilai kondisi risiko dan temuan yang sudah ada',
+      'Mencatat risiko dalam format yang konsisten dan bisa dipantau',
+      'Memprioritaskan berdasarkan dampak bisnis, regulasi, sensitivitas data, dan urgensi',
+      'Menetapkan owner dan tindak lanjut lintas legal, IT, risk, compliance, procurement, dan operations',
+      'Memperbaiki dengan pelacakan status, deadline, dan keputusan',
+      'Mendokumentasikan bukti setiap penyelesaian agar siap audit, review, atau pelaporan manajemen',
     ],
     outcomes: [
-      'Organisasi memahami gap utama terhadap UU PDP',
-      'Tim memiliki prioritas implementasi yang jelas',
-      'Kepatuhan mulai diterjemahkan menjadi aktivitas operasional',
+      'Risiko tidak berhenti sebagai laporan, tetapi masuk ke workflow operasional',
+      'Manajemen memiliki visibility atas prioritas dan progres remediation',
+      'Tim memiliki bukti yang bisa ditelusuri untuk audit dan keputusan compliance',
     ],
-    keywords: ['UU PDP', 'PDP readiness assessment', 'gap assessment PDP', 'konsultan UU PDP'],
+    keywords: [
+      'orkestrasi risiko',
+      'kesiapan orkestrasi risiko',
+      'platform orkestrasi risiko',
+      'register risiko',
+      'manajemen risiko AI',
+      'risiko vendor',
+      'pelacakan bukti',
+    ],
+  },
+  {
+    slug: 'pdp-readiness-assessment',
+    title: 'Gap Assessment UU PDP',
+    description: 'Gap assessment kesiapan operasional terhadap UU PDP—temuan prioritas dan rencana perbaikan.',
+    heroDescription:
+      'Assessment 52 kontrol operasional UU PDP—plus template ROPA, gap register, dan roadmap remediasi untuk bank & fintech.',
+    intro:
+      'Layanan inti PatuhData: penilaian terhadap 52 kontrol operasional (tata kelola, consent, keamanan, vendor, insiden, dokumentasi) diselaraskan prinsip UU PDP. Bukan sekadar cek dokumen—setiap gap punya owner, prioritas, dan template lanjutan.',
+    idealFor: [
+      'Bank, BPR, dan fintech yang menyiapkan kepatuhan UU PDP',
+      'Tim legal, compliance, risk, IT, dan operations yang perlu menyelaraskan proses',
+      'Institusi keuangan yang mengelola data nasabah, karyawan, dan mitra pihak ketiga',
+    ],
+    deliverables: [
+      'Assessment 52 kontrol operasional UU PDP (matriks status & owner)',
+      'Paket template: ROPA, gap register, vendor checklist, roadmap 90 hari',
+      'Preliminary gap summary untuk manajemen',
+      'Remediation roadmap dan indeks bukti audit',
+    ],
+    process: [
+      'Review alur data: koleksi, penggunaan, penyimpanan, pembagian',
+      'Identifikasi gap kebijakan, SOP, akses, dan vendor',
+      'Prioritisasi berdasarkan risiko & dampak bisnis',
+      'Serahkan rekomendasi yang bisa langsung dijalankan tim',
+    ],
+    outcomes: [
+      'Peta gap UU PDP yang jelas',
+      'Prioritas implementasi terurut',
+      'Dasar bukti untuk regulator & mitra',
+    ],
+    keywords: [
+      'UU PDP',
+      'gap assessment PDP',
+      '52 kontrol UU PDP',
+      'template gap assessment',
+      'konsultan UU PDP bank fintech',
+    ],
   },
   {
     slug: 'operational-data-governance',
     title: 'Operational Data Governance',
     description: 'Pendampingan SOP, tata kelola data, dan implementasi proses operasional.',
     heroDescription:
-      'Membangun tata kelola data yang bisa dijalankan oleh tim operasional, bukan hanya tertulis di dokumen.',
+      'SOP, peran, dan kontrol data yang bisa dijalankan tim operasional—bukan hanya di dokumen.',
     intro:
-      'Operational Data Governance membantu organisasi membuat aturan, peran, kontrol, dan alur kerja data yang jelas. Layanan ini cocok untuk perusahaan yang ingin membuat tata kelola data lebih praktis, terukur, dan mudah dijalankan lintas fungsi.',
+      'Perjelas owner, kontrol, dan alur kerja data lintas fungsi agar tata kelola praktis dan terukur.',
     idealFor: [
-      'Perusahaan dengan proses data lintas tim yang belum terdokumentasi rapi',
-      'Organisasi yang perlu memperjelas owner, kontrol, dan alur persetujuan data',
-      'Tim yang ingin menurunkan risiko operasional dari penggunaan data sehari-hari',
+      'Proses data lintas tim belum terdokumentasi',
+      'Perlu owner, kontrol, dan persetujuan yang jelas',
+      'Ingin menurunkan risiko operasional penggunaan data',
     ],
     deliverables: [
       'Struktur peran dan tanggung jawab tata kelola data',
@@ -81,13 +130,13 @@ export const services: Service[] = [
     title: 'AI Governance Readiness',
     description: 'Panduan penggunaan AI yang aman, bertanggung jawab, dan sesuai tata kelola data.',
     heroDescription:
-      'Membantu organisasi menyiapkan kontrol penggunaan AI agar tetap aman, bertanggung jawab, dan selaras dengan tata kelola data.',
+      'Kontrol penggunaan AI yang aman, bertanggung jawab, dan selaras tata kelola data.',
     intro:
-      'AI Governance Readiness dirancang untuk bisnis yang mulai menggunakan AI dalam proses kerja, layanan pelanggan, analisis, atau otomasi. Fokusnya adalah memastikan penggunaan AI memiliki batasan, kontrol, dan akuntabilitas yang jelas.',
+      'Untuk tim yang mulai memakai AI: batasan, kontrol data, dan akuntabilitas sebelum adopsi meluas.',
     idealFor: [
-      'Perusahaan yang mulai menggunakan AI tools dalam operasional',
-      'Tim yang perlu mengelola risiko data, privasi, dan output AI',
-      'Bisnis yang ingin menyiapkan prinsip internal sebelum adopsi AI lebih luas',
+      'AI dipakai di operasional atau layanan pelanggan',
+      'Perlu mengelola risiko data, privasi, dan output AI',
+      'Menyiapkan prinsip internal sebelum skala lebih besar',
     ],
     deliverables: [
       'Assessment risiko penggunaan AI',
@@ -113,13 +162,13 @@ export const services: Service[] = [
     title: 'Vendor Risk Review',
     description: 'Assessment vendor dan pihak ketiga yang mengelola data organisasi.',
     heroDescription:
-      'Menilai kesiapan vendor dan pihak ketiga yang memproses data agar risiko operasional dan kepatuhan lebih terkendali.',
+      'Nilai vendor yang memproses data Anda—kontrak, kontrol, dan prioritas mitigasi.',
     intro:
-      'Vendor Risk Review membantu organisasi memahami risiko dari vendor, partner, platform, atau pihak ketiga yang mengakses dan mengelola data. Layanan ini menghubungkan aspek kontrak, kontrol operasional, keamanan, dan tata kelola data.',
+      'Pahami risiko pihak ketiga yang mengakses data: gap kontrak, keamanan, dan tata kelola operasional.',
     idealFor: [
-      'Perusahaan yang menggunakan vendor untuk sistem, customer service, HR, cloud, atau analytics',
-      'Tim procurement, legal, compliance, dan operations yang perlu review vendor',
-      'Organisasi yang ingin memperkuat kontrol pihak ketiga terhadap data',
+      'Vendor cloud, HR, CS, atau analytics memproses data',
+      'Procurement, legal, compliance perlu review terstruktur',
+      'Ingin memperkuat kontrol pihak ketiga',
     ],
     deliverables: [
       'Checklist dan assessment risiko vendor',
@@ -145,13 +194,13 @@ export const services: Service[] = [
     title: 'Advisory & Retainer',
     description: 'Pendampingan berkala untuk tata kelola data dan operasional compliance.',
     heroDescription:
-      'Pendampingan berkelanjutan untuk membantu tim mengambil keputusan data governance dan compliance secara praktis.',
+      'Pendampingan berkala untuk keputusan tata kelola data dan compliance yang praktis.',
     intro:
-      'Advisory & Retainer cocok untuk organisasi yang membutuhkan partner diskusi berkala saat membangun, menguji, dan memperbaiki tata kelola data. Layanan ini memberi akses ke arahan praktis untuk isu yang muncul dalam operasional harian.',
+      'Partner diskusi rutin saat membangun dan memperbaiki tata kelola data—arah praktis untuk isu operasional harian.',
     idealFor: [
-      'Perusahaan yang sedang menjalankan roadmap data governance',
-      'Tim yang membutuhkan second opinion untuk keputusan data dan compliance',
-      'Organisasi yang ingin menjaga momentum implementasi setelah assessment',
+      'Sedang menjalankan roadmap tata kelola data',
+      'Butuh second opinion keputusan data & compliance',
+      'Ingin menjaga momentum setelah gap assessment',
     ],
     deliverables: [
       'Sesi advisory berkala',

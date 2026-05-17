@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/layanan',
     '/blog',
+    '/kebocoran-data',
+    '/tentang',
     '/privacy-policy',
     '/terms-conditions',
     '/cookies',

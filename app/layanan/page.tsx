@@ -1,43 +1,19 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
 import Navigation from '@/app/components/Navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import { services } from '@/data/services';
+import { getServiceImagery } from '@/lib/serviceImagery';
 
 const siteUrl = 'https://patuhdata.id';
 
 export const metadata: Metadata = {
-  title: 'Layanan Operational Data Governance',
+  title: 'Layanan PatuhData | Tata Kelola Data & Risiko',
   description:
-    'Layanan PatuhData untuk PDP Readiness Assessment, Operational Data Governance, AI Governance Readiness, Vendor Risk Review, dan Advisory & Retainer.',
-  alternates: {
-    canonical: `${siteUrl}/layanan`,
-  },
-  openGraph: {
-    title: 'Layanan Operational Data Governance | PatuhData',
-    description:
-      'Pilih layanan PatuhData untuk assessment, temuan, dan implementasi tata kelola data yang praktis.',
-    url: `${siteUrl}/layanan`,
-    siteName: 'PatuhData',
-    locale: 'id_ID',
-    type: 'website',
-    images: [
-      {
-        url: '/patuhdata.png',
-        width: 1200,
-        height: 630,
-        alt: 'Layanan PatuhData',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Layanan Operational Data Governance | PatuhData',
-    description:
-      'Layanan assessment dan implementasi tata kelola data untuk bisnis modern di Indonesia.',
-    images: ['/patuhdata.png'],
-  },
+    'Gap assessment UU PDP, tata kelola vendor, orkestrasi risiko, dan advisory—untuk kepatuhan regulator yang terbukti.',
+  alternates: { canonical: `${siteUrl}/layanan` },
 };
 
 export default function ServicesLandingPage() {
@@ -46,60 +22,71 @@ export default function ServicesLandingPage() {
       <Navigation />
 
       <main>
-        <section className="bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 pt-36 pb-24 text-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <p className="mb-5 text-sm font-bold uppercase tracking-[0.35em] text-blue-200">
-              Solusi PatuhData
+        <section className="gradient-mesh border-b border-slate-200/80 pt-28 pb-14 md:pt-36 md:pb-16">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-brand-600">
+              Layanan
             </p>
-            <h1 className="mb-8 max-w-4xl text-4xl font-bold leading-tight md:text-6xl">
-              Layanan operational data governance untuk bisnis modern.
+            <h1 className="text-4xl font-semibold tracking-tight text-slate-900 md:text-5xl">
+              Tata kelola data &amp; risiko—langsung ke poinnya
             </h1>
-            <p className="max-w-3xl text-xl leading-relaxed text-blue-100 md:text-2xl">
-              Dari assessment, temuan, prioritas, hingga implementasi proses yang membantu organisasi lebih siap menghadapi regulasi data.
+            <p className="mt-5 text-lg text-slate-600">
+              Mulai dari{' '}
+              <Link href="/layanan/pdp-readiness-assessment" className="font-semibold text-brand-600 hover:underline">
+                Gap Assessment UU PDP
+              </Link>
+              , atau pilih layanan pendukung di bawah.
             </p>
           </div>
         </section>
 
-        <section className="py-20">
+        <section className="py-14 md:py-16">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {services.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={`/layanan/${service.slug}`}
-                  className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl"
-                >
-                  <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-blue-600">
-                    Layanan
-                  </p>
-                  <h2 className="mb-4 text-2xl font-bold text-blue-950 group-hover:text-blue-600">
-                    {service.title}
-                  </h2>
-                  <p className="mb-8 leading-relaxed text-slate-700">
-                    {service.heroDescription}
-                  </p>
-                  <span className="font-bold text-blue-600">
-                    Pelajari layanan <span className="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
-                  </span>
-                </Link>
-              ))}
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {services.map((service) => {
+                const img = getServiceImagery(service.slug);
+                const isPdp = service.slug === 'pdp-readiness-assessment';
+                return (
+                  <Link
+                    key={service.slug}
+                    href={`/layanan/${service.slug}`}
+                    className={`group card-premium flex h-full flex-col overflow-hidden p-0 ${isPdp ? 'ring-2 ring-brand-500/30' : ''}`}
+                  >
+                    <div className="relative aspect-[16/10] bg-slate-100">
+                      <Image
+                        src={img.hero}
+                        alt={img.heroAlt}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                      />
+                      {isPdp && (
+                        <span className="absolute left-3 top-3 rounded-full bg-brand-600 px-2.5 py-1 text-[10px] font-semibold uppercase text-white">
+                          Layanan inti
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex flex-1 flex-col p-6">
+                      <h2 className="text-lg font-semibold text-slate-900 group-hover:text-brand-700">
+                        {service.title}
+                      </h2>
+                      <p className="mt-2 flex-1 text-sm text-slate-600">{service.description}</p>
+                      <span className="mt-4 text-sm font-semibold text-slate-900 group-hover:text-brand-600">
+                        Detail →
+                      </span>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
 
-        <section className="bg-slate-50 py-20">
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-            <h2 className="mb-6 text-3xl font-bold text-blue-950 md:text-5xl">
-              Butuh arahan layanan yang paling tepat?
-            </h2>
-            <p className="mb-10 text-xl leading-relaxed text-slate-700">
-              Ceritakan kondisi organisasi Anda, lalu kami bantu tentukan prioritas assessment dan implementasi.
-            </p>
-            <Link
-              href="/#konsultasi"
-              className="inline-flex rounded-lg bg-blue-700 px-8 py-4 text-lg font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-800"
-            >
-              Schedule Assessment
+        <section className="border-t border-slate-200 bg-slate-50/80 py-14">
+          <div className="mx-auto max-w-xl px-4 text-center">
+            <p className="text-slate-600">Tidak yakin layanan mana yang tepat?</p>
+            <Link href="/#assessment" className="btn-primary mt-4 px-8 py-3.5">
+              Ajukan konsultasi
             </Link>
           </div>
         </section>

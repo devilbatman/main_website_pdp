@@ -1,103 +1,94 @@
+'use client';
+
+import { ArrowRight, ClipboardCheck, Scale, Shield } from 'lucide-react';
 import Link from 'next/link';
-import { services } from '@/data/services';
+import FadeIn from './motion/FadeIn';
 
-function ServiceIcon({ slug }: { slug: string }) {
-  if (slug === 'pdp-readiness-assessment') {
-    return (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-      </svg>
-    );
-  }
-
-  if (slug === 'operational-data-governance') {
-    return (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    );
-  }
-
-  if (slug === 'ai-governance-readiness') {
-    return (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-      </svg>
-    );
-  }
-
-  if (slug === 'vendor-risk-review') {
-    return (
-      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-    </svg>
-  );
-}
+const services = [
+  {
+    icon: Shield,
+    title: 'Kesiapan Tata Kelola Vendor',
+    summary:
+      'Saat procurement meminta bukti, spreadsheet tersebar sering gagal uji. Kami membantu merakit berkas vendor yang dapat dipertanggungjawabkan, jawaban kuesioner keamanan, dan skor risiko yang selaras dengan cara pembeli enterprise menilai Anda.',
+    items: [
+      'Penilaian vendor bertingkat dan prioritas perbaikan',
+      'Paket due diligence untuk RFP dan tinjauan keamanan',
+      'Jawaban kuesioner keamanan yang mencerminkan kondisi nyata',
+      'Skoring risiko vendor dan ritme pemantauan',
+    ],
+    href: '/layanan/vendor-risk-review',
+  },
+  {
+    icon: ClipboardCheck,
+    title: 'Gap Assessment UU PDP',
+    summary:
+      'Gap assessment operasional terhadap UU PDP: temukan celah pada proses data, kontrol, dan vendor—dengan prioritas perbaikan yang jelas.',
+    items: [
+      'Pemetaan pemrosesan dan alur data yang dapat dipertahankan',
+      'Akses, retensi, dan minimisasi pada sistem yang benar-benar berjalan',
+      'Playbook pelanggaran & notifikasi mengikuti tenggat hukum',
+      'Kontrak pemroses dan tinjauan penanganan data vendor',
+    ],
+    href: '/layanan/pdp-readiness-assessment',
+  },
+  {
+    icon: Scale,
+    title: 'Risiko Operasional & Tata Kelola',
+    summary:
+      'Tata kelola yang hanya hidup di slide deck akan bergeser begitu tim bertambah. Kami merancang alur kerja, kepemilikan, dan pustaka bukti agar pertanyaan audit dijawab dari operasi—bukan improvisasi menit terakhir.',
+    items: [
+      'Alur tata kelola lintas fungsi dengan pemilik yang jelas',
+      'Kesiapan audit & tinjauan manajemen tanpa panik mendadak',
+      'Bukti terpusat: keputusan, persetujuan, dan bukti implementasi',
+      'Pelacakan perbaikan dari temuan hingga penutupan dengan akuntabilitas',
+    ],
+    href: '/layanan/risk-orchestration-readiness',
+  },
+];
 
 export default function Services() {
   return (
-    <section id="layanan" className="py-24 bg-white scroll-mt-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
-            Solusi <span className="text-blue-600">PatuhData</span>
-          </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Layanan operasional untuk data governance, UU PDP, tata kelola AI, vendor risk, dan advisory berkelanjutan.
+    <section id="services" className="section-padding bg-slate-50/80">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <FadeIn className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
+            Layanan
           </p>
-        </div>
+          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
+            Layanan untuk institusi keuangan
+          </h2>
+          <p className="mt-4 text-lg text-slate-600">
+            Vendor, UU PDP, risiko operasional—dirancang untuk bank, BPR, dan fintech.
+          </p>
+        </FadeIn>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Link
-              key={service.slug}
-              href={`/layanan/${service.slug}`}
-              className="group bg-white border-2 border-gray-200 rounded-xl p-8 hover:border-blue-500 transition-all duration-300 hover:shadow-xl relative overflow-hidden"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mb-6 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
-                <ServiceIcon slug={service.slug} />
-              </div>
-
-              {/* Title */}
-              <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-blue-600 transition-colors">
-                {service.title}
-              </h3>
-
-              {/* Description */}
-              <p className="text-gray-700 leading-relaxed">
-                {service.description}
-              </p>
-
-              <div className="mt-6 font-bold text-blue-600">
-                Pelajari layanan
-                <span className="ml-2 transition-transform group-hover:translate-x-1 inline-block">&rarr;</span>
-              </div>
-
-              {/* Decorative Element */}
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
-            </Link>
+        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <FadeIn key={service.title} delay={index * 0.1}>
+              <article className="card-premium flex h-full flex-col p-7">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-sm ring-1 ring-slate-200/80">
+                  <service.icon className="h-6 w-6 text-slate-800" strokeWidth={1.5} />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-600">{service.summary}</p>
+                <ul className="mt-5 flex-1 space-y-2">
+                  {service.items.map((item) => (
+                    <li key={item} className="flex items-start gap-2 text-sm text-slate-600">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-600" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={service.href}
+                  className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-brand-600"
+                >
+                  Selengkapnya
+                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </article>
+            </FadeIn>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <a
-            href="#konsultasi"
-            className="inline-block px-8 py-4 gradient-blue text-white font-bold rounded-lg hover:opacity-90 transition-all hover:scale-105 text-lg shadow-lg"
-          >
-            Schedule Assessment
-          </a>
         </div>
       </div>
     </section>
