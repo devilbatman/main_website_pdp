@@ -34,6 +34,9 @@ export const metadata: Metadata = {
   authors: [{ name: "PatuhData" }],
   creator: "PatuhData",
   publisher: "PT PATUHDATA SOLUSI NUSANTARA",
+  verification: {
+    google: "BkUwKbP9OX2t2WvsL_excE_cTSQkoTuEQKALtDtv7hQ",
+  },
   robots: {
     index: true,
     follow: true,
