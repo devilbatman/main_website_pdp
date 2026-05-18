@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
@@ -6,15 +5,15 @@ import Navigation from '@/app/components/Navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
 import { services } from '@/data/services';
 import { getServiceImagery } from '@/lib/serviceImagery';
+import { createPageMetadata } from '@/lib/seo';
 
-const siteUrl = 'https://patuhdata.id';
-
-export const metadata: Metadata = {
-  title: 'Layanan PatuhData | Tata Kelola Data & Risiko',
+export const metadata = createPageMetadata({
+  title: 'Layanan',
   description:
     'Gap assessment UU PDP, tata kelola vendor, orkestrasi risiko, dan advisory—untuk kepatuhan regulator yang terbukti.',
-  alternates: { canonical: `${siteUrl}/layanan` },
-};
+  path: '/layanan',
+  ogTitle: 'Layanan PatuhData | Tata Kelola Data & Risiko',
+});
 
 export default function ServicesLandingPage() {
   return (

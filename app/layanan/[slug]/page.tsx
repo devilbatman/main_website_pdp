@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Footer from '@/app/components/Footer';
 import Navigation from '@/app/components/Navigation';
+import JsonLd from '@/app/components/JsonLd';
 import ServicePageTracker from '@/app/components/ServicePageTracker';
 import TrackedLink from '@/app/components/TrackedLink';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
@@ -12,8 +13,7 @@ import { getServiceImagery } from '@/lib/serviceImagery';
 import { getServiceCta } from '@/lib/serviceCta';
 import PdpGapFramework from '@/app/components/PdpGapFramework';
 import PdpTemplatesUseCases from '@/app/components/PdpTemplatesUseCases';
-
-const siteUrl = 'https://patuhdata.id';
+import { createPageMetadata, getServiceJsonLd } from '@/lib/seo';
 
 const defaultFaqs = [
   {
@@ -53,23 +53,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return { title: 'Layanan Tidak Ditemukan' };
 
-  const imagery = getServiceImagery(slug);
-  const url = `${siteUrl}/layanan/${service.slug}`;
-
   return {
-    title: `${service.title} | PatuhData`,
-    description: service.description,
-    keywords: service.keywords,
-    alternates: { canonical: url },
-    openGraph: {
-      title: `${service.title} | PatuhData`,
+    ...createPageMetadata({
+      title: service.title,
       description: service.description,
-      url,
-      siteName: 'PatuhData',
-      locale: 'id_ID',
-      type: 'website',
-      images: [{ url: imagery.hero, width: 1200, height: 630, alt: imagery.heroAlt }],
-    },
+      path: `/layanan/${service.slug}`,
+      keywords: service.keywords,
+    }),
   };
 }
 
@@ -85,6 +75,13 @@ export default async function ServicePage({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd
+        data={getServiceJsonLd({
+          slug: service.slug,
+          title: service.title,
+          description: service.description,
+        })}
+      />
       <Navigation />
       <ServicePageTracker service={service.slug} />
 

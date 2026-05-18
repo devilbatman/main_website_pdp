@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
 import LegalPageLayout from '../components/LegalPageLayout';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Kebijakan Privasi',
   description:
     'Bagaimana PatuhData mengumpulkan, menggunakan, dan melindungi data pribadi sesuai UU PDP Indonesia.',
-};
+  path: '/privacy-policy',
+});
 
 export default function PrivacyPolicyPage() {
   return (

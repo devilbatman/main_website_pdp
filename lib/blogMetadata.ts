@@ -1,35 +1,22 @@
 import type { Metadata } from 'next';
 import type { Article } from '@/data/blog';
-
-const siteUrl = 'https://patuhdata.id';
+import { SITE_URL, createPageMetadata } from '@/lib/seo';
 
 export function getArticleMetadata(article: Article): Metadata {
-  const url = `${siteUrl}/blog/${article.slug}`;
-
-  return {
+  const base = createPageMetadata({
     title: article.title,
     description: article.description,
-    alternates: { canonical: url },
+    path: `/blog/${article.slug}`,
+    ogType: 'article',
+    ogImage: article.image,
+  });
+
+  return {
+    ...base,
     openGraph: {
-      title: article.title,
-      description: article.description,
-      url,
-      siteName: 'PatuhData',
-      locale: 'id_ID',
+      ...base.openGraph,
       type: 'article',
       publishedTime: article.publishedAt,
-      images: [
-        {
-          url: article.image,
-          alt: article.title,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: article.title,
-      description: article.description,
-      images: [article.image],
     },
   };
 }
@@ -40,25 +27,25 @@ export function getArticleJsonLd(article: Article) {
     '@type': 'Article',
     headline: article.title,
     description: article.description,
-    image: `${siteUrl}${article.image}`,
+    image: `${SITE_URL}${article.image}`,
     datePublished: article.publishedAt,
     dateModified: article.publishedAt,
     author: {
       '@type': 'Organization',
       name: 'PatuhData',
-      url: siteUrl,
+      url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
       name: 'PatuhData',
       logo: {
         '@type': 'ImageObject',
-        url: `${siteUrl}/logo.png`,
+        url: `${SITE_URL}/logo.png`,
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${siteUrl}/blog/${article.slug}`,
+      '@id': `${SITE_URL}/blog/${article.slug}`,
     },
   };
 }

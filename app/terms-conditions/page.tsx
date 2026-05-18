@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
 import LegalPageLayout from '../components/LegalPageLayout';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Syarat & Ketentuan',
   description:
     'Ketentuan penggunaan situs web PatuhData dan layanan konsultasi tata kelola profesional.',
-};
+  path: '/terms-conditions',
+});
 
 export default function TermsConditionsPage() {
   return (

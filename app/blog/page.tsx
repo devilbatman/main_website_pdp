@@ -5,13 +5,15 @@ import { getLatestArticles } from '@/data/blog';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import BlogCard from '../components/BlogCard';
-import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Wawasan | Tata Kelola & Kesiapan UU PDP',
+export const metadata = createPageMetadata({
+  title: 'Wawasan',
   description:
     'Artikel dan panduan praktis tentang UU PDP, tata kelola vendor, dan kepatuhan operasional untuk bisnis berkembang di Indonesia.',
-};
+  path: '/blog',
+  ogTitle: 'Wawasan | Tata Kelola & Kesiapan UU PDP',
+});
 
 export default function BlogIndex() {
   const articles = getLatestArticles();

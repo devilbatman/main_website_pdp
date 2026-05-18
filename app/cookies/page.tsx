@@ -1,11 +1,12 @@
-import type { Metadata } from 'next';
 import LegalPageLayout from '../components/LegalPageLayout';
+import { createPageMetadata } from '@/lib/seo';
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Kebijakan Cookie',
   description:
     'Bagaimana PatuhData menggunakan cookie dan teknologi serupa di patuhdata.id, serta cara mengelola preferensi Anda.',
-};
+  path: '/cookies',
+});
 
 export default function CookiesPolicyPage() {
   return (

@@ -3,6 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import CookieConsent from "./components/CookieConsent";
+import JsonLd from "./components/JsonLd";
+import {
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+  defaultOgImages,
+  getRootJsonLd,
+} from "@/lib/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,10 +17,8 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteUrl = "https://patuhdata.id";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
     template: "%s | PatuhData",
@@ -49,83 +54,28 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: siteUrl,
+    canonical: SITE_URL,
   },
   openGraph: {
     title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
     description:
       "UU PDP untuk bank & fintech. Gap assessment, tata kelola vendor, bukti audit operasional.",
-    url: siteUrl,
+    url: SITE_URL,
     siteName: "PatuhData",
     locale: "id_ID",
     type: "website",
-    images: [
-      {
-        url: "/logo.png",
-        width: 985,
-        height: 341,
-        alt: "PatuhData — Kedalaman regulasi. Kontrol terlindungi.",
-      },
-    ],
+    images: defaultOgImages,
   },
   twitter: {
     card: "summary_large_image",
     title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
     description:
       "UU PDP untuk bank & fintech. Gap assessment, vendor governance, bukti audit.",
-    images: ["/logo.png"],
+    images: [DEFAULT_OG_IMAGE],
   },
   icons: {
     icon: [{ url: "/logoico.ico", type: "image/x-icon" }],
     shortcut: "/logoico.ico",
-  },
-};
-
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "PatuhData",
-  legalName: "PT PATUHDATA SOLUSI NUSANTARA",
-  url: siteUrl,
-  logo: `${siteUrl}/logo.png`,
-  sameAs: ["https://www.linkedin.com/company/patuhdata-id"],
-  description:
-    "Tata kelola data untuk sektor keuangan Indonesia. Kedalaman UU PDP, kontrol operasional, dan bukti audit untuk bank, BPR, dan fintech.",
-  founder: {
-    "@type": "Person",
-    name: "Richard Rusli",
-    jobTitle: "Founder",
-    url: "https://www.linkedin.com/in/richard-r-b51120129/",
-    sameAs: ["https://www.linkedin.com/in/richard-r-b51120129/"],
-    description:
-      "Tech Lead dengan pengalaman governance dan lingkungan perusahaan bersertifikasi ISO 27001. Fokus gap assessment UU PDP dan tata kelola data sektor keuangan.",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "Indonesia",
-  },
-  serviceType: [
-    "Gap Assessment UU PDP",
-    "Tata Kelola Data Operasional",
-    "Kesiapan Tata Kelola AI",
-    "Tinjauan Risiko Vendor",
-    "Kesiapan Orkestrasi Risiko",
-    "Advisory dan retainer",
-  ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "INFINITI OFFICE, Jl. Permata Regency Jl. H. Kelik, Srengseng",
-    addressLocality: "Jakarta Barat",
-    addressRegion: "DKI Jakarta",
-    postalCode: "11630",
-    addressCountry: "ID",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+62-851-8306-4580",
-    contactType: "customer service",
-    areaServed: "ID",
-    availableLanguage: ["Indonesian", "English"],
   },
 };
 
@@ -137,10 +87,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={inter.variable}>
       <body className={`${inter.className} antialiased`}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <JsonLd data={getRootJsonLd()} />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics GA_MEASUREMENT_ID={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}

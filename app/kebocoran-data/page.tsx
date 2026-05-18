@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
@@ -8,22 +7,15 @@ import HibpBreachList from '@/app/components/HibpBreachList';
 import TrustedSourcesBar from '@/app/components/TrustedSourcesBar';
 import { countByStatus, dataBreachIncidents } from '@/data/dataBreaches';
 import { fetchIndonesiaHibpBreaches } from '@/lib/hibp';
+import { createPageMetadata } from '@/lib/seo';
 
-const siteUrl = 'https://patuhdata.id';
-
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Pemantauan Kebocoran Data Indonesia',
   description:
     'Daftar insiden kebocoran data Indonesia — Have I Been Pwned, media, dan threat intelligence. Dikurasi PatuhData untuk sektor keuangan.',
-  alternates: { canonical: `${siteUrl}/kebocoran-data` },
-  openGraph: {
-    title: 'Pemantauan Kebocoran Data Indonesia | PatuhData',
-    description:
-      'Sumber terpusat: insiden terverifikasi HIBP + klaim & investigasi lokal — untuk bank, fintech, dan vendor.',
-    url: `${siteUrl}/kebocoran-data`,
-    type: 'website',
-  },
-};
+  path: '/kebocoran-data',
+  ogTitle: 'Pemantauan Kebocoran Data Indonesia | PatuhData',
+});
 
 export default async function KebocoranDataPage() {
   const hibpBreaches = await fetchIndonesiaHibpBreaches();

@@ -1,18 +1,16 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/app/components/Footer';
 import FounderCredibility from '@/app/components/FounderCredibility';
 import Navigation from '@/app/components/Navigation';
 import WhatsAppButton from '@/app/components/WhatsAppButton';
+import { createPageMetadata } from '@/lib/seo';
 
-const siteUrl = 'https://patuhdata.id';
-
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: 'Tentang PatuhData',
   description:
     'Konsultan tata kelola data untuk sektor keuangan Indonesia. Gap assessment UU PDP, vendor risk, dan kontrol operasional—PT PatuhData Solusi Nusantara.',
-  alternates: { canonical: `${siteUrl}/tentang` },
-};
+  path: '/tentang',
+});
 
 export default function TentangPage() {
   return (
