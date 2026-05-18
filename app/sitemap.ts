@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/blog',
     '/kebocoran-data',
     '/tentang',
+    '/faq',
     '/privacy-policy',
     '/terms-conditions',
     '/cookies',

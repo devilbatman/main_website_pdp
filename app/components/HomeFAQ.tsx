@@ -1,6 +1,7 @@
 'use client';
 
-import { homeFaqs } from '@/data/homeFaqs';
+import Link from 'next/link';
+import { faqs } from '@/data/faqs';
 import FadeIn from './motion/FadeIn';
 
 export default function HomeFAQ() {
@@ -15,8 +16,8 @@ export default function HomeFAQ() {
         </FadeIn>
 
         <div className="mt-10 space-y-4">
-          {homeFaqs.map((faq, i) => (
-            <FadeIn key={faq.q} delay={i * 0.04}>
+          {faqs.map((faq, i) => (
+            <FadeIn key={faq.id} delay={i * 0.04}>
               <details className="group card-premium p-5 open:shadow-md">
                 <summary className="cursor-pointer list-none text-sm font-semibold text-slate-900 marker:content-none [&::-webkit-details-marker]:hidden">
                   {faq.q}
@@ -26,6 +27,12 @@ export default function HomeFAQ() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn className="mt-8 text-center">
+          <Link href="/faq" className="text-sm font-semibold text-brand-700 hover:text-brand-600">
+            Lihat semua FAQ →
+          </Link>
+        </FadeIn>
       </div>
     </section>
   );

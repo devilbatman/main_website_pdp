@@ -1,104 +1,96 @@
 import Link from 'next/link';
-import { Mail } from 'lucide-react';
-import Logo from './Logo';
 
-const footerLinks = {
-  Layanan: [
-    { label: 'Tata Kelola Vendor', href: '/layanan/vendor-risk-review' },
-    { label: 'Kesiapan UU PDP', href: '/layanan/pdp-readiness-assessment' },
-    { label: 'Orkestrasi Risiko', href: '/layanan/risk-orchestration-readiness' },
-    { label: 'Semua Layanan', href: '/layanan' },
-  ],
-  Perusahaan: [
-    { label: 'Tentang', href: '/tentang' },
-    { label: 'Industri & layanan', href: '/layanan' },
-    { label: 'Cara Kerja', href: '/layanan' },
-    { label: 'Konsultasi', href: '#assessment' },
-  ],
-  Wawasan: [
-    { label: 'Semua artikel', href: '/blog' },
-    { label: 'Status Badan PDP 2026', href: '/blog/badan-pdp-2026' },
-    { label: 'Pemantauan kebocoran data', href: '/kebocoran-data' },
-    { label: 'DPO & keamanan siber', href: '/blog/peran-dpo-cybersecurity-2026' },
-  ],
-  Kontak: [
-    { label: 'support@patuhdata.id', href: 'mailto:support@patuhdata.id' },
-    { label: '+62 851 8306 4580', href: 'tel:+6285183064580' },
-    { label: 'Jakarta, Indonesia', href: '#assessment' },
-  ],
-};
+interface FooterProps {
+  variant?: 'full' | 'minimal';
+}
 
-export default function Footer() {
+export default function Footer({ variant = 'full' }: FooterProps) {
   const currentYear = new Date().getFullYear();
+
+  if (variant === 'minimal') {
+    return (
+      <footer className="border-t border-slate-200/80 bg-white py-12">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
+          <div className="text-center sm:text-left">
+            <p className="text-sm font-semibold text-ocean-950">patuhdata.id</p>
+            <p className="mt-1 text-xs text-slate-500">
+              Operational trust &amp; vendor governance · Indonesia
+            </p>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm sm:justify-end">
+            <Link href="/faq" className="text-slate-600 transition-colors hover:text-brand-700">
+              FAQ
+            </Link>
+            <a
+              href="https://www.linkedin.com/company/patuhdata-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 transition-colors hover:text-brand-700"
+            >
+              LinkedIn
+            </a>
+            <a
+              href="mailto:support@patuhdata.id"
+              className="text-slate-600 transition-colors hover:text-brand-700"
+            >
+              support@patuhdata.id
+            </a>
+          </div>
+          <p className="text-xs text-slate-400">
+            &copy; {currentYear} PT PatuhData Solusi Nusantara
+          </p>
+        </div>
+      </footer>
+    );
+  }
 
   return (
     <footer className="border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <Logo className="h-10" />
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
-              Tata kelola data dan risiko vendor untuk institusi keuangan Indonesia—berbasis UU PDP dan
-              praktik kepatuhan operasional.
+      <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
+          <div>
+            <p className="text-lg font-semibold text-ocean-950">PatuhData</p>
+            <p className="mt-2 max-w-sm text-sm text-slate-600">
+              Operational trust, vendor governance, and UU PDP readiness for regulated ecosystems.
             </p>
-            <p className="mt-3 max-w-sm text-xs leading-relaxed text-slate-500">
-              PatuhData bukan lembaga pengawas, bukan firma hukum, dan tidak mewakili otoritas regulator
-              mana pun. Layanan bersifat konsultasi dan pendampingan operasional.
-            </p>
-            <div className="mt-6 flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/patuhdata-id"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition-colors hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900"
-                aria-label="LinkedIn"
-              >
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-              </a>
-              <a
-                href="mailto:support@patuhdata.id"
-                className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-600 transition-colors hover:border-slate-300 hover:bg-slate-50 hover:text-slate-900"
-                aria-label="Email"
-              >
-                <Mail className="h-4 w-4" />
-              </a>
-            </div>
           </div>
-
-          {Object.entries(footerLinks).map(([title, links]) => (
-            <div key={title}>
-              <h4 className="text-sm font-semibold text-slate-900">{title}</h4>
-              <ul className="mt-4 space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-600 transition-colors hover:text-slate-900"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link href="/layanan" className="text-slate-600 hover:text-ocean-950">
+              Services
+            </Link>
+            <Link href="/blog" className="text-slate-600 hover:text-ocean-950">
+              Insights
+            </Link>
+            <Link href="/tentang" className="text-slate-600 hover:text-ocean-950">
+              About
+            </Link>
+            <Link href="/faq" className="text-slate-600 hover:text-ocean-950">
+              FAQ
+            </Link>
+            <a
+              href="https://www.linkedin.com/company/patuhdata-id"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-slate-600 hover:text-ocean-950"
+            >
+              LinkedIn
+            </a>
+            <a href="mailto:support@patuhdata.id" className="text-slate-600 hover:text-ocean-950">
+              Contact
+            </a>
+          </div>
         </div>
-
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-8 sm:flex-row">
-          <p className="text-sm text-slate-500">
-            &copy; {currentYear} PT PatuhData Solusi Nusantara. Hak cipta dilindungi.
-          </p>
-          <div className="flex gap-6 text-sm">
-            <Link href="/privacy-policy" className="text-slate-600 hover:text-slate-900">
-              Kebijakan Privasi
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 text-xs text-slate-500 sm:flex-row">
+          <p>&copy; {currentYear} PT PatuhData Solusi Nusantara</p>
+          <div className="flex gap-5">
+            <Link href="/privacy-policy" className="hover:text-slate-700">
+              Privacy
             </Link>
-            <Link href="/cookies" className="text-slate-600 hover:text-slate-900">
-              Kebijakan Cookie
+            <Link href="/cookies" className="hover:text-slate-700">
+              Cookies
             </Link>
-            <Link href="/terms-conditions" className="text-slate-600 hover:text-slate-900">
-              Syarat &amp; Ketentuan
+            <Link href="/terms-conditions" className="hover:text-slate-700">
+              Terms
             </Link>
           </div>
         </div>

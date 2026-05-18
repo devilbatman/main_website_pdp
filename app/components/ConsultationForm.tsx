@@ -112,7 +112,7 @@ export default function ConsultationForm() {
   };
 
   return (
-    <section id="assessment" ref={formRef} className="section-padding scroll-mt-24 bg-slate-50/80">
+    <section id="assessment" ref={formRef} className="section-padding scroll-mt-24 bg-white">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 items-start">
