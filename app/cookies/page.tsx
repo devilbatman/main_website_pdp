@@ -4,7 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata = createPageMetadata({
   title: 'Kebijakan Cookie',
   description:
-    'Bagaimana PatuhData menggunakan cookie dan teknologi serupa di patuhdata.id, serta cara mengelola preferensi Anda.',
+    'Bagaimana Patuhdata menggunakan cookie dan teknologi serupa di patuhdata.id, serta cara mengelola preferensi Anda.',
   path: '/cookies',
 });
 
@@ -15,7 +15,7 @@ export default function CookiesPolicyPage() {
       description="Informasi transparan tentang cookie yang kami gunakan dan cara mengontrolnya."
     >
       <p>
-        Kebijakan Cookie ini menjelaskan bagaimana PatuhData (&quot;kami&quot;) menggunakan cookie dan
+        Kebijakan Cookie ini menjelaskan bagaimana Patuhdata (&quot;kami&quot;) menggunakan cookie dan
         teknologi serupa ketika Anda mengunjungi patuhdata.id. Baca bersama{' '}
         <a href="/privacy-policy">Kebijakan Privasi</a> kami.
       </p>

@@ -50,7 +50,7 @@ export default function AdminPage() {
         <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
           <div className="bg-blue-600 p-8 text-white">
             <h1 className="text-3xl font-bold">Admin Article CMS</h1>
-            <p className="opacity-80">Gunakan form ini untuk membuat entri artikel baru bagi website Patuh Data.</p>
+            <p className="opacity-80">Gunakan form ini untuk membuat entri artikel baru bagi website Patuhdata.</p>
           </div>
           
           <div className="p-8">

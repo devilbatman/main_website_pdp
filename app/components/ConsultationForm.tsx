@@ -122,7 +122,7 @@ export default function ConsultationForm() {
                 Konsultasi
               </p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-                Hubungi PatuhData
+                Hubungi Patuhdata
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
                 Untuk <strong className="text-slate-900">Gap Assessment UU PDP</strong>, sebutkan di

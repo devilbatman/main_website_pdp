@@ -27,7 +27,7 @@ export const dataBreachTrackerMeta = {
   lastUpdated: '2026-05-17',
   lastUpdatedLabel: '17 Mei 2026',
   disclaimer:
-    'PatuhData mengkurasi insiden Indonesia dari media, pemerintah, dan threat intelligence—dipadukan dengan insiden terverifikasi Have I Been Pwned untuk layanan relevan. Status dapat berubah. Bukan daftar resmi regulator; bukan opini hukum.',
+    'Patuhdata mengkurasi insiden Indonesia dari media, pemerintah, dan threat intelligence—dipadukan dengan insiden terverifikasi Have I Been Pwned untuk layanan relevan. Status dapat berubah. Bukan daftar resmi regulator; bukan opini hukum.',
 };
 
 export const breachStatusLabels: Record<BreachStatus, string> = {

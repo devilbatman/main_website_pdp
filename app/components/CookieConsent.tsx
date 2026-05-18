@@ -36,7 +36,7 @@ export default function CookieConsent() {
       <h3 className="text-base font-semibold text-slate-900">Kami menghargai privasi Anda</h3>
       <p className="mt-2 text-sm leading-relaxed text-slate-600">
         Kami menggunakan cookie untuk meningkatkan pengalaman dan memahami penggunaan situs. Cookie analitik membantu kami
-        menyempurnakan PatuhData — hanya jika Anda setuju. Baca{' '}
+        menyempurnakan Patuhdata — hanya jika Anda setuju. Baca{' '}
         <Link href="/cookies" className="font-medium text-brand-600 hover:underline">
           Kebijakan Cookie
         </Link>{' '}

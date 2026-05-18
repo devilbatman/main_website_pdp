@@ -7,11 +7,11 @@ import Logo from './Logo';
 import TrackedLink from './TrackedLink';
 
 const navLinks = [
-  { href: '#services', label: 'Services' },
+  { href: '#flagship', label: 'Assessment' },
   { href: '#framework', label: 'Framework' },
+  { href: '/layanan', label: 'Layanan' },
   { href: '/faq', label: 'FAQ' },
   { href: '/blog', label: 'Insights' },
-  { href: '/tentang', label: 'About' },
 ];
 
 interface NavigationProps {
@@ -62,14 +62,14 @@ export default function Navigation({ darkHero = false }: NavigationProps) {
             <TrackedLink
               href="#assessment"
               eventName="cta_click"
-              eventParams={{ location: 'navbar', label: 'book_assessment' }}
+              eventParams={{ location: 'navbar', label: 'discuss_assessment_scope' }}
               className={
                 onDark
                   ? 'btn-primary !py-2.5 !text-sm'
                   : 'btn-primary-dark !py-2.5 !text-sm'
               }
             >
-              Book Assessment
+              Discuss Scope
             </TrackedLink>
           </div>
 
@@ -110,11 +110,11 @@ export default function Navigation({ darkHero = false }: NavigationProps) {
             <TrackedLink
               href="#assessment"
               eventName="cta_click"
-              eventParams={{ location: 'navbar_mobile', label: 'book_assessment' }}
+              eventParams={{ location: 'navbar_mobile', label: 'discuss_assessment_scope' }}
               onClick={() => setIsOpen(false)}
               className={onDark ? 'btn-primary mt-2 w-full' : 'btn-primary-dark mt-2 w-full'}
             >
-              Book Assessment
+              Discuss Scope
             </TrackedLink>
           </div>
         </div>

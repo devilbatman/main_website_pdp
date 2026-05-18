@@ -13,12 +13,12 @@ const topics = [
   },
   {
     tag: 'Operational Trust',
-    title: 'From policy to proof: governance your auditors can follow',
+    title: 'From policy to proof: governance your stakeholders can follow',
     slug: 'audit-kepatuhan-pdp',
   },
   {
-    tag: 'UU PDP Readiness',
-    title: 'Badan PDP 2026: what to prepare before the agency is fully operational',
+    tag: 'UU PDP Operationalization',
+    title: 'Badan PDP 2026: preparing before the agency is fully operational',
     slug: 'badan-pdp-2026',
   },
   {
@@ -26,10 +26,15 @@ const topics = [
     title: 'Data breaches in Indonesia: lessons for banks, fintech, and vendors',
     slug: 'kebocoran-data-indonesia-2026',
   },
+  {
+    tag: 'AI Governance Readiness',
+    title: 'DPO and cybersecurity in 2026: operational roles, not paper titles',
+    slug: 'peran-dpo-cybersecurity-2026',
+  },
 ];
 
 export default function ThoughtLeadership() {
-  const articles = getLatestArticles(4);
+  const articles = getLatestArticles(5);
   const insights = topics.map((topic, i) => {
     const article = articles.find((a) => a.slug === topic.slug) ?? articles[i];
     return { ...topic, href: `/blog/${article?.slug ?? topic.slug}`, date: article?.date };
@@ -44,10 +49,11 @@ export default function ThoughtLeadership() {
               Thought leadership
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-              Insights for governance leaders
+              Perspectives on Operational Trust
             </h2>
             <p className="mt-3 text-slate-600">
-              Practical perspectives on vendor trust, UU PDP, and operational readiness.
+              Strategic views on vendor governance, UU PDP operationalization, and enterprise
+              readiness.
             </p>
           </div>
           <Link
@@ -58,9 +64,9 @@ export default function ThoughtLeadership() {
           </Link>
         </FadeIn>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {insights.map((item, i) => (
-            <FadeIn key={item.tag} delay={i * 0.06}>
+            <FadeIn key={item.tag} delay={i * 0.05}>
               <Link
                 href={item.href}
                 className="card-premium group flex h-full flex-col p-6"
@@ -69,9 +75,9 @@ export default function ThoughtLeadership() {
                   <span className="rounded-full bg-brand-50 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-brand-800">
                     {item.tag}
                   </span>
-                  <ArrowUpRight className="h-4 w-4 text-slate-300 transition-all group-hover:text-brand-600" />
+                  <ArrowUpRight className="h-4 w-4 shrink-0 text-slate-300 transition-all group-hover:text-brand-600" />
                 </div>
-                <h3 className="mt-4 flex-1 text-base font-semibold leading-snug text-ocean-950 group-hover:text-brand-800">
+                <h3 className="mt-4 flex-1 text-sm font-semibold leading-snug text-ocean-950 group-hover:text-brand-800">
                   {item.title}
                 </h3>
                 {item.date && (

@@ -38,7 +38,7 @@ export default function DataBreachTracker() {
     <>
       <div className="mb-8 rounded-2xl border border-slate-200 bg-slate-50/80 p-5 text-sm leading-relaxed text-slate-600 md:p-6">
         <p>
-          <strong className="text-slate-800">Kurasi lokal PatuhData</strong> — insiden dan klaim
+          <strong className="text-slate-800">Kurasi lokal Patuhdata</strong> — insiden dan klaim
           kebocoran di Indonesia dari media &amp; instansi (belum tentu ada di HIBP). Terakhir diperbarui:{' '}
           <strong className="text-slate-800">{dataBreachTrackerMeta.lastUpdatedLabel}</strong>.
         </p>

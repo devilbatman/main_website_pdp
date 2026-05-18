@@ -19,7 +19,7 @@ export default function PlatformPreview() {
             Not just a compliance report. A working risk remediation system.
           </h2>
           <p className="text-xl leading-relaxed text-slate-700">
-            PatuhData is building a consulting-backed workflow that helps teams register risks, assign owners, track remediation, and keep evidence ready for management review.
+            Patuhdata is building a consulting-backed workflow that helps teams register risks, assign owners, track remediation, and keep evidence ready for management review.
           </p>
         </div>
 

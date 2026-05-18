@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { Briefcase, FileStack } from 'lucide-react';
 import { pdpTemplates, pdpUseCases } from '@/data/pdpGapFramework';
 import FadeIn from './motion/FadeIn';
@@ -37,9 +38,12 @@ export default function PdpTemplatesUseCases() {
             ))}
           </div>
 
-          <p className="mx-auto mt-8 max-w-2xl text-center text-xs text-slate-500">
-            Template disertakan dalam engagement Gap Assessment penuh. Konten disesuaikan profil institusi
-            keuangan Anda—bukan dokumen generik tanpa konteks.
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-slate-600">
+            Mulai dengan template gratis (ROPA + checklist PDF), atau lanjut ke Gap Assessment penuh
+            dengan 52 kontrol dan paket remediasi.{' '}
+            <Link href="/resources" className="font-semibold text-brand-600 hover:underline">
+              Unduh template gratis →
+            </Link>
           </p>
         </div>
       </section>

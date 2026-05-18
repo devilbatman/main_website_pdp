@@ -87,7 +87,7 @@ export default async function BlogPost({ params }: Props) {
                   {readTime} menit baca · Mendalam
                 </span>
                 <span className="text-slate-300">·</span>
-                <span>Editorial PatuhData</span>
+                <span>Editorial Patuhdata</span>
               </div>
             </div>
           </header>

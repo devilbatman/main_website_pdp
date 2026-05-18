@@ -5,28 +5,28 @@ import FadeIn from './motion/FadeIn';
 
 const challenges = [
   {
-    icon: Users,
-    title: 'Vendor Risk',
+    icon: Eye,
+    title: 'Vendor Risk Visibility',
     description:
-      'Third parties expand your data footprint. Without structured readiness, procurement and audits stall.',
-  },
-  {
-    icon: FileCheck,
-    title: 'UU PDP Readiness',
-    description:
-      'Policy alone is not enough. Regulators and partners expect operational evidence—not paper compliance.',
+      'See how third parties handle data and controls—before procurement, audits, or enterprise reviews stall.',
   },
   {
     icon: ShieldCheck,
     title: 'Procurement Confidence',
     description:
-      'Enterprise buyers demand proof. Vendors that cannot demonstrate governance lose deals and renewals.',
+      'Give buyers structured evidence of governance maturity—not promises buried in slide decks.',
   },
   {
-    icon: Eye,
-    title: 'Governance Visibility',
+    icon: FileCheck,
+    title: 'UU PDP Readiness',
     description:
-      'Leaders need a single view of gaps, owners, and remediation—not scattered spreadsheets and slide decks.',
+      'Move from policy to operational proof—controls your teams run and stakeholders can verify.',
+  },
+  {
+    icon: Users,
+    title: 'Governance Accountability',
+    description:
+      'Clear owners, priorities, and remediation paths—one view of trust across vendors and operations.',
   },
 ];
 
@@ -42,7 +42,7 @@ export default function TrustChallenges() {
             Why Operational Trust Matters
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Regulated ecosystems run on confidence—in vendors, in data handling, and in how
+            Regulated ecosystems depend on confidence—in vendors, in data handling, and in how
             organizations prove governance every day.
           </p>
         </FadeIn>

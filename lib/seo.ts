@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const SITE_URL = 'https://patuhdata.id';
-export const SITE_NAME = 'PatuhData';
+export const SITE_NAME = 'Patuhdata';
 /** Default social preview — generated at /opengraph-image (1200×630) */
 export const DEFAULT_OG_IMAGE = '/opengraph-image';
 
@@ -10,7 +10,7 @@ export const defaultOgImages = [
     url: DEFAULT_OG_IMAGE,
     width: 1200,
     height: 630,
-    alt: 'PatuhData — Tata kelola data & UU PDP untuk sektor keuangan Indonesia',
+    alt: 'Patuhdata — Tata kelola data & UU PDP untuk sektor keuangan Indonesia',
   },
 ];
 
@@ -19,7 +19,7 @@ type PageMetadataOptions = {
   description: string;
   /** Path without domain, e.g. `/layanan` or `` for homepage */
   path?: string;
-  /** Use full title without `| PatuhData` template */
+  /** Use full title without `| Patuhdata` template */
   absoluteTitle?: boolean;
   ogTitle?: string;
   ogType?: 'website' | 'article';
@@ -91,7 +91,7 @@ export function getOrganizationJsonLd() {
     '@type': 'ProfessionalService',
     '@id': `${SITE_URL}/#organization`,
     name: SITE_NAME,
-    legalName: 'PT PATUHDATA SOLUSI NUSANTARA',
+    legalName: 'PT Patuhdata Solusi Nusantara',
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     image: `${SITE_URL}${DEFAULT_OG_IMAGE}`,

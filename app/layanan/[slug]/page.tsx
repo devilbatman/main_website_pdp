@@ -31,7 +31,7 @@ const pdpFaqs = [
   {
     question: 'Apa itu 52 kontrol?',
     answer:
-      'Matriks operasional PatuhData yang memetakan tata kelola, consent, hak subjek, keamanan, insiden, vendor, retensi, transfer, dan dokumentasi—diselaraskan prinsip UU PDP. Bukan checklist resmi regulator.',
+      'Matriks operasional Patuhdata yang memetakan tata kelola, consent, hak subjek, keamanan, insiden, vendor, retensi, transfer, dan dokumentasi—diselaraskan prinsip UU PDP. Bukan checklist resmi regulator.',
   },
   {
     question: 'Template apa yang disertakan?',
@@ -71,7 +71,11 @@ export default async function ServicePage({ params }: Props) {
   const imagery = getServiceImagery(slug);
   const cta = getServiceCta(slug);
   const isPdpGap = slug === 'pdp-readiness-assessment';
+  const isFlagshipVendor = slug === 'vendor-risk-review';
+  const pageTitle =
+    isFlagshipVendor ? 'Vendor Trust Readiness Assessment' : service.title;
   const pageFaqs = isPdpGap ? pdpFaqs : defaultFaqs;
+  const otherServices = services.filter((s) => s.slug !== slug).slice(0, 4);
 
   return (
     <div className="min-h-screen bg-white">
@@ -98,11 +102,14 @@ export default async function ServicePage({ params }: Props) {
             <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
               <div>
                 <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-brand-600">
-                  Layanan PatuhData
+                  Layanan Patuhdata
                 </p>
                 <h1 className="text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl lg:text-5xl">
-                  {service.title}
+                  {pageTitle}
                 </h1>
+                {isFlagshipVendor && (
+                  <p className="mt-2 text-sm font-medium text-brand-700">{service.title}</p>
+                )}
                 <p className="mt-4 text-lg text-slate-600">{service.heroDescription}</p>
                 <TrackedLink
                   href="/#assessment"
@@ -200,6 +207,39 @@ export default async function ServicePage({ params }: Props) {
             <PdpTemplatesUseCases />
           </>
         )}
+
+        <section className="border-t border-slate-200/80 bg-white py-14 md:py-16">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
+                  Program lain
+                </p>
+                <h2 className="mt-2 text-2xl font-semibold text-ocean-950">
+                  Lihat semua layanan Patuhdata
+                </h2>
+              </div>
+              <Link
+                href="/layanan"
+                className="text-sm font-semibold text-brand-700 hover:text-brand-600"
+              >
+                Semua program →
+              </Link>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {otherServices.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/layanan/${s.slug}`}
+                  className="card-premium block p-5 transition-colors hover:border-brand-200"
+                >
+                  <p className="text-sm font-semibold text-ocean-950">{s.title}</p>
+                  <p className="mt-2 line-clamp-2 text-xs text-slate-600">{s.description}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="border-t border-slate-200 bg-slate-50/80 py-14">
           <div className="mx-auto max-w-2xl px-4 text-center sm:px-6">

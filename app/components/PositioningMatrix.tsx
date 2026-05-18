@@ -2,7 +2,7 @@
 
 import FadeIn from './motion/FadeIn';
 
-/** Category labels only — aligned to PatuhData positioning framework (no vendor names). */
+/** Category labels only — aligned to Patuhdata positioning framework (no vendor names). */
 const quadrants = [
   {
     label: 'Firma hukum',
@@ -29,7 +29,7 @@ export default function PositioningMatrix() {
               Spesifik sektor keuangan—di persimpangan regulasi dan operasi
             </h2>
             <p className="mt-4 text-base leading-relaxed text-slate-600">
-              PatuhData menempati posisi yang menggabungkan{' '}
+              Patuhdata menempati posisi yang menggabungkan{' '}
               <strong className="font-semibold text-slate-800">kedalaman regulasi UU PDP</strong>{' '}
               dan{' '}
               <strong className="font-semibold text-slate-800">kerangka kepatuhan sektor finansial</strong>{' '}
@@ -66,7 +66,7 @@ export default function PositioningMatrix() {
           <FadeIn delay={0.08} direction="none">
             <div
               className="relative aspect-[4/3] max-w-md rounded-2xl border border-slate-200 bg-slate-50/80 p-4 shadow-sm md:mx-auto lg:ml-auto"
-              aria-label="Kerangka positioning PatuhData: spesifik sektor keuangan, antara kedalaman legal dan teknis"
+              aria-label="Kerangka positioning Patuhdata: spesifik sektor keuangan, antara kedalaman legal dan teknis"
             >
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center p-6">
                 <div className="h-full w-px bg-slate-300" />
@@ -100,7 +100,7 @@ export default function PositioningMatrix() {
                   ★
                 </span>
                 <span className="mt-1 rounded-full bg-brand-600 px-2.5 py-0.5 text-[10px] font-bold text-white">
-                  PatuhData
+                  Patuhdata
                 </span>
                 <p className="mt-1 max-w-[8rem] text-center text-[9px] leading-snug text-slate-600">
                   Posisi target

@@ -6,42 +6,39 @@ const steps = [
   {
     step: '01',
     title: 'Assess',
-    description:
-      'Map vendors, data flows, and control surfaces. Establish a baseline across governance and UU PDP expectations.',
+    description: 'Review governance and operational maturity across vendors, data, and controls.',
   },
   {
     step: '02',
     title: 'Evaluate',
-    description:
-      'Score readiness with structured criteria—gaps, risk level, and evidence quality visible to every stakeholder.',
+    description: 'Identify readiness gaps and operational risks with structured scoring.',
   },
   {
     step: '03',
     title: 'Remediate',
-    description:
-      'Prioritize fixes with clear owners, timelines, and deliverables your teams can execute—not advisory reports alone.',
+    description: 'Prioritize governance and operational improvements with clear owners.',
   },
   {
     step: '04',
     title: 'Monitor',
-    description:
-      'Maintain operational trust over time with review rhythms, updated evidence, and procurement-ready documentation.',
+    description: 'Maintain trust visibility and governance continuity over time.',
   },
 ];
 
 export default function TrustFramework() {
   return (
-    <section id="framework" className="section-padding scroll-mt-24 bg-white">
+    <section id="framework" className="section-padding scroll-mt-24 gradient-mesh">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Methodology
+            Platform methodology
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-            Our Operational Trust Framework
+            The Patuhdata Framework
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            A disciplined four-stage approach—from first assessment to sustained governance visibility.
+            A systematic, repeatable approach—from first assessment to sustained governance
+            visibility.
           </p>
         </FadeIn>
 

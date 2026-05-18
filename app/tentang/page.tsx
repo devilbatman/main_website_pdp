@@ -6,9 +6,9 @@ import WhatsAppButton from '@/app/components/WhatsAppButton';
 import { createPageMetadata } from '@/lib/seo';
 
 export const metadata = createPageMetadata({
-  title: 'Tentang PatuhData',
+  title: 'Tentang Patuhdata',
   description:
-    'Konsultan tata kelola data untuk sektor keuangan Indonesia. Gap assessment UU PDP, vendor risk, dan kontrol operasional—PT PatuhData Solusi Nusantara.',
+    'Konsultan tata kelola data untuk sektor keuangan Indonesia. Gap assessment UU PDP, vendor risk, dan kontrol operasional—PT Patuhdata Solusi Nusantara.',
   path: '/tentang',
 });
 
@@ -25,7 +25,7 @@ export default function TentangPage() {
           <header className="mb-10 border-b border-slate-200 pb-8">
             <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">Tentang</p>
             <h1 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              PatuhData
+              Patuhdata
             </h1>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
               Kami membantu institusi keuangan Indonesia membangun kepatuhan UU PDP yang dapat dibuktikan
@@ -37,7 +37,7 @@ export default function TentangPage() {
             <section>
               <h2 className="text-xl font-semibold text-slate-900">Siapa kami</h2>
               <p>
-                <strong className="text-slate-800">PT PatuhData Solusi Nusantara</strong> (PatuhData)
+                <strong className="text-slate-800">PT Patuhdata Solusi Nusantara</strong> (Patuhdata)
                 adalah penyedia layanan konsultasi tata kelola data dan kesiapan kepatuhan operasional,
                 dengan fokus pada bank, BPR, fintech, dan vendor yang melayani sektor finansial.
               </p>
@@ -56,7 +56,7 @@ export default function TentangPage() {
             <section>
               <h2 className="text-xl font-semibold text-slate-900">Apa yang bukan kami</h2>
               <p>
-                PatuhData bukan firma hukum, bukan lembaga pengawas, dan tidak mewakili otoritas regulator
+                Patuhdata bukan firma hukum, bukan lembaga pengawas, dan tidak mewakili otoritas regulator
                 mana pun. Kami tidak memberikan opini hukum formal atau jaminan kelulusan pemeriksaan.
               </p>
             </section>

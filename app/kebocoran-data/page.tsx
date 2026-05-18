@@ -12,9 +12,9 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata = createPageMetadata({
   title: 'Pemantauan Kebocoran Data Indonesia',
   description:
-    'Daftar insiden kebocoran data Indonesia — Have I Been Pwned, media, dan threat intelligence. Dikurasi PatuhData untuk sektor keuangan.',
+    'Daftar insiden kebocoran data Indonesia — Have I Been Pwned, media, dan threat intelligence. Dikurasi Patuhdata untuk sektor keuangan.',
   path: '/kebocoran-data',
-  ogTitle: 'Pemantauan Kebocoran Data Indonesia | PatuhData',
+  ogTitle: 'Pemantauan Kebocoran Data Indonesia | Patuhdata',
 });
 
 export default async function KebocoranDataPage() {
@@ -95,7 +95,7 @@ export default async function KebocoranDataPage() {
 
           <section>
             <h2 className="text-xl font-semibold text-slate-900">
-              Klaim &amp; insiden lokal (kurasi PatuhData)
+              Klaim &amp; insiden lokal (kurasi Patuhdata)
             </h2>
             <p className="mt-2 text-sm text-slate-600">
               Berita Indonesia 2025–2026 yang mungkin belum masuk HIBP—dari media, pemerintah, dan

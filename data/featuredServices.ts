@@ -9,10 +9,10 @@ export interface FeaturedService {
 export const featuredServices: FeaturedService[] = [
   {
     slug: 'vendor-risk-review',
-    title: 'Kesiapan Tata Kelola Vendor',
-    subtitle: 'Vendor Governance Readiness',
+    title: 'Vendor Readiness Sprint',
+    subtitle: 'Vendor Risk & Due Diligence',
     tagline:
-      'Titik awal tercepat: siapkan due diligence, kuesioner keamanan, dan bukti tata kelola vendor sebelum review klien enterprise.',
+      'Sprint 2 minggu: siapkan due diligence, kuesioner keamanan, dan bukti tata kelola vendor sebelum review klien enterprise.',
     highlights: [
       'Persiapan due diligence vendor',
       'Pendampingan kuesioner keamanan',

@@ -22,11 +22,11 @@ export default function Logo({
     <Link
       href="/"
       className={`relative inline-flex shrink-0 items-center ${className}`}
-      aria-label="PatuhData home"
+      aria-label="Patuhdata home"
     >
       <Image
         src="/logo.png"
-        alt="PatuhData — Kedalaman regulasi. Kontrol terlindungi."
+        alt="Patuhdata — Kedalaman regulasi. Kontrol terlindungi."
         width={LOGO_WIDTH}
         height={LOGO_HEIGHT}
         className={`h-full w-auto object-contain object-left ${inverted ? 'brightness-0 invert' : ''}`}

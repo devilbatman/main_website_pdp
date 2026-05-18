@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/privacy-policy',
     '/terms-conditions',
     '/cookies',
+    '/resources',
   ];
 
   const blogRoutes = articles.map((post) => `/blog/${post.slug}`);

@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'PatuhData — Tata kelola data & UU PDP untuk sektor keuangan Indonesia';
+export const alt = 'Patuhdata — Tata kelola data & UU PDP untuk sektor keuangan Indonesia';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -30,7 +30,7 @@ export default function OpenGraphImage() {
             }}
           />
           <span style={{ fontSize: 22, fontWeight: 600, letterSpacing: '0.08em', opacity: 0.9 }}>
-            PATUHDATA
+            Patuhdata
           </span>
         </div>
 

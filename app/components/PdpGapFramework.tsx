@@ -28,7 +28,7 @@ export default function PdpGapFramework({ compact = false, showLink = true }: Pd
             {totalPdpControls} kontrol operasional UU PDP
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Matriks PatuhData untuk gap assessment institusi keuangan—dari tata kelola hingga vendor,
+            Matriks Patuhdata untuk gap assessment institusi keuangan—dari tata kelola hingga vendor,
             keamanan, dan bukti audit. Bukan checklist resmi regulator; diselaraskan prinsip UU PDP dan
             praktik governance di lingkungan ISO 27001.
           </p>

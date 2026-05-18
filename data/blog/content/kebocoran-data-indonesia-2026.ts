@@ -1,7 +1,7 @@
 export const content = `
 <p>Awal 2026 menjadi periode di mana klaim kebocoran data di Indonesia mendominasi headline—sementara <strong>Badan Pelindungan Data Pribadi belum beroperasi penuh</strong>. Bagi bank, BPR, fintech, dan vendor, pola ini mengubah perhitungan risiko: reputasi, audit mitra, dan kesiapan insiden tidak lagi menunggu lembaga pengawas resmi.</p>
 
-<p><strong>Daftar insiden terkini (multi-sumber, dikurasi PatuhData):</strong> <a href="/kebocoran-data">Pemantauan Kebocoran Data Indonesia</a> — status investigasi, tautan media, dan implikasi sektor keuangan diperbarui secara berkala.</p>
+<p><strong>Daftar insiden terkini (multi-sumber, dikurasi Patuhdata):</strong> <a href="/kebocoran-data">Pemantauan Kebocoran Data Indonesia</a> — status investigasi, tautan media, dan implikasi sektor keuangan diperbarui secara berkala.</p>
 
 <p>Pola penting: tidak semua klaim terbukti, tetapi <strong>setiap klaim memaksa organisasi menjawab</strong>—apakah data Anda terlibat, bagaimana kontainemen, dan bukti apa yang bisa ditunjukkan dalam 24–72 jam pertama.</p>
 
@@ -60,5 +60,5 @@ export const content = `
 
 <p>Jika Anda belum punya register insiden, kriteria pemberitahuan, atau bukti kontrol vendor, mulai dengan <strong>preliminary gap assessment</strong> sebelum Badan PDP dan penegakan penuh menjadi kenyataan operasional.</p>
 
-<p><em>Sumber berita eksternal dikutip untuk konteks edukasi. PatuhData bukan firma hukum dan tidak mewakili regulator mana pun.</em></p>
+<p><em>Sumber berita eksternal dikutip untuk konteks edukasi. Patuhdata bukan firma hukum dan tidak mewakili regulator mana pun.</em></p>
 `;

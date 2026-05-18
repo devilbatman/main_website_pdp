@@ -27,7 +27,7 @@ export const content = `
 
 <p>Tidak setiap scale-up bisa membiayai peran C-suite terpisah. Alternatif meliputi DPO didukung virtual CISO, pimpinan gabungan privasi dan keamanan dengan konselor eksternal yang jelas, atau DPO yang duduk di komite risiko dengan perwakilan security tetap. Yang penting independensi nasihat DPO, garis pelaporan terdokumentasi, dan waktu terlindungi untuk menolak pemrosesan berisiko tinggi.</p>
 
-<p>Perusahaan Indonesia berkembang cepat kerap menunjuk DPO berdasarkan gelar sementara security tetap reaktif—tiket ditutup, akar masalah tidak ditangani. Review triwulanan bersama antara privasi dan security—mencakup perubahan pemrosesan, ancaman baru, temuan audit, dan pelatihan—membuat ritme tanpa birokrasi berlebihan. Tata kelola operasional ala PatuhData mengikat review tersebut ke onboarding vendor dan pembaruan register sehingga mencerminkan kenyataan, bukan slide deck.</p>
+<p>Perusahaan Indonesia berkembang cepat kerap menunjuk DPO berdasarkan gelar sementara security tetap reaktif—tiket ditutup, akar masalah tidak ditangani. Review triwulanan bersama antara privasi dan security—mencakup perubahan pemrosesan, ancaman baru, temuan audit, dan pelatihan—membuat ritme tanpa birokrasi berlebihan. Tata kelola operasional ala Patuhdata mengikat review tersebut ke onboarding vendor dan pembaruan register sehingga mencerminkan kenyataan, bukan slide deck.</p>
 
 <h2>DPIA dan security assessment: satu percakapan, dua lensa</h2>
 

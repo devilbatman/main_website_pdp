@@ -71,5 +71,5 @@ export const content = `
 
 <p>Pembentukan Badan PDP adalah titik balik institusional: dari masa “UU ada, pengawas belum lengkap” menuju penegakan yang dapat diprediksi. Institusi keuangan yang sudah punya kontrol operasional dan bukti audit akan masuk fase baru dengan keunggulan—bukan yang terburu-buru membangun tata kelola dari nol saat penyidikan pertama datang.</p>
 
-<p><em>Artikel ini pembaruan editorial PatuhData, bukan rilis resmi regulator. Untuk keputusan hukum, konsultasikan penasihat hukum Anda.</em></p>
+<p><em>Artikel ini pembaruan editorial Patuhdata, bukan rilis resmi regulator. Untuk keputusan hukum, konsultasikan penasihat hukum Anda.</em></p>
 `;

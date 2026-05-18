@@ -20,13 +20,13 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
-    template: "%s | PatuhData",
+    default: "Patuhdata — Tata Kelola Data Sektor Keuangan Indonesia",
+    template: "%s | Patuhdata",
   },
   description:
     "Tata kelola data untuk bank & fintech. Kedalaman UU PDP, kontrol operasional, dan bukti audit untuk institusi keuangan.",
   keywords: [
-    "PatuhData",
+    "Patuhdata",
     "tata kelola data Indonesia",
     "UU PDP regulator",
     "audit log kepatuhan",
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     "kepatuhan operasional",
     "Indonesia",
   ],
-  authors: [{ name: "PatuhData" }],
-  creator: "PatuhData",
-  publisher: "PT PATUHDATA SOLUSI NUSANTARA",
+  authors: [{ name: "Patuhdata" }],
+  creator: "Patuhdata",
+  publisher: "PT Patuhdata Solusi Nusantara",
   verification: {
     google: "BkUwKbP9OX2t2WvsL_excE_cTSQkoTuEQKALtDtv7hQ",
   },
@@ -57,18 +57,18 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
+    title: "Patuhdata — Tata Kelola Data Sektor Keuangan Indonesia",
     description:
       "UU PDP untuk bank & fintech. Gap assessment, tata kelola vendor, bukti audit operasional.",
     url: SITE_URL,
-    siteName: "PatuhData",
+    siteName: "Patuhdata",
     locale: "id_ID",
     type: "website",
     images: defaultOgImages,
   },
   twitter: {
     card: "summary_large_image",
-    title: "PatuhData — Tata Kelola Data Sektor Keuangan Indonesia",
+    title: "Patuhdata — Tata Kelola Data Sektor Keuangan Indonesia",
     description:
       "UU PDP untuk bank & fintech. Gap assessment, vendor governance, bukti audit.",
     images: [DEFAULT_OG_IMAGE],

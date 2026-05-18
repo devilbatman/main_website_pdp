@@ -16,7 +16,7 @@ export default function About() {
               Infrastruktur kepercayaan operasional untuk ekonomi digital Indonesia
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              PatuhData bermitra dengan perusahaan SaaS berkembang, vendor fintech, platform HR, dan
+              Patuhdata bermitra dengan perusahaan SaaS berkembang, vendor fintech, platform HR, dan
               penyedia layanan digital untuk mengoperasionalkan tata kelola—bukan sekadar
               mendokumentasikannya. Kami menggabungkan pengalaman praktisi dengan alur kerja terstruktur
               agar tim Anda dapat berkembang dengan percaya diri.

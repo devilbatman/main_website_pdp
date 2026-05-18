@@ -4,7 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata = createPageMetadata({
   title: 'Kebijakan Privasi',
   description:
-    'Bagaimana PatuhData mengumpulkan, menggunakan, dan melindungi data pribadi sesuai UU PDP Indonesia.',
+    'Bagaimana Patuhdata mengumpulkan, menggunakan, dan melindungi data pribadi sesuai UU PDP Indonesia.',
   path: '/privacy-policy',
 });
 
@@ -12,11 +12,11 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageLayout
       title="Kebijakan Privasi"
-      description="Cara PT PatuhData Solusi Nusantara menangani data pribadi ketika Anda menggunakan situs web dan layanan kami."
+      description="Cara PT Patuhdata Solusi Nusantara menangani data pribadi ketika Anda menggunakan situs web dan layanan kami."
     >
       <p>
-        PatuhData (&quot;kami&quot;) dioperasikan oleh{' '}
-        <strong>PT PatuhData Solusi Nusantara</strong>. Kami menyediakan layanan tata kelola operasional,
+        Patuhdata (&quot;kami&quot;) dioperasikan oleh{' '}
+        <strong>PT Patuhdata Solusi Nusantara</strong>. Kami menyediakan layanan tata kelola operasional,
         risiko vendor, dan kesiapan UU PDP untuk bisnis berkembang di Indonesia. Kebijakan Privasi ini
         menjelaskan data pribadi apa yang kami kumpulkan, mengapa kami mengumpulkannya, bagaimana kami
         menggunakannya, dan hak Anda berdasarkan Undang-Undang Nomor 27 Tahun 2022 tentang Pelindungan
@@ -128,7 +128,7 @@ export default function PrivacyPolicyPage() {
 
       <h2>12. Hubungi kami</h2>
       <div className="rounded-xl border border-slate-200 bg-slate-50 p-6 text-slate-800">
-        <p className="font-semibold text-slate-900">PT PatuhData Solusi Nusantara</p>
+        <p className="font-semibold text-slate-900">PT Patuhdata Solusi Nusantara</p>
         <p className="mt-2 text-sm leading-relaxed">
           INFINITI OFFICE, Jl. Permata Regency Jl. H. Kelik, RT.1/RW.6, Srengseng,
           <br />

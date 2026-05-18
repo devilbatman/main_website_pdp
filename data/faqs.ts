@@ -7,7 +7,7 @@ export type FaqItem = {
 export const faqs: FaqItem[] = [
   {
     id: 1,
-    q: 'Apakah PatuhData firma hukum atau perwakilan regulator?',
+    q: 'Apakah Patuhdata firma hukum atau perwakilan regulator?',
     a: 'Tidak. Kami konsultan operasional tata kelola data dan kepercayaan vendor berbasis UU PDP. Untuk opini hukum formal, kami dapat berkoordinasi dengan mitra legal Anda.',
   },
   {
@@ -22,8 +22,8 @@ export const faqs: FaqItem[] = [
   },
   {
     id: 4,
-    q: 'Bagaimana PatuhData berposisi terhadap Kemkomdigi dan Badan PDP?',
-    a: 'PatuhData bukan lembaga pemerintah dan tidak mewakili Kemkomdigi atau Badan PDP. Pemerintah membangun kerangka regulasi; kami membangun infrastruktur implementasi untuk sektor swasta—gap assessment, kepercayaan vendor, remediasi, dan bukti operasional. Kami menyelaraskan metodologi dengan arah kebijakan UU PDP tanpa mengklaim pengesahan resmi, kecuali ada perjanjian tertulis yang menyatakan hal tersebut.',
+    q: 'Bagaimana Patuhdata berposisi terhadap Kemkomdigi dan Badan PDP?',
+    a: 'Patuhdata bukan lembaga pemerintah dan tidak mewakili Kemkomdigi atau Badan PDP. Pemerintah membangun kerangka regulasi; kami membangun infrastruktur implementasi untuk sektor swasta—gap assessment, kepercayaan vendor, remediasi, dan bukti operasional. Kami menyelaraskan metodologi dengan arah kebijakan UU PDP tanpa mengklaim pengesahan resmi, kecuali ada perjanjian tertulis yang menyatakan hal tersebut.',
   },
   {
     id: 5,
@@ -32,7 +32,7 @@ export const faqs: FaqItem[] = [
   },
   {
     id: 6,
-    q: 'Apakah PatuhData hanya untuk bank besar? Apakah UMKM, SaaS, dan vendor bisa menggunakan layanan ini?',
+    q: 'Apakah Patuhdata hanya untuk bank besar? Apakah UMKM, SaaS, dan vendor bisa menggunakan layanan ini?',
     a: 'Tidak hanya bank besar. Kami mendampingi bank & BPR, fintech, perusahaan SaaS yang melayani institusi teregulasi, vendor keuangan, layanan kesehatan dengan data sensitif, dan penyedia infrastruktur digital—dengan ruang lingkup dan kedalaman assessment yang disesuaikan skala organisasi Anda.',
   },
   {
@@ -58,7 +58,7 @@ export const faqs: FaqItem[] = [
   {
     id: 11,
     q: 'Apa yang dimaksud 52 kontrol?',
-    a: 'Kerangka operasional PatuhData untuk menilai kesiapan UU PDP—dari DPO dan consent hingga vendor, keamanan, dan bukti audit. Detail ada di halaman Gap Assessment UU PDP.',
+    a: 'Kerangka operasional Patuhdata untuk menilai kesiapan UU PDP—dari DPO dan consent hingga vendor, keamanan, dan bukti audit. Detail ada di halaman Gap Assessment UU PDP.',
   },
 ];
 

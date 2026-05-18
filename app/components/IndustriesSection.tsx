@@ -43,8 +43,8 @@ export default function IndustriesSection() {
             Built for Regulated Ecosystems
           </h2>
           <p className="mt-4 text-lg text-sky-100/75">
-            Banks, fintech, SaaS vendors, and enterprises serving regulated sectors—one governance
-            language, operational clarity.
+            Trust and operational readiness for institutions—and the vendors, platforms, and
+            partners that serve them.
           </p>
         </FadeIn>
 

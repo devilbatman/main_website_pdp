@@ -4,7 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 export const metadata = createPageMetadata({
   title: 'Syarat & Ketentuan',
   description:
-    'Ketentuan penggunaan situs web PatuhData dan layanan konsultasi tata kelola profesional.',
+    'Ketentuan penggunaan situs web Patuhdata dan layanan konsultasi tata kelola profesional.',
   path: '/terms-conditions',
 });
 
@@ -12,18 +12,18 @@ export default function TermsConditionsPage() {
   return (
     <LegalPageLayout
       title="Syarat &amp; Ketentuan"
-      description="Ketentuan penggunaan patuhdata.id dan layanan profesional PatuhData."
+      description="Ketentuan penggunaan patuhdata.id dan layanan profesional Patuhdata."
     >
       <p>
         Syarat &amp; Ketentuan ini (&quot;Ketentuan&quot;) mengatur akses Anda ke patuhdata.id dan
-        penggunaan layanan yang disediakan oleh <strong>PT PatuhData Solusi Nusantara</strong>{' '}
-        (&quot;PatuhData&quot;, &quot;kami&quot;). Dengan menggunakan situs atau layanan kami, Anda
+        penggunaan layanan yang disediakan oleh <strong>PT Patuhdata Solusi Nusantara</strong>{' '}
+        (&quot;Patuhdata&quot;, &quot;kami&quot;). Dengan menggunakan situs atau layanan kami, Anda
         menyetujui Ketentuan ini. Jika tidak setuju, mohon tidak menggunakan situs atau layanan.
       </p>
 
       <h2>1. Tentang layanan kami</h2>
       <p>
-        PatuhData menyediakan tata kelola operasional, risiko vendor, kesiapan UU PDP, dan advisory
+        Patuhdata menyediakan tata kelola operasional, risiko vendor, kesiapan UU PDP, dan advisory
         terkait untuk bisnis di Indonesia. Ruang lingkup, deliverable, biaya, dan jadwal spesifik
         diatur dalam proposal, statement of work, atau perjanjian layanan terpisah dengan klien.
         Ketentuan ini bersifat umum; bila kontrak tertulis bertentangan, yang berlaku adalah kontrak.
@@ -38,7 +38,7 @@ export default function TermsConditionsPage() {
         <li>Menyesatkan mengenai identitas atau afiliasi Anda saat menghubungi kami.</li>
       </ul>
       <p>
-        Konten di situs ini (teks, grafik, metodologi, kerangka kerja) dimiliki PatuhData atau dilisensi
+        Konten di situs ini (teks, grafik, metodologi, kerangka kerja) dimiliki Patuhdata atau dilisensi
         kepada kami dan dilindungi hukum kekayaan intelektual.
       </p>
 
@@ -74,7 +74,7 @@ export default function TermsConditionsPage() {
 
       <h2>7. Kekayaan intelektual</h2>
       <p>
-        Kecuali disepakati lain secara tertulis, PatuhData tetap memiliki metodologi, template, kerangka
+        Kecuali disepakati lain secara tertulis, Patuhdata tetap memiliki metodologi, template, kerangka
         kerja, dan materi praeksisting yang digunakan dalam deliverable. Klien mendapat lisensi terbatas
         untuk menggunakan deliverable khusus proyek untuk keperluan internal bisnis, tanpa hak menjual
         kembali, mensublisensikan, atau mempublikasikan tanpa persetujuan.
@@ -82,7 +82,7 @@ export default function TermsConditionsPage() {
 
       <h2>8. Pembatasan tanggung jawab</h2>
       <p>
-        Sepanjang diizinkan hukum Indonesia, PatuhData tidak bertanggung jawab atas kerugian tidak
+        Sepanjang diizinkan hukum Indonesia, Patuhdata tidak bertanggung jawab atas kerugian tidak
         langsung, insidental, khusus, atau konsekuensial yang timbul dari penggunaan situs atau layanan,
         termasuk kehilangan laba, denda regulator, atau pelanggaran data yang disebabkan kegagalan klien
         menerapkan kontrol yang disepakati. Total tanggung jawab kami dalam suatu engagement dibatasi
@@ -92,7 +92,7 @@ export default function TermsConditionsPage() {
 
       <h2>9. Ganti rugi</h2>
       <p>
-        Anda setuju mengganti rugi PatuhData atas klaim yang timbul dari penyalahgunaan situs oleh Anda,
+        Anda setuju mengganti rugi Patuhdata atas klaim yang timbul dari penyalahgunaan situs oleh Anda,
         pelanggaran Ketentuan ini, atau penyediaan informasi yang melanggar hukum atau tidak akurat
         kepada kami.
       </p>
@@ -118,7 +118,7 @@ export default function TermsConditionsPage() {
 
       <h2>13. Kontak</h2>
       <div className="rounded-xl border border-slate-200 bg-slate-50 p-6 text-slate-800">
-        <p className="font-semibold text-slate-900">PT PatuhData Solusi Nusantara</p>
+        <p className="font-semibold text-slate-900">PT Patuhdata Solusi Nusantara</p>
         <p className="mt-2 text-sm leading-relaxed">INFINITI OFFICE, Jakarta Barat 11630, Indonesia</p>
         <p className="mt-3 text-sm">
           <a href="mailto:support@patuhdata.id">support@patuhdata.id</a> ·{' '}

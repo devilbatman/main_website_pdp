@@ -67,7 +67,7 @@ export async function fetchIndonesiaHibpBreaches(): Promise<HibpBreach[]> {
     const res = await fetch('https://haveibeenpwned.com/api/v3/breaches', {
       next: { revalidate: 86400 },
       headers: {
-        'User-Agent': 'PatuhData-BreachTracker/1.0 (https://patuhdata.id/kebocoran-data)',
+        'User-Agent': 'Patuhdata-BreachTracker/1.0 (https://patuhdata.id/kebocoran-data)',
       },
     });
 

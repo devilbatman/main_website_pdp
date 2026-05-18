@@ -7,7 +7,7 @@ const commitments = [
   {
     icon: Handshake,
     title: 'Badan hukum tercatat',
-    text: 'PT PatuhData Solusi Nusantara—kontrak, invoice, dan engagement formal untuk institusi enterprise.',
+    text: 'PT Patuhdata Solusi Nusantara—kontrak, invoice, dan engagement formal untuk institusi enterprise.',
   },
   {
     icon: Lock,

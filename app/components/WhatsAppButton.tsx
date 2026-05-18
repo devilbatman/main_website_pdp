@@ -6,7 +6,7 @@ import { trackEvent } from '@/lib/analytics';
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
   const phoneNumber = '6285183064580'; // Format: country code + number without +
-  const message = 'Halo PatuhData, saya tertarik dengan Gap Assessment UU PDP / konsultasi tata kelola. Bisakah kita diskusi lebih lanjut?';
+  const message = 'Halo Patuhdata, saya tertarik dengan Gap Assessment UU PDP / konsultasi tata kelola. Bisakah kita diskusi lebih lanjut?';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

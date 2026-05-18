@@ -54,7 +54,7 @@ export default function PreliminaryGapSummaryPreview() {
               </div>
               <div>
                 <p className="text-[11px] font-bold tracking-wide text-slate-900">
-                  PATUHDATA — PRELIMINARY GAP SUMMARY
+                  Patuhdata — PRELIMINARY GAP SUMMARY
                 </p>
                 <p className="text-[10px] text-slate-500">Contoh deliverable · bukan data klien aktual</p>
               </div>
@@ -77,7 +77,7 @@ export default function PreliminaryGapSummaryPreview() {
             </div>
             <p>
               <span className="text-slate-400">Dilakukan oleh:</span>{' '}
-              <span className="font-medium text-slate-800">John Doe, PatuhData</span>
+              <span className="font-medium text-slate-800">John Doe, Patuhdata</span>
             </p>
 
             <div className="border-t border-dashed border-slate-200 pt-3">
@@ -133,7 +133,7 @@ export default function PreliminaryGapSummaryPreview() {
                 Rekomendasi langkah selanjutnya
               </p>
               <p className="mt-1 text-[10px] leading-snug text-slate-700">
-                PatuhData merekomendasikan{' '}
+                Patuhdata merekomendasikan{' '}
                 <span className="font-semibold text-slate-900">Full Gap Assessment (6 minggu)</span> untuk
                 memetakan seluruh 52 kontrol dan menghasilkan remediation roadmap yang dapat langsung
                 dieksekusi.

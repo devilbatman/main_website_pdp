@@ -20,7 +20,7 @@ export default function FounderCredibility() {
             <div className="border-b border-slate-200 bg-slate-900 p-8 text-white lg:border-b-0 lg:border-r">
               <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Tim inti</p>
               <h2 className="mt-3 text-2xl font-semibold md:text-3xl">Richard Rusli</h2>
-              <p className="mt-1 text-sm text-slate-300">Founder, PatuhData</p>
+              <p className="mt-1 text-sm text-slate-300">Founder, Patuhdata</p>
               <p className="mt-2 text-sm text-slate-400">
                 Tech Lead · Governance · lingkungan ISO 27001
               </p>
@@ -40,7 +40,7 @@ export default function FounderCredibility() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-400 hover:text-white"
                 >
-                  LinkedIn PatuhData
+                  LinkedIn Patuhdata
                   <ArrowUpRight className="h-4 w-4" />
                 </Link>
               </div>
@@ -48,7 +48,7 @@ export default function FounderCredibility() {
 
             <div className="p-8 md:p-10">
               <p className="text-base leading-relaxed text-slate-600">
-                Richard membangun PatuhData setelah bertahun-tahun sebagai Tech Lead di lingkungan tata kelola
+                Richard membangun Patuhdata setelah bertahun-tahun sebagai Tech Lead di lingkungan tata kelola
                 dan keamanan—termasuk perusahaan bersertifikasi ISO 27001. Fokusnya memindahkan regulasi
                 (UU PDP) ke kontrol operasional yang bisa dijalankan tim: gap assessment, vendor, audit trail,
                 dan bukti yang dapat dipertanggungjawabkan ke manajemen dan mitra institusi keuangan.

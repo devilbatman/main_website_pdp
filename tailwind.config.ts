@@ -52,13 +52,18 @@ export default {
           'radial-gradient(ellipse 60% 40% at 30% 30%, rgba(255,255,255,0.14) 0%, transparent 70%), radial-gradient(ellipse 50% 35% at 70% 25%, rgba(255,255,255,0.08) 0%, transparent 65%)',
       },
       animation: {
-        'float-slow': 'float 8s ease-in-out infinite',
+        'float-slow': 'float 10s ease-in-out infinite',
+        'cloud-drift': 'cloudDrift 18s ease-in-out infinite',
         'fade-up': 'fadeUp 0.6s ease-out forwards',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        cloudDrift: {
+          '0%, 100%': { opacity: '0.85', transform: 'translateX(0)' },
+          '50%': { opacity: '1', transform: 'translateX(8px)' },
         },
         fadeUp: {
           '0%': { opacity: '0', transform: 'translateY(16px)' },

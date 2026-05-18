@@ -25,7 +25,7 @@ export default function WorkflowPipeline() {
   return (
     <div
       className="mx-auto max-w-6xl rounded-3xl border border-blue-300/25 bg-blue-950/45 p-6 shadow-2xl backdrop-blur-sm md:p-10"
-      aria-label="Cara Kerja PatuhData: Evaluasi, Prioritas, Operasionalisasi, Pemeliharaan"
+      aria-label="Cara Kerja Patuhdata: Evaluasi, Prioritas, Operasionalisasi, Pemeliharaan"
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {nodes.map((node) => (

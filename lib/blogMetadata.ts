@@ -32,12 +32,12 @@ export function getArticleJsonLd(article: Article) {
     dateModified: article.publishedAt,
     author: {
       '@type': 'Organization',
-      name: 'PatuhData',
+      name: 'Patuhdata',
       url: SITE_URL,
     },
     publisher: {
       '@type': 'Organization',
-      name: 'PatuhData',
+      name: 'Patuhdata',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_URL}/logo.png`,

@@ -9,7 +9,7 @@ export type PdpDomain = {
   controls: PdpControl[];
 };
 
-/** 52 kontrol operasional PatuhData — diselaraskan prinsip UU PDP (bukan checklist resmi regulator). */
+/** 52 kontrol operasional Patuhdata — diselaraskan prinsip UU PDP (bukan checklist resmi regulator). */
 export const pdpDomains: PdpDomain[] = [
   {
     id: 'governance',

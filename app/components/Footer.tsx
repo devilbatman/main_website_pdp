@@ -13,11 +13,17 @@ export default function Footer({ variant = 'full' }: FooterProps) {
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6 lg:px-8">
           <div className="text-center sm:text-left">
             <p className="text-sm font-semibold text-ocean-950">patuhdata.id</p>
-            <p className="mt-1 text-xs text-slate-500">
-              Operational trust &amp; vendor governance · Indonesia
+            <p className="mt-1 max-w-xs text-xs text-slate-500">
+              Operational trust infrastructure for Indonesia&apos;s regulated digital economy.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm sm:justify-end">
+            <Link href="/layanan" className="text-slate-600 transition-colors hover:text-brand-700">
+              Layanan
+            </Link>
+            <Link href="/resources" className="text-slate-600 transition-colors hover:text-brand-700">
+              Template gratis
+            </Link>
             <Link href="/faq" className="text-slate-600 transition-colors hover:text-brand-700">
               FAQ
             </Link>
@@ -37,7 +43,7 @@ export default function Footer({ variant = 'full' }: FooterProps) {
             </a>
           </div>
           <p className="text-xs text-slate-400">
-            &copy; {currentYear} PT PatuhData Solusi Nusantara
+            &copy; {currentYear} PT Patuhdata Solusi Nusantara
           </p>
         </div>
       </footer>
@@ -49,7 +55,7 @@ export default function Footer({ variant = 'full' }: FooterProps) {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div>
-            <p className="text-lg font-semibold text-ocean-950">PatuhData</p>
+            <p className="text-lg font-semibold text-ocean-950">Patuhdata</p>
             <p className="mt-2 max-w-sm text-sm text-slate-600">
               Operational trust, vendor governance, and UU PDP readiness for regulated ecosystems.
             </p>
@@ -81,7 +87,7 @@ export default function Footer({ variant = 'full' }: FooterProps) {
           </div>
         </div>
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 text-xs text-slate-500 sm:flex-row">
-          <p>&copy; {currentYear} PT PatuhData Solusi Nusantara</p>
+          <p>&copy; {currentYear} PT Patuhdata Solusi Nusantara</p>
           <div className="flex gap-5">
             <Link href="/privacy-policy" className="hover:text-slate-700">
               Privacy

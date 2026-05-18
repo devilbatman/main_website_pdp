@@ -62,7 +62,7 @@ export const services: Service[] = [
     heroDescription:
       'Assessment 52 kontrol operasional UU PDP—plus template ROPA, gap register, dan roadmap remediasi untuk bank & fintech.',
     intro:
-      'Layanan inti PatuhData: penilaian terhadap 52 kontrol operasional (tata kelola, consent, keamanan, vendor, insiden, dokumentasi) diselaraskan prinsip UU PDP. Bukan sekadar cek dokumen—setiap gap punya owner, prioritas, dan template lanjutan.',
+      'Layanan inti Patuhdata: penilaian terhadap 52 kontrol operasional (tata kelola, consent, keamanan, vendor, insiden, dokumentasi) diselaraskan prinsip UU PDP. Bukan sekadar cek dokumen—setiap gap punya owner, prioritas, dan template lanjutan.',
     idealFor: [
       'Bank, BPR, dan fintech yang menyiapkan kepatuhan UU PDP',
       'Tim legal, compliance, risk, IT, dan operations yang perlu menyelaraskan proses',
@@ -159,35 +159,42 @@ export const services: Service[] = [
   },
   {
     slug: 'vendor-risk-review',
-    title: 'Vendor Risk Review',
-    description: 'Assessment vendor dan pihak ketiga yang mengelola data organisasi.',
+    title: 'Vendor Readiness Sprint',
+    description:
+      'Sprint terstruktur untuk kesiapan vendor—kontrol data, bukti, dan prioritas sebelum due diligence enterprise.',
     heroDescription:
-      'Nilai vendor yang memproses data Anda—kontrak, kontrol, dan prioritas mitigasi.',
+      'Satu vendor atau entitas Anda: skor kesiapan, gap utama, dan daftar perbaikan sebelum review bank atau klien enterprise.',
     intro:
-      'Pahami risiko pihak ketiga yang mengakses data: gap kontrak, keamanan, dan tata kelola operasional.',
+      'Vendor Readiness Sprint adalah paket assessment Patuhdata untuk pihak ketiga dan vendor—bukan sekadar “vendor risk review” generik, melainkan engagement 2 minggu dengan deliverable siap due diligence. Kami menilai kontrak, kontrol data, keamanan, dan bukti operasional.',
     idealFor: [
-      'Vendor cloud, HR, CS, atau analytics memproses data',
-      'Procurement, legal, compliance perlu review terstruktur',
-      'Ingin memperkuat kontrol pihak ketiga',
+      'SaaS, fintech, atau vendor yang menghadapi kuesioner keamanan bank',
+      'Tim procurement, legal, atau compliance yang butuh jawaban terstruktur',
+      'Organisasi yang ingin memperkuat kontrol pihak ketiga sebelum deal ditutup',
     ],
     deliverables: [
-      'Checklist dan assessment risiko vendor',
-      'Review kontrol data dan keamanan vendor',
+      'Vendor readiness score dan ringkasan untuk manajemen',
+      'Checklist assessment risiko vendor (kontrol & data handling)',
+      'Top gaps dengan prioritas mitigasi',
       'Rekomendasi klausul dan kontrol operasional',
-      'Prioritas mitigasi untuk vendor berisiko tinggi',
     ],
     process: [
-      'Memetakan vendor yang mengakses atau memproses data organisasi',
-      'Menilai jenis data, tujuan pemrosesan, dan kontrol yang tersedia',
-      'Mengidentifikasi gap pada kontrak, akses, keamanan, dan monitoring',
-      'Menyusun rekomendasi mitigasi dan tindak lanjut',
+      'Kick-off: ruang lingkup vendor/entitas dan data yang diproses',
+      'Review kontrak, akses, keamanan, dan dokumentasi kontrol',
+      'Identifikasi gap dan prioritas berdasarkan risiko bisnis',
+      'Serahkan sprint report dan rencana tindak lanjut',
     ],
     outcomes: [
-      'Risiko pihak ketiga lebih terlihat dan terukur',
-      'Tim memiliki dasar yang lebih kuat untuk review vendor',
-      'Pengelolaan vendor lebih selaras dengan kebutuhan kepatuhan data',
+      'Lebih siap menghadapi due diligence enterprise',
+      'Risiko pihak ketiga terlihat dan terukur',
+      'Dasar bukti untuk procurement dan compliance',
     ],
-    keywords: ['vendor risk review', 'third party risk', 'vendor governance', 'risiko vendor data'],
+    keywords: [
+      'vendor readiness sprint',
+      'vendor risk review',
+      'third party risk',
+      'vendor governance',
+      'due diligence vendor',
+    ],
   },
   {
     slug: 'advisory-retainer',

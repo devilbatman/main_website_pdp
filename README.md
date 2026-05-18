@@ -1,4 +1,4 @@
-# Patuh Data Website
+# Patuhdata Website
 
 Website profesional untuk konsultan kepatuhan Undang-Undang Perlindungan Data Pribadi (UU PDP) Indonesia.
 
@@ -143,7 +143,7 @@ Saat ini, form konsultasi menggunakan simulasi submission. Untuk production, And
 
 ## Lisensi
 
-Hak Cipta © 2024 Patuh Data. Seluruh hak cipta dilindungi.
+Hak Cipta © 2024 Patuhdata. Seluruh hak cipta dilindungi.
 
 ## Kontak
 

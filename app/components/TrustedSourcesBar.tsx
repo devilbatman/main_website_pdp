@@ -8,7 +8,7 @@ export default function TrustedSourcesBar() {
         Sumber terpercaya
       </h2>
       <p className="mt-2 text-sm text-slate-600">
-        PatuhData menggabungkan kurasi editorial dengan data terverifikasi dari katalog industri.
+        Patuhdata menggabungkan kurasi editorial dengan data terverifikasi dari katalog industri.
       </p>
       <ul className="mt-5 grid gap-4 sm:grid-cols-2">
         {trustedBreachSources.map((source) => (
