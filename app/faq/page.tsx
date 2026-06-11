@@ -11,7 +11,7 @@ import { createPageMetadata, getFaqPageJsonLd } from '@/lib/seo';
 export const metadata = createPageMetadata({
   title: 'FAQ — Pertanyaan Umum',
   description:
-    'Jawaban tentang Patuhdata, UU PDP, Badan PDP, program kepercayaan vendor, DPO, dan siapa yang kami layani—bank, fintech, SaaS, dan UMKM.',
+    'Jawaban tentang Patuhdata, UU PDP, Badan PDP, program kepercayaan vendor, DPO, dan siapa yang kami layani—bank, fintech, multifinance, SaaS, dan UMKM.',
   path: '/faq',
   ogTitle: 'FAQ Patuhdata | Operational Trust & Vendor Governance',
 });

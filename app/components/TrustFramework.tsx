@@ -5,23 +5,23 @@ import FadeIn from './motion/FadeIn';
 const steps = [
   {
     step: '01',
-    title: 'Assess',
-    description: 'Review governance and operational maturity across vendors, data, and controls.',
+    title: 'Asesmen',
+    description: 'Tinjau kematangan tata kelola dan operasional di seluruh vendor, data, dan kontrol.',
   },
   {
     step: '02',
-    title: 'Evaluate',
-    description: 'Identify readiness gaps and operational risks with structured scoring.',
+    title: 'Evaluasi',
+    description: 'Identifikasi kesenjangan kesiapan dan risiko operasional dengan penilaian terstruktur.',
   },
   {
     step: '03',
-    title: 'Remediate',
-    description: 'Prioritize governance and operational improvements with clear owners.',
+    title: 'Remediasi',
+    description: 'Prioritaskan perbaikan tata kelola dan operasional dengan pemilik yang jelas.',
   },
   {
     step: '04',
-    title: 'Monitor',
-    description: 'Maintain trust visibility and governance continuity over time.',
+    title: 'Pemantauan',
+    description: 'Jaga visibilitas kepatuhan dan kesinambungan tata kelola dari waktu ke waktu.',
   },
 ];
 
@@ -31,14 +31,13 @@ export default function TrustFramework() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Platform methodology
+            Metodologi Kami
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-            The Patuhdata Framework
+            Framework Patuhdata
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            A systematic, repeatable approach—from first assessment to sustained governance
-            visibility.
+            Pendekatan sistematis dan terulang—dari asesmen pertama hingga visibilitas tata kelola yang berkelanjutan.
           </p>
         </FadeIn>
 

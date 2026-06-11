@@ -39,11 +39,11 @@ export default function PdpTemplatesUseCases() {
           </div>
 
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-slate-600">
-            Mulai dengan template gratis (ROPA + checklist PDF), atau lanjut ke Gap Assessment penuh
-            dengan 52 kontrol dan paket remediasi.{' '}
-            <Link href="/resources" className="font-semibold text-brand-600 hover:underline">
-              Unduh template gratis →
+            Untuk starter gratis (ROPA + checklist PDF), kunjungi halaman{' '}
+            <Link href="/template-gratis" className="font-semibold text-brand-600 hover:underline">
+              Template gratis
             </Link>
+            . Paket di atas termasuk dalam Gap Assessment penuh (52 kontrol + remediasi).
           </p>
         </div>
       </section>
@@ -56,7 +56,7 @@ export default function PdpTemplatesUseCases() {
               Kapan institusi keuangan membutuhkan ini
             </h2>
             <p className="mt-4 text-slate-600">
-              Skenario umum di bank, BPR, fintech, dan vendor yang melayani sektor finansial.
+              Skenario umum di bank, BPR, fintech, dan multifinance, multifinance, dan vendor yang melayani sektor finansial.
             </p>
           </FadeIn>
 

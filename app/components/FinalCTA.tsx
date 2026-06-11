@@ -21,10 +21,10 @@ export default function FinalCTA() {
             />
             <div className="relative">
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                Build Enterprise Trust with Confidence
+                Mulai Perjalanan Kepatuhan UU PDP Anda
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-sky-100/80">
-                Operational governance for Indonesia&apos;s evolving digital economy.
+                Konsultan profesional untuk bisnis Anda di era ekonomi digital Indonesia.
               </p>
               <TrackedLink
                 href="#assessment"
@@ -32,7 +32,7 @@ export default function FinalCTA() {
                 eventParams={{ location: 'final_cta', label: 'talk_to_patuhdata' }}
                 className="btn-primary mt-8 inline-flex gap-2"
               >
-                Talk to Patuhdata
+                Hubungi Patuhdata
                 <ArrowRight className="h-4 w-4" />
               </TrackedLink>
             </div>

@@ -12,7 +12,7 @@ const segments = [
   },
   {
     icon: Smartphone,
-    title: 'Fintech & payment',
+    title: 'Fintech, Multifinance & payment',
     description:
       'Gap assessment sebelum scale, DPA vendor, consent & retensi data nasabah—siap tinjauan mitra strategis.',
   },
@@ -20,7 +20,7 @@ const segments = [
     icon: Building,
     title: 'Vendor ke institusi keuangan',
     description:
-      'SaaS, KYC, cloud, dan outsourcer yang perlu membuktikan kontrol data kepada klien bank atau fintech.',
+      'SaaS, KYC, cloud, dan outsourcer yang perlu membuktikan kontrol data kepada klien bank, fintech, atau multifinance.',
   },
 ];
 

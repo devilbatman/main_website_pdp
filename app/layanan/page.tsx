@@ -50,11 +50,7 @@ export default function ServicesLandingPage() {
               >
                 Gap Assessment UU PDP
               </Link>
-              , atau pilih program pendukung di bawah.{' '}
-              <Link href="/resources" className="font-semibold text-brand-600 hover:underline">
-                Template gratis (PDF + Excel)
-              </Link>
-              .
+              , atau pilih program pendukung di bawah.
             </p>
           </div>
         </section>

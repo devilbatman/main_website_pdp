@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowUpRight, ClipboardCheck, Map, Route, Search } from 'lucide-react';
+import { ArrowUpRight, ClipboardCheck, Map, Route, Search, UserCheck } from 'lucide-react';
 import FadeIn from './motion/FadeIn';
 
 const services = [
@@ -32,6 +32,13 @@ const services = [
     description:
       'From findings to tracked closure—workflows, timelines, and audit-ready evidence your teams can run.',
     href: '/layanan/risk-orchestration-readiness',
+  },
+  {
+    icon: UserCheck,
+    title: 'DPO as a Service',
+    description:
+      'External Data Protection Officer to guide daily compliance and oversee DPIAs without full-time hires.',
+    href: '/layanan/dpo-as-a-service',
   },
 ];
 

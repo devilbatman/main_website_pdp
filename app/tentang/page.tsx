@@ -39,7 +39,7 @@ export default function TentangPage() {
               <p>
                 <strong className="text-slate-800">PT Patuhdata Solusi Nusantara</strong> (Patuhdata)
                 adalah penyedia layanan konsultasi tata kelola data dan kesiapan kepatuhan operasional,
-                dengan fokus pada bank, BPR, fintech, dan vendor yang melayani sektor finansial.
+                dengan fokus pada bank, BPR, fintech, dan multifinance, multifinance, dan vendor yang melayani sektor finansial.
               </p>
             </section>
 

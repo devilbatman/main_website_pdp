@@ -1,115 +1,82 @@
 'use client';
 
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import FadeIn from './motion/FadeIn';
 import TrackedLink from './TrackedLink';
 
 export default function Hero() {
+
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] overflow-hidden bg-ocean-hero pt-28 pb-20 md:min-h-[88vh] md:pt-36 md:pb-28"
+      className="relative min-h-screen overflow-hidden bg-[#f8f9fa] pt-28 pb-20 md:pt-36 md:pb-28 flex items-center"
     >
+      {/* Spacious executive background layout */}
+      <div className="pointer-events-none absolute inset-0 opacity-40 governance-grid" aria-hidden />
+      
+      {/* Soft executive gradients */}
       <div
-        className="pointer-events-none absolute inset-0 animate-cloud-drift bg-cloud-soft"
-        aria-hidden
-      />
-      <div className="pointer-events-none absolute inset-0 governance-grid opacity-50" aria-hidden />
-
-      <div
-        className="pointer-events-none absolute -left-24 top-[20%] h-72 w-72 animate-float-slow rounded-full bg-sky-400/15 blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -right-16 top-[35%] h-96 w-96 animate-float-slow rounded-full bg-brand-400/10 blur-3xl [animation-delay:2s]"
+        className="pointer-events-none absolute -left-24 top-[10%] h-80 w-80 rounded-full bg-[#0069c7]/5 blur-3xl"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute left-1/2 top-[12%] h-48 w-[min(90%,640px)] -translate-x-1/2 rounded-full bg-white/8 blur-3xl animate-float-slow [animation-delay:1s]"
+        className="pointer-events-none absolute right-[10%] bottom-[10%] h-[450px] w-[450px] rounded-full bg-[#0a2540]/5 blur-3xl"
         aria-hidden
       />
 
-      <div
-        className="pointer-events-none absolute bottom-[22%] left-1/2 h-px w-[min(92%,760px)] -translate-x-1/2 bg-gradient-to-r from-transparent via-sky-300/40 to-transparent"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-56 bg-gradient-to-t from-[#f8fafc] via-[#f8fafc]/80 to-transparent"
-        aria-hidden
-      />
+      {/* Corporate Accent Borders */}
+      <div className="absolute top-20 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0a2540]/10 to-transparent" />
+      <div className="absolute bottom-10 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[#0a2540]/10 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <FadeIn>
-            <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-sky-100/90 backdrop-blur-sm">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-sky-300" />
-              Operational Trust &amp; Vendor Governance
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.05}>
-            <h1 className="text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[3.25rem]">
-              Operational Trust &amp; Vendor Governance
-            </h1>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-sky-100/85 md:text-xl">
-              Helping organizations become enterprise-ready through vendor governance, operational
-              trust, and UU PDP readiness.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.14}>
-            <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
-              <TrackedLink
-                href="#assessment"
-                eventName="cta_click"
-                eventParams={{ location: 'hero', label: 'discuss_assessment_scope' }}
-                className="btn-primary min-w-[240px] gap-2"
-              >
-                Discuss Assessment Scope
-                <ArrowRight className="h-4 w-4" />
-              </TrackedLink>
-              <Link href="#framework" className="btn-ghost-light min-w-[200px]">
-                Explore Framework
-              </Link>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.18}>
-            <p className="mt-12 text-sm text-sky-200/60">
-              The operational trust infrastructure layer for Indonesia&apos;s regulated digital
-              economy.
-            </p>
-          </FadeIn>
-        </div>
-
-        <FadeIn delay={0.22} direction="none">
-          <div className="mx-auto mt-16 max-w-3xl">
-            <div className="card-ocean rounded-3xl border border-white/10 p-6 md:p-8">
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-                {[
-                  { label: 'Governance', value: 'Assessed' },
-                  { label: 'Vendor trust', value: 'Structured' },
-                  { label: 'UU PDP', value: 'Operational' },
-                  { label: 'Readiness', value: 'Visible' },
-                ].map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-xl border border-white/10 bg-white/5 px-4 py-4 text-center transition-colors hover:border-white/20 hover:bg-white/[0.07]"
-                  >
-                    <p className="text-[10px] font-medium uppercase tracking-widest text-sky-200/70">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-white">{item.value}</p>
-                  </div>
-                ))}
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+        <div className="flex flex-col items-center text-center justify-center">
+          
+          {/* Main Content: Prestigious Copy & CTAs */}
+          <div className="space-y-6 max-w-4xl mx-auto flex flex-col items-center">
+            <FadeIn delay={0.05}>
+              <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider text-[#0069c7] shadow-sm">
+                <span className="flex h-2 w-2 relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#0069c7] opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#0069c7]"></span>
+                </span>
+                Konsultan Profesional Kepatuhan Data Pribadi
               </div>
-            </div>
+            </FadeIn>
+
+            <FadeIn delay={0.1}>
+              <h1 className="font-display text-balance text-4xl font-extrabold leading-[1.1] tracking-tight text-[#0a2540] sm:text-5xl md:text-6xl">
+                Kepatuhan <span className="text-[#0069c7]">UU PDP</span> yang Terpercaya.
+              </h1>
+            </FadeIn>
+
+            <FadeIn delay={0.15}>
+              <p className="max-w-2xl mx-auto text-base md:text-lg leading-relaxed text-slate-600">
+                Konsultan profesional untuk membantu bisnis Anda memenuhi persyaratan Undang-Undang Perlindungan Data Pribadi Indonesia.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={0.2}>
+              <div className="flex flex-col sm:flex-row gap-4 pt-2 justify-center">
+                <TrackedLink
+                  href="#calculator"
+                  eventName="cta_click"
+                  eventParams={{ location: 'hero', label: 'secure_assessment_scope' }}
+                  className="btn-primary group px-8 py-4 text-base font-semibold flex items-center justify-center gap-2"
+                >
+                  Konsultasi Sekarang
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </TrackedLink>
+                <a
+                  href="#framework"
+                  className="btn-secondary px-8 py-4 text-base font-semibold flex items-center justify-center"
+                >
+                  Pelajari Layanan Kami
+                </a>
+              </div>
+            </FadeIn>
+
           </div>
-        </FadeIn>
+        </div>
       </div>
     </section>
   );

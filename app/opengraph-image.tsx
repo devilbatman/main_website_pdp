@@ -39,7 +39,7 @@ export default function OpenGraphImage() {
             Tata kelola data & UU PDP
           </div>
           <div style={{ fontSize: 30, fontWeight: 400, lineHeight: 1.4, color: '#cbd5e1' }}>
-            Gap assessment, vendor risk, dan bukti audit untuk bank, BPR, dan fintech Indonesia
+            Gap assessment, vendor risk, dan bukti audit untuk bank, BPR, fintech, dan multifinance, dan multifinance Indonesia
           </div>
         </div>
 

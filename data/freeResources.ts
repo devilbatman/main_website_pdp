@@ -1,3 +1,5 @@
+export const TEMPLATE_GRATIS_PATH = '/template-gratis';
+
 export const FREE_RESOURCE_DOWNLOADS = {
   pdf: {
     filename: 'patuhdata-pdp-readiness-checklist.pdf',

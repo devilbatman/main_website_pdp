@@ -6,28 +6,28 @@ import FadeIn from './motion/FadeIn';
 const industries = [
   {
     icon: Landmark,
-    title: 'Banking',
-    description: 'Core banking, payments, and outsourcing with enterprise-grade vendor evidence.',
+    title: 'Perbankan',
+    description: 'Bank KBMI 2/3, BPD, dan BPR yang membutuhkan kesiapan audit regulator dan tata kelola data.',
   },
   {
     icon: Layers,
     title: 'Fintech',
-    description: 'Scale with confidence—PDP alignment and partner due diligence built in.',
+    description: 'Tumbuh dengan percaya diri—keselarasan UU PDP dan uji tuntas mitra dibangun sejak awal.',
   },
   {
     icon: HeartPulse,
-    title: 'Healthcare',
-    description: 'Sensitive data ecosystems with heightened governance and vendor scrutiny.',
+    title: 'Multifinance',
+    description: 'Perusahaan pembiayaan yang membutuhkan tata kelola data dan kesiapan audit OJK.',
   },
   {
     icon: Cloud,
-    title: 'SaaS',
-    description: 'Prove operational trust to regulated buyers before the procurement clock runs out.',
+    title: 'SaaS & Teknologi',
+    description: 'Buktikan kepercayaan operasional kepada pembeli di industri yang diatur sebelum proses pengadaan dimulai.',
   },
   {
     icon: Building2,
-    title: 'Digital Infrastructure',
-    description: 'Platforms and integrators serving institutions that cannot accept governance gaps.',
+    title: 'Infrastruktur Digital',
+    description: 'Platform dan integrator yang melayani institusi yang tidak bisa menerima celah tata kelola.',
   },
 ];
 
@@ -37,14 +37,13 @@ export default function IndustriesSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-sky-300/90">
-            Industries
+            Industri
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl">
-            Built for Regulated Ecosystems
+            Melayani Berbagai Industri
           </h2>
           <p className="mt-4 text-lg text-sky-100/75">
-            Trust and operational readiness for institutions—and the vendors, platforms, and
-            partners that serve them.
+            Kepatuhan dan kesiapan tata kelola untuk bank, fintech, multifinance, dan vendor teknologi yang melayani mereka.
           </p>
         </FadeIn>
 

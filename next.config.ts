@@ -4,7 +4,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   outputFileTracingRoot: __dirname,
   async redirects() {
-    return [{ source: '/pricing', destination: '/layanan', permanent: true }];
+    return [
+      { source: '/pricing', destination: '/layanan', permanent: true },
+      { source: '/resources', destination: '/template-gratis', permanent: true },
+    ];
   },
   images: {
     remotePatterns: [

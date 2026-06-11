@@ -35,7 +35,7 @@ export default function PositioningMatrix() {
               <strong className="font-semibold text-slate-800">kerangka kepatuhan sektor finansial</strong>{' '}
               dengan{' '}
               <strong className="font-semibold text-slate-800">kontrol operasional yang dapat dieksekusi</strong>
-              —untuk bank, BPR, fintech, dan institusi keuangan yang dituntut bukti oleh regulator serta mitra
+              —untuk bank, BPR, fintech, dan multifinance, dan institusi keuangan yang dituntut bukti oleh regulator serta mitra
               strategis.
             </p>
             <ul className="mt-6 space-y-3 text-sm text-slate-600">

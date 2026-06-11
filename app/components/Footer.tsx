@@ -21,7 +21,7 @@ export default function Footer({ variant = 'full' }: FooterProps) {
             <Link href="/layanan" className="text-slate-600 transition-colors hover:text-brand-700">
               Layanan
             </Link>
-            <Link href="/resources" className="text-slate-600 transition-colors hover:text-brand-700">
+            <Link href="/template-gratis" className="text-slate-600 transition-colors hover:text-brand-700">
               Template gratis
             </Link>
             <Link href="/faq" className="text-slate-600 transition-colors hover:text-brand-700">
@@ -63,6 +63,9 @@ export default function Footer({ variant = 'full' }: FooterProps) {
           <div className="flex flex-wrap justify-center gap-6 text-sm">
             <Link href="/layanan" className="text-slate-600 hover:text-ocean-950">
               Services
+            </Link>
+            <Link href="/template-gratis" className="text-slate-600 hover:text-ocean-950">
+              Template gratis
             </Link>
             <Link href="/blog" className="text-slate-600 hover:text-ocean-950">
               Insights

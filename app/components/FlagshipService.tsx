@@ -15,37 +15,37 @@ import TrackedLink from './TrackedLink';
 const deliverables = [
   {
     icon: Search,
-    title: 'Governance Assessment',
-    description: 'Baseline maturity across policies, ownership, and operational controls.',
+    title: 'Penilaian Tata Kelola',
+    description: 'Evaluasi kematangan kebijakan, kepemilikan, dan kontrol operasional.',
   },
   {
     icon: ClipboardCheck,
-    title: 'PDP Gap Analysis',
-    description: 'Operational mapping against UU PDP principles with prioritized gaps.',
+    title: 'Gap Assessment UU PDP',
+    description: 'Pemetaan operasional terhadap prinsip UU PDP dengan identifikasi prioritas kesenjangan.',
   },
   {
     icon: BarChart3,
-    title: 'Operational Risk Review',
-    description: 'Structured view of vendor, process, and data-handling risks.',
+    title: 'Tinjauan Risiko Operasional',
+    description: 'Pandangan terstruktur atas risiko vendor, proses, dan penanganan data.',
   },
   {
     icon: Map,
-    title: 'Governance Scoring',
-    description: 'Clear readiness scores readable by legal, risk, and leadership.',
+    title: 'Skor Kesiapan',
+    description: 'Skor kesiapan yang mudah dipahami oleh tim legal, risiko, dan manajemen.',
   },
   {
     icon: Route,
-    title: 'Remediation Roadmap',
-    description: 'Prioritized improvements with owners, timelines, and evidence paths.',
+    title: 'Peta Jalan Remediasi',
+    description: 'Perbaikan terprioritasi dengan pemilik, jadwal, dan jalur pembuktian yang jelas.',
   },
 ];
 
 const processSteps = [
-  { step: '01', label: 'Scope & context' },
-  { step: '02', label: 'Assess & evidence' },
-  { step: '03', label: 'Score & gaps' },
-  { step: '04', label: 'Roadmap' },
-  { step: '05', label: 'Enterprise-ready' },
+  { step: '01', label: 'Ruang Lingkup' },
+  { step: '02', label: 'Asesmen & Bukti' },
+  { step: '03', label: 'Skor & Kesenjangan' },
+  { step: '04', label: 'Peta Jalan' },
+  { step: '05', label: 'Siap Diaudit' },
 ];
 
 export default function FlagshipService() {
@@ -55,18 +55,16 @@ export default function FlagshipService() {
         <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn>
             <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-              Flagship program
+              Layanan Unggulan
             </p>
             <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-              Vendor Trust Readiness Assessment
+              Gap Assessment UU PDP
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              A structured operational trust review designed for vendors serving regulated industries
-              and enterprise ecosystems.
+              Tinjauan terstruktur terhadap kesiapan kepatuhan data pribadi, dirancang untuk bisnis yang beroperasi di industri yang diatur.
             </p>
             <p className="mt-4 text-sm text-slate-500">
-              Your primary entry point for enterprise procurement, due diligence, and UU PDP
-              alignment—delivered with clarity your stakeholders can act on.
+              Titik masuk utama untuk pengadaan enterprise, uji tuntas, dan keselarasan UU PDP—disampaikan dengan kejelasan yang dapat ditindaklanjuti oleh pemangku kepentingan Anda.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <TrackedLink
@@ -75,11 +73,11 @@ export default function FlagshipService() {
                 eventParams={{ location: 'flagship', label: 'discuss_assessment_scope' }}
                 className="btn-primary-dark gap-2"
               >
-                Discuss Assessment Scope
+                Diskusikan Ruang Lingkup
                 <ArrowRight className="h-4 w-4" />
               </TrackedLink>
               <Link href="/layanan" className="btn-secondary">
-                Lihat semua program
+                Lihat semua layanan
               </Link>
             </div>
           </FadeIn>
@@ -87,7 +85,7 @@ export default function FlagshipService() {
           <FadeIn delay={0.08}>
             <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-brand-50/30 p-6 md:p-8">
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-700">
-                Assessment flow
+                Alur Asesmen
               </p>
               <div className="mt-6 grid grid-cols-5 gap-2">
                 {processSteps.map((item, i) => (

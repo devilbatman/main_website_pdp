@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Navigation from './components/Navigation';
 import JsonLd from './components/JsonLd';
 import Hero from './components/Hero';
+import ExposureCalculator from './components/ExposureCalculator';
 import TrustChallenges from './components/TrustChallenges';
 import FlagshipService from './components/FlagshipService';
 import TrustFramework from './components/TrustFramework';
@@ -15,33 +16,42 @@ import { createPageMetadata, getFaqPageJsonLd } from '@/lib/seo';
 import { faqsForSchema } from '@/data/faqs';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Patuhdata — Operational Trust & Vendor Governance',
+  title: 'Patuhdata — Konsultan Kepatuhan UU PDP Indonesia',
   description:
-    'Patuhdata helps organizations operationalize trust, vendor governance, and UU PDP readiness for banks, fintech, SaaS vendors, and regulated digital businesses.',
+    'Patuhdata adalah konsultan profesional kepatuhan UU PDP untuk bank, fintech, multifinance, dan bisnis digital Indonesia. Gap assessment, DPO as a Service, dan pendampingan audit.',
   path: '',
   absoluteTitle: true,
   keywords: [
-    'operational trust',
-    'vendor governance',
-    'UU PDP readiness',
-    'vendor trust assessment',
-    'enterprise governance Indonesia',
+    'konsultan UU PDP',
+    'gap assessment UU PDP',
+    'kepatuhan data pribadi Indonesia',
+    'DPO as a service',
+    'konsultan kepatuhan data',
     'Patuhdata',
   ],
 });
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#f8fafc]">
+    <main className="min-h-screen bg-[#f8f9fa] text-[#1a202c] antialiased">
       <JsonLd data={getFaqPageJsonLd(faqsForSchema)} />
       <Navigation darkHero />
       <Hero />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
+      <ExposureCalculator />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <TrustChallenges />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <FlagshipService />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <TrustFramework />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <IndustriesSection />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <ThoughtLeadership />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <FinalCTA />
+      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <ConsultationForm />
       <Footer variant="minimal" />
       <WhatsAppButton />

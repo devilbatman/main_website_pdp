@@ -7,28 +7,28 @@ import FadeIn from './motion/FadeIn';
 
 const topics = [
   {
-    tag: 'Vendor Governance',
-    title: 'Why vendor readiness is the new enterprise gate',
+    tag: 'Tata Kelola Vendor',
+    title: 'Mengapa kesiapan vendor menjadi gerbang utama enterprise',
     slug: 'strategi-kepatuhan-korporasi',
   },
   {
-    tag: 'Operational Trust',
-    title: 'From policy to proof: governance your stakeholders can follow',
+    tag: 'Kepatuhan Operasional',
+    title: 'Dari kebijakan ke bukti: tata kelola yang dipahami pemangku kepentingan',
     slug: 'audit-kepatuhan-pdp',
   },
   {
-    tag: 'UU PDP Operationalization',
-    title: 'Badan PDP 2026: preparing before the agency is fully operational',
+    tag: 'Operasionalisasi UU PDP',
+    title: 'Badan PDP 2026: persiapan sebelum lembaga beroperasi penuh',
     slug: 'badan-pdp-2026',
   },
   {
-    tag: 'Third-Party Risk',
-    title: 'Data breaches in Indonesia: lessons for banks, fintech, and vendors',
+    tag: 'Risiko Pihak Ketiga',
+    title: 'Kebocoran data di Indonesia: pelajaran untuk bank, fintech, dan multifinance',
     slug: 'kebocoran-data-indonesia-2026',
   },
   {
-    tag: 'AI Governance Readiness',
-    title: 'DPO and cybersecurity in 2026: operational roles, not paper titles',
+    tag: 'Tata Kelola AI',
+    title: 'DPO dan keamanan siber 2026: peran operasional, bukan sekadar gelar',
     slug: 'peran-dpo-cybersecurity-2026',
   },
 ];
@@ -46,21 +46,20 @@ export default function ThoughtLeadership() {
         <FadeIn className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <div className="max-w-xl">
             <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-              Thought leadership
+              Wawasan & Artikel
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-              Perspectives on Operational Trust
+              Perspektif Kepatuhan Data Pribadi
             </h2>
             <p className="mt-3 text-slate-600">
-              Strategic views on vendor governance, UU PDP operationalization, and enterprise
-              readiness.
+              Pandangan strategis tentang tata kelola vendor, operasionalisasi UU PDP, dan kesiapan perusahaan.
             </p>
           </div>
           <Link
             href="/blog"
             className="text-sm font-semibold text-brand-700 hover:text-brand-600"
           >
-            View all insights →
+            Lihat semua artikel →
           </Link>
         </FadeIn>
 

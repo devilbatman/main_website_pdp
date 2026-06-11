@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, ClipboardCheck, Scale, Shield } from 'lucide-react';
+import { ArrowRight, ClipboardCheck, Scale, Shield, UserCheck } from 'lucide-react';
 import Link from 'next/link';
 import FadeIn from './motion/FadeIn';
 
@@ -44,6 +44,19 @@ const services = [
     ],
     href: '/layanan/risk-orchestration-readiness',
   },
+  {
+    icon: UserCheck,
+    title: 'DPO as a Service',
+    summary:
+      'Layanan Data Protection Officer eksternal untuk mendampingi kepatuhan perlindungan data pribadi secara berkelanjutan tanpa harus merekrut tim purna waktu.',
+    items: [
+      'Pendampingan tata kelola dan kepatuhan harian',
+      'Tinjauan dampak pelindungan data (DPIA)',
+      'Manajemen respons insiden dan permintaan subjek data',
+      'Penghubung dengan otoritas pengawas',
+    ],
+    href: '/layanan/dpo-as-a-service',
+  },
 ];
 
 export default function Services() {
@@ -58,11 +71,11 @@ export default function Services() {
             Layanan untuk institusi keuangan
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Vendor, UU PDP, risiko operasional—dirancang untuk bank, BPR, dan fintech.
+            Vendor, UU PDP, risiko operasional—dirancang untuk bank, BPR, fintech, dan multifinance.
           </p>
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <FadeIn key={service.title} delay={index * 0.1}>
               <article className="card-premium flex h-full flex-col p-7">
