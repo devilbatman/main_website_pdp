@@ -2,12 +2,10 @@ import type { Metadata } from 'next';
 import Navigation from './components/Navigation';
 import JsonLd from './components/JsonLd';
 import Hero from './components/Hero';
-import ExposureCalculator from './components/ExposureCalculator';
-import TrustChallenges from './components/TrustChallenges';
 import FlagshipService from './components/FlagshipService';
-import TrustFramework from './components/TrustFramework';
+import EngagementTimeline from './components/EngagementTimeline';
 import IndustriesSection from './components/IndustriesSection';
-import ThoughtLeadership from './components/ThoughtLeadership';
+import EnterpriseReadiness from './components/EnterpriseReadiness';
 import FinalCTA from './components/FinalCTA';
 import ConsultationForm from './components/ConsultationForm';
 import Footer from './components/Footer';
@@ -37,19 +35,10 @@ export default function Home() {
       <JsonLd data={getFaqPageJsonLd(faqsForSchema)} />
       <Navigation darkHero />
       <Hero />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
-      <ExposureCalculator />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
-      <TrustChallenges />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
       <FlagshipService />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
-      <TrustFramework />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
+      <EngagementTimeline />
       <IndustriesSection />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
-      <ThoughtLeadership />
-      <hr className="border-slate-200 mx-auto max-w-7xl" />
+      <EnterpriseReadiness />
       <FinalCTA />
       <hr className="border-slate-200 mx-auto max-w-7xl" />
       <ConsultationForm />

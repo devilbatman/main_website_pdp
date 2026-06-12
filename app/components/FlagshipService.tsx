@@ -1,127 +1,107 @@
 'use client';
 
-import Link from 'next/link';
 import {
-  ArrowRight,
-  BarChart3,
   ClipboardCheck,
-  Map,
-  Route,
-  Search,
+  Database,
+  ShieldAlert,
+  UserCheck,
+  Building2,
+  ArrowRight
 } from 'lucide-react';
 import FadeIn from './motion/FadeIn';
-import TrackedLink from './TrackedLink';
 
-const deliverables = [
-  {
-    icon: Search,
-    title: 'Penilaian Tata Kelola',
-    description: 'Evaluasi kematangan kebijakan, kepemilikan, dan kontrol operasional.',
-  },
+const services = [
   {
     icon: ClipboardCheck,
-    title: 'Gap Assessment UU PDP',
-    description: 'Pemetaan operasional terhadap prinsip UU PDP dengan identifikasi prioritas kesenjangan.',
+    title: 'UU PDP Gap Assessment',
+    hook: 'A comprehensive legal and operational audit of your current data processing frameworks to identify compliance vulnerabilities.',
+    link: '/layanan/gap-assessment',
   },
   {
-    icon: BarChart3,
-    title: 'Tinjauan Risiko Operasional',
-    description: 'Pandangan terstruktur atas risiko vendor, proses, dan penanganan data.',
+    icon: Database,
+    title: 'ROPA Framework Construction',
+    hook: 'Structured mapping and classification of your enterprise data lifecycle into a legally defensible Record of Processing Activities.',
+    link: '/layanan/ropa',
   },
   {
-    icon: Map,
-    title: 'Skor Kesiapan',
-    description: 'Skor kesiapan yang mudah dipahami oleh tim legal, risiko, dan manajemen.',
+    icon: ShieldAlert,
+    title: 'Data Protection Impact Assessment (DPIA)',
+    hook: 'Expert evaluation of high-risk processing activities, ensuring new products and integrations meet strict statutory requirements.',
+    link: '/layanan/dpia',
   },
   {
-    icon: Route,
-    title: 'Peta Jalan Remediasi',
-    description: 'Perbaikan terprioritasi dengan pemilik, jadwal, dan jalur pembuktian yang jelas.',
+    icon: UserCheck,
+    title: 'Managed DPO-as-a-Service',
+    hook: 'Retain fractional, certified Data Protection Officer expertise to independently oversee your corporate privacy roadmap and handle regulatory liaisons.',
+    link: '/layanan/dpo-as-a-service',
   },
-];
-
-const processSteps = [
-  { step: '01', label: 'Ruang Lingkup' },
-  { step: '02', label: 'Asesmen & Bukti' },
-  { step: '03', label: 'Skor & Kesenjangan' },
-  { step: '04', label: 'Peta Jalan' },
-  { step: '05', label: 'Siap Diaudit' },
+  {
+    icon: Building2,
+    title: 'Corporate Governance & Training',
+    hook: 'Crafting internal data protection policies, vendor data processing agreements (DPAs), and delivering executive-level compliance training.',
+    link: '/layanan/caas-platform',
+  },
 ];
 
 export default function FlagshipService() {
   return (
-    <section id="flagship" className="section-padding scroll-mt-24 bg-white">
+    <section id="services" className="py-24 bg-[#F8FAFC]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid items-start gap-12 lg:grid-cols-2 lg:gap-16">
+        
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <FadeIn>
-            <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-              Layanan Unggulan
+            <h2 className="text-sm font-bold uppercase tracking-widest text-[#00B4D8] mb-3">Advisory Pillars</h2>
+            <h3 className="text-3xl md:text-4xl font-extrabold text-[#0B132B] tracking-tight">
+              Enterprise RegTech Solutions
+            </h3>
+            <p className="mt-4 text-lg text-slate-600">
+              End-to-end privacy frameworks engineered for scale, security, and full regulatory alignment.
             </p>
-            <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-ocean-950 md:text-4xl">
-              Gap Assessment UU PDP
-            </h2>
-            <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              Tinjauan terstruktur terhadap kesiapan kepatuhan data pribadi, dirancang untuk bisnis yang beroperasi di industri yang diatur.
-            </p>
-            <p className="mt-4 text-sm text-slate-500">
-              Titik masuk utama untuk pengadaan enterprise, uji tuntas, dan keselarasan UU PDP—disampaikan dengan kejelasan yang dapat ditindaklanjuti oleh pemangku kepentingan Anda.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <TrackedLink
-                href="#assessment"
-                eventName="cta_click"
-                eventParams={{ location: 'flagship', label: 'discuss_assessment_scope' }}
-                className="btn-primary-dark gap-2"
-              >
-                Diskusikan Ruang Lingkup
-                <ArrowRight className="h-4 w-4" />
-              </TrackedLink>
-              <Link href="/layanan" className="btn-secondary">
-                Lihat semua layanan
-              </Link>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.08}>
-            <div className="rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-50 to-brand-50/30 p-6 md:p-8">
-              <p className="text-xs font-semibold uppercase tracking-widest text-brand-700">
-                Alur Asesmen
-              </p>
-              <div className="mt-6 grid grid-cols-5 gap-2">
-                {processSteps.map((item, i) => (
-                  <div key={item.step} className="relative flex flex-col items-center text-center">
-                    {i > 0 && (
-                      <div
-                        className="absolute -left-1 top-5 hidden h-px w-[calc(50%+0.25rem)] -translate-x-full bg-brand-200 sm:block"
-                        aria-hidden
-                      />
-                    )}
-                    <div className="relative z-10 flex h-10 w-10 items-center justify-center rounded-full bg-ocean-950 text-xs font-bold text-white shadow-soft">
-                      {item.step}
-                    </div>
-                    <p className="mt-3 text-[10px] font-medium leading-snug text-slate-600 sm:text-[11px]">
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </FadeIn>
         </div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {deliverables.map((item, i) => (
-            <FadeIn key={item.title} delay={i * 0.05}>
-              <article className="card-premium h-full p-5">
-                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-ocean-950 text-white">
-                  <item.icon className="h-4 w-4" strokeWidth={1.75} />
+        {/* Responsive Grid with flex-wrap to center the last row perfectly */}
+        <div className="flex flex-wrap justify-center gap-8">
+          {services.map((service, index) => (
+            <FadeIn 
+              key={service.title} 
+              delay={index * 0.1} 
+              className="flex w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)]"
+            >
+              <article className="group flex flex-col w-full rounded-2xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-300 hover:shadow-xl hover:border-[#00B4D8]/30 hover:-translate-y-1">
+                
+                {/* Icon Slot */}
+                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-[#0B132B]/5 text-[#0B132B] transition-colors duration-300 group-hover:bg-[#00B4D8]/10 group-hover:text-[#00B4D8]">
+                  <service.icon className="h-7 w-7" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-sm font-semibold text-ocean-950">{item.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-slate-600">{item.description}</p>
+                
+                {/* Content */}
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-[#0B132B] mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-600 leading-relaxed text-sm">
+                    {service.hook}
+                  </p>
+                </div>
+                
+                {/* Learn More Link */}
+                <div className="mt-8 pt-6 border-t border-slate-100">
+                  <a 
+                    href={service.link}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#0B132B] transition-colors group-hover:text-[#00B4D8]"
+                  >
+                    Explore Service Framework
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </a>
+                </div>
+                
               </article>
             </FadeIn>
           ))}
         </div>
+
       </div>
     </section>
   );
