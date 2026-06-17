@@ -166,6 +166,68 @@ export const services: Service[] = [
     ],
     keywords: ['CaaS', 'compliance platform', 'automated compliance', 'privacy software'],
   },
+  {
+    slug: 'employee-privacy-training',
+    title: 'Employee Privacy & Security Awareness Training',
+    description: 'Transform your workforce into a human firewall.',
+    heroDescription: 'Equip your employees with the practical knowledge to handle personal data securely and recognize cyber threats.',
+    intro: 'Human error is the leading cause of data breaches. Our training programs are designed to be engaging, practical, and tailored to the specific roles within your organization.',
+    idealFor: [
+      'Organizations wanting to build a culture of privacy',
+      'Companies needing to demonstrate compliance training to regulators',
+      'Teams handling sensitive personal or financial data',
+    ],
+    deliverables: [
+      'Customized Training Modules',
+      'Interactive Workshops or E-Learning',
+      'Phishing Simulation Exercises',
+      'Certificates of Completion (for compliance evidence)',
+    ],
+    process: [
+      'Assess current employee knowledge gaps',
+      'Customize training material to your business context',
+      'Deliver live workshops or digital modules',
+      'Conduct simulated attacks (e.g., phishing)',
+      'Provide management with progress reporting',
+    ],
+    outcomes: [
+      'Drastically reduced risk of human error',
+      'Documented evidence of organizational compliance measures',
+      'A proactive "Privacy First" company culture',
+    ],
+    keywords: ['awareness training', 'privacy training', 'human firewall', 'security awareness'],
+  },
+  {
+    slug: 'data-breach-response',
+    title: 'Data Breach Response Plan & Tabletop Exercises',
+    description: 'Prepare for the worst before it happens.',
+    heroDescription: 'Develop a robust playbook to handle data breaches within the mandatory 3x24 hour regulatory window.',
+    intro: 'When a breach occurs, time is your enemy. We help you build a comprehensive incident response plan and train your executive team through simulated tabletop exercises.',
+    idealFor: [
+      'Enterprises wanting to minimize post-breach liability',
+      'Organizations processing high-volumes of personal data',
+      'Firms seeking to improve incident readiness',
+    ],
+    deliverables: [
+      'Data Breach Incident Response Playbook',
+      'Pre-drafted Regulatory Notification Templates',
+      'Executive Tabletop Simulation Session',
+      'Post-Simulation Readiness Report',
+    ],
+    process: [
+      'Audit existing incident handling capabilities',
+      'Draft the step-by-step response playbook',
+      'Establish the Incident Response Team (IRT)',
+      'Conduct a simulated breach scenario (Tabletop Exercise)',
+      'Refine the playbook based on simulation results',
+    ],
+    outcomes: [
+      'Ability to confidently meet the 3x24h reporting window',
+      'Coordinated response across Legal, IT, and PR',
+      'Minimized financial and reputational damage',
+    ],
+    keywords: ['data breach', 'incident response', 'tabletop exercise', 'breach notification'],
+  },
 ];
 
 export function getServiceBySlug(slug: string) {

@@ -4,6 +4,14 @@ import { content as strategiContent } from './blog/content/strategi-kepatuhan-ko
 import { content as auditContent } from './blog/content/audit-kepatuhan-pdp';
 import { content as dpoContent } from './blog/content/peran-dpo-cybersecurity-2026';
 import { content as breachContent } from './blog/content/kebocoran-data-indonesia-2026';
+import { content as gapAssessmentContent } from './blog/content/apa-itu-gap-assessment-pdp';
+import { content as ropaContent } from './blog/content/apa-itu-ropa-pdp';
+import { content as dpiaContent } from './blog/content/apa-itu-dpia-pdp';
+import { content as dpoAasContent } from './blog/content/dpo-as-a-service-pdp';
+import { content as dataBreachContent } from './blog/content/data-breach-response-plan-pdp';
+import { content as vendorRiskContent } from './blog/content/vendor-risk-assessment-pdp';
+import { content as employeeTrainingContent } from './blog/content/employee-privacy-training-pdp';
+import { content as privacyByDesignContent } from './blog/content/privacy-by-design-pdp';
 
 export interface Article {
   slug: string;
@@ -33,6 +41,94 @@ function buildArticle(
 }
 
 const articleData: Omit<Article, 'readTimeMinutes'>[] = [
+  {
+    slug: 'data-breach-response-plan-pdp',
+    title: '3x24 Jam: Mengapa Anda Membutuhkan Data Breach Response Plan?',
+    description:
+      'Pelajari mengapa merespons kebocoran data dengan cepat dan terstruktur adalah kunci untuk menghindari sanksi regulator dan mempertahankan kepercayaan klien.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/dpo-cybersecurity.png',
+    category: 'Keamanan',
+    content: dataBreachContent,
+  },
+  {
+    slug: 'vendor-risk-assessment-pdp',
+    title: 'Audit Vendor Anda: Risiko Pihak Ketiga dalam Ekosistem UU PDP',
+    description:
+      'Anda bertanggung jawab atas data yang bocor dari server vendor Anda. Pahami pentingnya Vendor Risk Assessment dan Data Processing Agreement.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'Kepatuhan',
+    content: vendorRiskContent,
+  },
+  {
+    slug: 'employee-privacy-training-pdp',
+    title: 'Membangun "Human Firewall": Pentingnya Pelatihan Privasi Karyawan',
+    description:
+      'Kebijakan 50 halaman tidak ada gunanya jika karyawan tidak membacanya. Mengapa Awareness Training wajib untuk mencegah human error.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/dpo-cybersecurity.png',
+    category: 'Edukasi',
+    content: employeeTrainingContent,
+  },
+  {
+    slug: 'privacy-by-design-pdp',
+    title: 'Privacy by Design: Membangun Privasi Sejak Baris Kode Pertama',
+    description:
+      'Mengenal 7 prinsip dasar Privacy by Design agar produk dan fitur yang Anda bangun sudah mematuhi standar privasi secara otomatis (default).',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'Teknis',
+    content: privacyByDesignContent,
+  },
+  {
+    slug: 'dpo-as-a-service-pdp',
+    title: 'DPO as a Service: Manfaat Layanan DPO Eksternal untuk Perusahaan',
+    description:
+      'Apa itu DPO as a Service? Pelajari manfaat menggunakan ahli privasi eksternal untuk memastikan kepatuhan UU PDP secara efisien, objektif, dan hemat biaya.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/dpo-cybersecurity.png',
+    category: 'Layanan',
+    content: dpoAasContent,
+  },
+  {
+    slug: 'apa-itu-gap-assessment-pdp',
+    title: 'Apa itu Gap Assessment UU PDP dan Mengapa Perusahaan Anda Membutuhkannya?',
+    description:
+      'Panduan lengkap mengenai Gap Assessment Pelindungan Data Pribadi: proses membandingkan praktik pengolahan data saat ini dengan kewajiban UU PDP.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'Dasar-Dasar',
+    content: gapAssessmentContent,
+  },
+  {
+    slug: 'apa-itu-ropa-pdp',
+    title: 'Mengenal ROPA (Record of Processing Activities) dalam Kepatuhan UU PDP',
+    description:
+      'ROPA adalah pondasi kepatuhan privasi. Pelajari cara menyusun Rekam Kegiatan Pemrosesan Data Pribadi untuk memenuhi standar UU PDP.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'Dasar-Dasar',
+    content: ropaContent,
+  },
+  {
+    slug: 'apa-itu-dpia-pdp',
+    title: 'DPIA: Penilaian Dampak Pelindungan Data Pribadi untuk Risiko Tinggi',
+    description:
+      'Kapan perusahaan wajib melakukan DPIA? Pahami kriteria risiko tinggi dan langkah-langkah Data Protection Impact Assessment menurut UU PDP.',
+    date: '17 Juni 2026',
+    publishedAt: '2026-06-17',
+    image: '/blog/dpo-cybersecurity.png',
+    category: 'Dasar-Dasar',
+    content: dpiaContent,
+  },
   {
     slug: 'uu-pdp',
     title: 'UU Perlindungan Data Pribadi di 2026: Yang Harus Diketahui Bisnis Berkembang',

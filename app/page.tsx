@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f8f9fa] text-[#1a202c] antialiased">
       <JsonLd data={getFaqPageJsonLd(faqsForSchema)} />
-      <Navigation darkHero />
+      <Navigation />
       <Hero />
       <FlagshipService />
       <EngagementTimeline />

@@ -41,7 +41,7 @@ export default function EnterpriseReadiness() {
               Enterprise-Grade Onboarding & Compliance Vetting
             </h2>
             <p className="mt-4 text-lg text-slate-600 leading-relaxed">
-              PT PatuhData Solusi Nusantara is fully structured to meet the rigorous administrative, legal, and risk management standards of Indonesia's financial sector.
+              PT PatuhData Solusi Nusantara is fully structured to meet the rigorous administrative, legal, and risk management standards of Indonesia&apos;s financial sector.
             </p>
           </FadeIn>
         </div>
