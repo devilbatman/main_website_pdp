@@ -71,7 +71,7 @@ export default function Navigation() {
             <Link href="#metodologi" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               Methodology
             </Link>
-            <Link href="#tentang-kami" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
+            <Link href="/tentang" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">
               About Us
             </Link>
 
@@ -121,7 +121,7 @@ export default function Navigation() {
               Methodology
             </Link>
             <Link
-              href="#tentang-kami"
+              href="/tentang"
               onClick={() => setIsOpen(false)}
               className="block rounded-lg px-3 py-3 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white"
             >
