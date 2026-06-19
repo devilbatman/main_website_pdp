@@ -24,7 +24,7 @@ export default function FinalCTA() {
                 Start Your UU PDP Compliance Journey
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-sky-100/80">
-                Professional compliance advisory for Indonesia's digital economy.
+                Professional compliance advisory for Indonesia&apos;s digital economy.
               </p>
               <TrackedLink
                 href="#assessment"

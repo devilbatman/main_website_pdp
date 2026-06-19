@@ -228,7 +228,7 @@ export default function ConsultationForm() {
                     Send another message
                   </button>
                   <p className="text-center text-sm italic text-slate-500">
-                    Check your spam folder if you don't see a confirmation in your inbox.
+                    Check your spam folder if you don&apos;t see a confirmation in your inbox.
                   </p>
                 </div>
               </div>

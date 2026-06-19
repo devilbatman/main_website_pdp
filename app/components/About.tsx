@@ -13,7 +13,7 @@ export default function About() {
               About
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Operational trust infrastructure for Indonesia's digital economy
+              Operational trust infrastructure for Indonesia&apos;s digital economy
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
               Patuhdata partners with growing SaaS companies, fintech vendors, HR platforms, and digital service providers to operationalize governance—not just document it. We combine practitioner experience with structured workflows so your team can scale with confidence.
