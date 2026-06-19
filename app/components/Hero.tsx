@@ -19,8 +19,13 @@ export default function Hero() {
           {/* Left Side: Premium Copy & CTAs */}
           <div className="space-y-8 max-w-2xl text-left">
             <FadeIn delay={0.05}>
-              <div className="inline-flex items-center gap-2 rounded-sm border-l-2 border-[#00B4D8] bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-slate-300 backdrop-blur-sm">
-                PT PatuhData Solusi Nusantara
+              <div className="flex flex-wrap gap-3">
+                <div className="inline-flex items-center gap-2 rounded-sm border-l-2 border-[#00B4D8] bg-white/5 px-4 py-2 text-xs font-bold uppercase tracking-widest text-slate-300 backdrop-blur-sm">
+                  PT PatuhData Solusi Nusantara
+                </div>
+                <div className="inline-flex items-center gap-2 rounded-sm border-l-2 border-emerald-500 bg-emerald-500/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-emerald-400 backdrop-blur-sm">
+                  8+ Years Industry Expertise
+                </div>
               </div>
             </FadeIn>
 
@@ -33,7 +38,7 @@ export default function Hero() {
 
             <FadeIn delay={0.15}>
               <p className="text-lg leading-relaxed text-slate-400 font-light">
-                PT PatuhData Solusi Nusantara provides end-to-end corporate consultancy, gap assessments, and managed framework implementation to safeguard your organization against regulatory and operational liabilities.
+                With over 8 years of dedicated industry experience, PT PatuhData Solusi Nusantara provides end-to-end corporate consultancy, governance training, gap assessments, and managed framework implementation to safeguard your organization against regulatory and operational liabilities.
               </p>
             </FadeIn>
 
@@ -43,7 +48,7 @@ export default function Hero() {
                   href="#assessment"
                   className="group inline-flex items-center justify-center gap-2 rounded bg-[#00B4D8] hover:bg-white px-8 py-4 text-sm font-bold uppercase tracking-wider text-[#0B132B] transition-all duration-300"
                 >
-                  Request Proposal
+                  Request Consultation
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </a>
               </div>

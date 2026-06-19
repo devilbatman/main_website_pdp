@@ -39,7 +39,7 @@ const services = [
     icon: Building2,
     title: 'Corporate Governance & Training',
     hook: 'Crafting internal data protection policies, vendor data processing agreements (DPAs), and delivering executive-level compliance training.',
-    link: '/layanan/caas-platform',
+    link: '/layanan/corporate-governance-training',
   },
 ];
 

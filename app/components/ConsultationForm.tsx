@@ -37,15 +37,15 @@ export default function ConsultationForm() {
 
   const validateForm = () => {
     const errors: Record<string, string> = {};
-    if (!formData.name.trim()) errors.name = 'Nama lengkap wajib diisi';
+    if (!formData.name.trim()) errors.name = 'Full name is required';
     if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      errors.email = 'Masukkan alamat email yang valid';
+      errors.email = 'Enter a valid email address';
     }
     if (!formData.phone.trim() || !/^(\+62|62|0)[0-9]{8,13}$/.test(formData.phone)) {
-      errors.phone = 'Masukkan nomor telepon yang valid (mis. +628...)';
+      errors.phone = 'Enter a valid phone number (e.g., +628...)';
     }
-    if (!formData.company.trim()) errors.company = 'Nama perusahaan wajib diisi';
-    if (!formData.industry) errors.industry = 'Pilih industri';
+    if (!formData.company.trim()) errors.company = 'Company name is required';
+    if (!formData.industry) errors.industry = 'Select industry';
 
     setFormErrors(errors);
     return Object.keys(errors).length === 0;
@@ -69,7 +69,7 @@ export default function ConsultationForm() {
       const formDataObj = new FormData();
       formDataObj.append('access_key', accessKey);
       formDataObj.append('from_name', 'Patuh Data Website');
-      formDataObj.append('subject', `Permintaan konsultasi: ${formData.name} (${formData.company})`);
+      formDataObj.append('subject', `Consultation request: ${formData.name} (${formData.company})`);
       
       // Append all form data
       Object.entries(formData).forEach(([key, value]) => {
@@ -119,14 +119,14 @@ export default function ConsultationForm() {
           <div>
             <div className="sticky top-24">
               <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-                Konsultasi
+                Consultation
               </p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-slate-900 md:text-4xl">
-                Hubungi Patuhdata
+                Request Consultation
               </h2>
               <p className="mt-4 text-base leading-relaxed text-slate-600">
-                Untuk <strong className="text-slate-900">Gap Assessment UU PDP</strong>, sebutkan di
-                pesan. Kami merespons dalam satu hari kerja.
+                For <strong className="text-slate-900">UU PDP Gap Assessments</strong>, please mention it in your
+                message. We respond within one business day.
               </p>
 
               <div className="space-y-3 mb-6">
@@ -135,7 +135,7 @@ export default function ConsultationForm() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <p className="text-sm text-slate-600">
-                    <strong className="text-slate-900">Pemetaan awal</strong> — prioritas data, vendor, dan risiko operasional.
+                    <strong className="text-slate-900">Initial mapping</strong> — prioritize data, vendors, and operational risks.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
@@ -143,7 +143,7 @@ export default function ConsultationForm() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <p className="text-sm text-slate-600">
-                    <strong className="text-slate-900">Artefak praktis</strong> — daftar periksa, register vendor, contoh bukti.
+                    <strong className="text-slate-900">Actionable artifacts</strong> — checklists, vendor registers, and evidence templates.
                   </p>
                 </div>
                 <div className="flex items-start gap-2">
@@ -151,14 +151,14 @@ export default function ConsultationForm() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <p className="text-sm text-slate-600">
-                    <strong className="text-slate-900">Ruang lingkup pas ukuran</strong> — dari startup berkembang hingga vendor enterprise.
+                    <strong className="text-slate-900">Right-sized scoping</strong> — from growing startups to enterprise vendors.
                   </p>
                 </div>
               </div>
 
               {/* Contact Info */}
               <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-                <h3 className="mb-3 text-base font-semibold text-slate-900">Kontak langsung</h3>
+                <h3 className="mb-3 text-base font-semibold text-slate-900">Direct Contact</h3>
                 <div className="space-y-3">
                   <div className="flex items-center text-gray-700">
                     <svg className="w-5 h-5 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -214,10 +214,10 @@ export default function ConsultationForm() {
                     />
                   </svg>
                 </div>
-                <h3 className="mb-4 text-3xl font-semibold tracking-tight text-slate-900">Pesan terkirim</h3>
+                <h3 className="mb-4 text-3xl font-semibold tracking-tight text-slate-900">Message Sent</h3>
                 <p className="mx-auto mb-10 max-w-sm text-lg leading-relaxed text-slate-600">
-                  Terima kasih, <span className="font-semibold text-slate-900">{formData.name}</span>. Tim kami akan
-                  menghubungi Anda dalam <span className="font-semibold">satu hari kerja</span>.
+                  Thank you, <span className="font-semibold text-slate-900">{formData.name}</span>. Our team will
+                  contact you within <span className="font-semibold">one business day</span>.
                 </p>
                 <div className="mx-auto max-w-xs space-y-4">
                   <button
@@ -225,10 +225,10 @@ export default function ConsultationForm() {
                     onClick={() => setSubmitStatus('idle')}
                     className="btn-primary w-full"
                   >
-                    Kirim pesan lain
+                    Send another message
                   </button>
                   <p className="text-center text-sm italic text-slate-500">
-                    Periksa folder spam jika tidak melihat konfirmasi di kotak masuk.
+                    Check your spam folder if you don't see a confirmation in your inbox.
                   </p>
                 </div>
               </div>
@@ -239,7 +239,7 @@ export default function ConsultationForm() {
                   <div className="absolute inset-0 bg-white/60 backdrop-blur-[1px] z-10 flex items-center justify-center rounded-xl">
                     <div className="flex flex-col items-center">
                       <div className="w-12 h-12 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                      <p className="mt-4 animate-pulse font-semibold text-slate-900">Memproses permintaan Anda...</p>
+                      <p className="mt-4 animate-pulse font-semibold text-slate-900">Processing your request...</p>
                     </div>
                   </div>
                 )}
@@ -249,12 +249,12 @@ export default function ConsultationForm() {
 
                 {submitStatus === 'error' && (
                   <div className="p-4 bg-red-50 border border-red-200 text-red-700 rounded-lg text-sm">
-                    Terjadi kesalahan. Silakan coba lagi atau email kami di support@patuhdata.id.
+                    An error occurred. Please try again or email us at support@patuhdata.id.
                   </div>
                 )}
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nama lengkap *
+                    Full Name *
                   </label>
                   <input
                     type="text"
@@ -263,7 +263,7 @@ export default function ConsultationForm() {
                     value={formData.name}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.name ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
-                    placeholder="Nama lengkap"
+                    placeholder="Full Name"
                   />
                   {formErrors.name && <p className="text-red-500 text-xs mt-1">{formErrors.name}</p>}
                 </div>
@@ -279,14 +279,14 @@ export default function ConsultationForm() {
                     value={formData.email}
                     onChange={handleChange}
                     className={`w-full px-4 py-3 border-2 rounded-lg focus:outline-none transition-colors text-black ${formErrors.email ? 'border-red-500 focus:border-red-500' : 'border-gray-200 focus:border-blue-500'}`}
-                    placeholder="john@perusahaan.com"
+                    placeholder="john@company.com"
                   />
                   {formErrors.email && <p className="text-red-500 text-xs mt-1">{formErrors.email}</p>}
                 </div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nomor telepon *
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
@@ -302,7 +302,7 @@ export default function ConsultationForm() {
 
                 <div>
                   <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Nama perusahaan *
+                    Company Name *
                   </label>
                   <input
                     type="text"
@@ -318,7 +318,7 @@ export default function ConsultationForm() {
 
                 <div>
                   <label htmlFor="industry" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Industri *
+                    Industry *
                   </label>
                   <select
                     id="industry"
@@ -328,22 +328,22 @@ export default function ConsultationForm() {
                     required
                     className="w-full rounded-lg border-2 border-slate-200 px-4 py-3 text-black transition-colors focus:border-brand-600 focus:outline-none"
                   >
-                    <option value="">Pilih industri</option>
-                    <option value="saas">SaaS / produk perangkat lunak</option>
-                    <option value="fintech">Fintech / vendor pembayaran</option>
-                    <option value="hr-tech">HR tech / payroll</option>
+                    <option value="">Select industry</option>
+                    <option value="saas">SaaS / Software Product</option>
+                    <option value="fintech">Fintech / Payment Vendor</option>
+                    <option value="hr-tech">HR Tech / Payroll</option>
                     <option value="outsourcing">Outsourcing / BPO</option>
-                    <option value="software-house">Pengembangan perangkat lunak</option>
-                    <option value="digital-services">Layanan digital / agensi</option>
-                    <option value="ecommerce">E-commerce / marketplace</option>
-                    <option value="healthtech">Health tech</option>
-                    <option value="other">Lainnya</option>
+                    <option value="software-house">Software Development</option>
+                    <option value="digital-services">Digital Services / Agency</option>
+                    <option value="ecommerce">E-commerce / Marketplace</option>
+                    <option value="healthtech">Health Tech</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Pesan (opsional)
+                    Message (Optional)
                   </label>
                   <textarea
                     id="message"
@@ -352,7 +352,7 @@ export default function ConsultationForm() {
                     onChange={handleChange}
                     rows={4}
                     className="w-full resize-none rounded-lg border-2 border-slate-200 px-4 py-3 text-black transition-colors focus:border-brand-600 focus:outline-none"
-                    placeholder="mis. persiapan tinjauan vendor enterprise, kesiapan UU PDP, register risiko vendor..."
+                    placeholder="e.g. enterprise vendor review preparation, UU PDP readiness, vendor risk register..."
                   />
                 </div>
 
@@ -367,11 +367,11 @@ export default function ConsultationForm() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                       </svg>
-                      <span>Mengirim...</span>
+                      <span>Sending...</span>
                     </>
                   ) : (
                     <>
-                      <span>Kirim permintaan</span>
+                      <span>Submit Request</span>
                       <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -380,10 +380,9 @@ export default function ConsultationForm() {
                 </button>
 
                 <p className="text-center text-xs text-slate-500">
-                  Dengan mengirim formulir ini, Anda menyetujui bahwa kami dapat menghubungi Anda terkait permintaan
-                  konsultasi. Lihat{' '}
+                  By submitting this form, you agree that we may contact you regarding your consultation request. View our{' '}
                   <Link href="/privacy-policy" className="font-medium text-brand-600 hover:underline">
-                    Kebijakan Privasi
+                    Privacy Policy
                   </Link>
                   .
                 </p>

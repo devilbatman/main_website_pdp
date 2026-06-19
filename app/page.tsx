@@ -4,27 +4,27 @@ import JsonLd from './components/JsonLd';
 import Hero from './components/Hero';
 import FlagshipService from './components/FlagshipService';
 import EngagementTimeline from './components/EngagementTimeline';
-import IndustriesSection from './components/IndustriesSection';
 import EnterpriseReadiness from './components/EnterpriseReadiness';
 import FinalCTA from './components/FinalCTA';
 import ConsultationForm from './components/ConsultationForm';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
+import WhoIsThisFor from './components/WhoIsThisFor';
 import { createPageMetadata, getFaqPageJsonLd } from '@/lib/seo';
 import { faqsForSchema } from '@/data/faqs';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Patuhdata — Konsultan Kepatuhan UU PDP Indonesia',
+  title: 'Patuhdata — UU PDP Compliance Consultancy Indonesia',
   description:
-    'Patuhdata adalah konsultan profesional kepatuhan UU PDP untuk bank, fintech, multifinance, dan bisnis digital Indonesia. Gap assessment, DPO as a Service, dan pendampingan audit.',
+    'Patuhdata provides professional UU PDP compliance advisory for banks, fintech, multifinance, and digital businesses in Indonesia. Gap assessment, DPO as a Service, and audit support.',
   path: '',
   absoluteTitle: true,
   keywords: [
-    'konsultan UU PDP',
-    'gap assessment UU PDP',
-    'kepatuhan data pribadi Indonesia',
+    'UU PDP consultant',
+    'UU PDP gap assessment',
+    'Indonesia personal data protection compliance',
     'DPO as a service',
-    'konsultan kepatuhan data',
+    'data compliance consultant',
     'Patuhdata',
   ],
 });
@@ -37,7 +37,7 @@ export default function Home() {
       <Hero />
       <FlagshipService />
       <EngagementTimeline />
-      <IndustriesSection />
+      <WhoIsThisFor />
       <EnterpriseReadiness />
       <FinalCTA />
       <hr className="border-slate-200 mx-auto max-w-7xl" />

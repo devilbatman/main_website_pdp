@@ -5,24 +5,24 @@ import FadeIn from './motion/FadeIn';
 
 const timelineSteps = [
   {
-    phase: 'Fase 1: Diagnose',
-    subtitle: 'Gap Assessment & Audit Hukum',
-    description: 'Kami memulai dengan audit komprehensif terhadap infrastruktur dan kebijakan hukum saat ini untuk mengidentifikasi celah kepatuhan terhadap UU PDP secara presisi.',
+    phase: 'Phase 1: Diagnose',
+    subtitle: 'Gap Assessment & Legal Audit',
+    description: 'We conduct a comprehensive audit of your current legal and IT infrastructure to pinpoint UU PDP compliance gaps.',
   },
   {
-    phase: 'Fase 2: Design',
-    subtitle: 'Penyusunan ROPA & DPIA',
-    description: 'Tim kami memetakan siklus data enterprise Anda ke dalam ROPA yang terstruktur secara hukum dan menyusun blueprint DPIA untuk aktivitas pemrosesan berisiko tinggi.',
+    phase: 'Phase 2: Design',
+    subtitle: 'ROPA & DPIA Formulation',
+    description: 'We map your enterprise data lifecycle into a legally structured ROPA and draft DPIA blueprints for high-risk processing.',
   },
   {
-    phase: 'Fase 3: Deploy',
-    subtitle: 'Tata Kelola & Implementasi Kebijakan',
-    description: 'Kami mengimplementasikan kerangka kerja yang telah dirancang, termasuk pembaruan kebijakan privasi, DPA vendor, dan peluncuran kontrol tata kelola di seluruh departemen.',
+    phase: 'Phase 3: Deploy',
+    subtitle: 'Governance & Policy Implementation',
+    description: 'We roll out the designed frameworks, including updated privacy policies, vendor DPAs, and department-wide governance controls.',
   },
   {
-    phase: 'Fase 4: Defend',
-    subtitle: 'DPO-as-a-Service & Audit Berkala',
-    description: 'Pengawasan berkelanjutan oleh tim DPO tersertifikasi kami. Kami menangani komunikasi regulator, pemantauan vendor, dan audit berkala untuk memastikan kepatuhan statuter berlanjut.',
+    phase: 'Phase 4: Defend',
+    subtitle: 'DPO-as-a-Service & Ongoing Audits',
+    description: 'Continuous oversight by our certified DPOs. We manage regulatory liaison, vendor monitoring, and periodic audits to ensure sustained compliance.',
   },
 ];
 
@@ -34,13 +34,13 @@ export default function EngagementTimeline() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-sm font-bold uppercase tracking-widest text-[#00B4D8] mb-3">
-            Metodologi
+            Methodology
           </p>
           <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
-            Metodologi Kepatuhan UU PDP Kami
+            Our UU PDP Compliance Methodology
           </h2>
           <p className="mt-4 text-lg text-slate-300">
-            Pendekatan sistematis dan terstruktur oleh PT PatuhData Solusi Nusantara untuk memitigasi risiko hukum dan operasional data enterprise Anda.
+            A systematic, structured approach by PT PatuhData Solusi Nusantara to mitigate legal and operational data risks.
           </p>
         </FadeIn>
 

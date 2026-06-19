@@ -6,18 +6,18 @@ import FadeIn from './motion/FadeIn';
 const items = [
   {
     icon: Building2,
-    title: 'Selaras regulator',
-    text: 'Kami membantu perusahaan menyelaraskan operasi dengan UU PDP dan kesiapan menghadapi pengawasan—bukan sekadar teks kebijakan.',
+    title: 'Regulator-Aligned',
+    text: 'We help companies align operations with UU PDP and audit readiness—not just policy text.',
   },
   {
     icon: FileCheck2,
-    title: 'Bukti yang dipercaya',
-    text: 'Alert kritis, monitoring log, dan audit log terstruktur menjadi bahan jawaban saat regulator atau mitra menuntut bukti kontrol.',
+    title: 'Evidence-Ready',
+    text: 'Critical alerts, monitoring logs, and structured audit trails become your answer when regulators or partners demand proof of control.',
   },
   {
     icon: Shield,
-    title: 'Otoritas di lapangan',
-    text: 'Pendekatan praktisi: dokumentasi, ritme review, dan integrasi dengan tata kelola IT & keamanan yang sudah Anda miliki.',
+    title: 'Practitioner-Led',
+    text: 'Documentation, review cadences, and seamless integration with your existing IT governance and security stack.',
   },
 ];
 
@@ -27,11 +27,10 @@ export default function HomeRegulatorStrip() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 md:text-3xl">
-            Kepatuhan finansial yang bisa dibuktikan
+            Provable compliance for your business
           </h2>
           <p className="mt-4 text-slate-600">
-            Kami menyatukan kedalaman UU PDP dengan kontrol operasional yang regulator dan mitra institusi
-            dapat verifikasi.
+            We combine deep UU PDP expertise with operational controls that regulators and institutional partners can independently verify.
           </p>
         </FadeIn>
         <div className="mt-12 grid gap-6 md:grid-cols-3">

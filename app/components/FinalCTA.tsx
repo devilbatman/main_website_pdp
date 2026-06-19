@@ -21,18 +21,18 @@ export default function FinalCTA() {
             />
             <div className="relative">
               <h2 className="text-balance text-3xl font-semibold tracking-tight text-white md:text-4xl">
-                Mulai Perjalanan Kepatuhan UU PDP Anda
+                Start Your UU PDP Compliance Journey
               </h2>
               <p className="mx-auto mt-4 max-w-xl text-lg text-sky-100/80">
-                Konsultan profesional untuk bisnis Anda di era ekonomi digital Indonesia.
+                Professional compliance advisory for Indonesia's digital economy.
               </p>
               <TrackedLink
                 href="#assessment"
                 eventName="cta_click"
-                eventParams={{ location: 'final_cta', label: 'talk_to_patuhdata' }}
+                eventParams={{ location: 'final_cta', label: 'request_consultation' }}
                 className="btn-primary mt-8 inline-flex gap-2"
               >
-                Hubungi Patuhdata
+                Request Consultation
                 <ArrowRight className="h-4 w-4" />
               </TrackedLink>
             </div>

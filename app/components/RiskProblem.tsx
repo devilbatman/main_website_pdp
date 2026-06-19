@@ -1,9 +1,9 @@
 const challenges = [
-  'Klien enterprise meminta kuesioner keamanan?',
-  'Belum yakin cara menata tata kelola vendor?',
-  'Sedang mempersiapkan kesiapan PDP?',
-  'Mengelola data pelanggan sensitif tanpa kontrol yang jelas?',
-  'Butuh tata kelola operasional tanpa kerumitan skala enterprise?',
+  'Enterprise procurement demanding security questionnaires?',
+  'Unsure how to structure vendor governance?',
+  'Preparing for UU PDP readiness?',
+  'Managing sensitive customer data without clear controls?',
+  'Need operational governance without enterprise-scale complexity?',
 ];
 
 export default function RiskProblem() {
@@ -12,13 +12,12 @@ export default function RiskProblem() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div>
-            <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-300">Tantangan Umum</p>
+            <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-blue-300">Common Challenges</p>
             <h2 className="mb-4 text-2xl font-bold leading-tight md:text-4xl">
-              Kurangi risiko operasional, bangun kepercayaan klien enterprise
+              Reduce operational risk. Build enterprise client trust.
             </h2>
             <p className="text-base leading-relaxed text-slate-300 md:text-lg">
-              Kami membantu vendor teknologi Indonesia menjadi siap dipercaya—bukan sekadar menawarkan solusi
-              compliance.
+              We help Indonesian technology vendors become genuinely trustworthy—not just checkbox-compliant.
             </p>
           </div>
 

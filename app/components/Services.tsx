@@ -7,40 +7,40 @@ import FadeIn from './motion/FadeIn';
 const services = [
   {
     icon: Shield,
-    title: 'Kesiapan Tata Kelola Vendor',
+    title: 'Vendor Governance Readiness',
     summary:
-      'Saat procurement meminta bukti, spreadsheet tersebar sering gagal uji. Kami membantu merakit berkas vendor yang dapat dipertanggungjawabkan, jawaban kuesioner keamanan, dan skor risiko yang selaras dengan cara pembeli enterprise menilai Anda.',
+      'When procurement demands proof, scattered spreadsheets fail the test. We assemble accountable vendor packages, security questionnaire responses, and risk scores aligned with how enterprise buyers evaluate you.',
     items: [
-      'Penilaian vendor bertingkat dan prioritas perbaikan',
-      'Paket due diligence untuk RFP dan tinjauan keamanan',
-      'Jawaban kuesioner keamanan yang mencerminkan kondisi nyata',
-      'Skoring risiko vendor dan ritme pemantauan',
+      'Tiered vendor assessments and remediation priorities',
+      'Due diligence packages for RFPs and security reviews',
+      'Security questionnaire responses that reflect actual conditions',
+      'Vendor risk scoring and monitoring cadences',
     ],
     href: '/layanan/vendor-risk-review',
   },
   {
     icon: ClipboardCheck,
-    title: 'Gap Assessment UU PDP',
+    title: 'UU PDP Gap Assessment',
     summary:
-      'Gap assessment operasional terhadap UU PDP: temukan celah pada proses data, kontrol, dan vendor—dengan prioritas perbaikan yang jelas.',
+      'Operational gap assessment against UU PDP: find gaps in your data processes, controls, and vendors—with a clear remediation priority list.',
     items: [
-      'Pemetaan pemrosesan dan alur data yang dapat dipertahankan',
-      'Akses, retensi, dan minimisasi pada sistem yang benar-benar berjalan',
-      'Playbook pelanggaran & notifikasi mengikuti tenggat hukum',
-      'Kontrak pemroses dan tinjauan penanganan data vendor',
+      'Defensible data processing and flow mapping',
+      'Access, retention, and minimization on live systems',
+      'Breach & notification playbook aligned to legal deadlines',
+      'Processor contracts and vendor data handling review',
     ],
     href: '/layanan/pdp-readiness-assessment',
   },
   {
     icon: Scale,
-    title: 'Risiko Operasional & Tata Kelola',
+    title: 'Operational Risk & Governance',
     summary:
-      'Tata kelola yang hanya hidup di slide deck akan bergeser begitu tim bertambah. Kami merancang alur kerja, kepemilikan, dan pustaka bukti agar pertanyaan audit dijawab dari operasi—bukan improvisasi menit terakhir.',
+      'Governance that lives only in slide decks drifts when teams grow. We design workflows, ownership, and evidence libraries so audit questions are answered from operations—not last-minute improvisation.',
     items: [
-      'Alur tata kelola lintas fungsi dengan pemilik yang jelas',
-      'Kesiapan audit & tinjauan manajemen tanpa panik mendadak',
-      'Bukti terpusat: keputusan, persetujuan, dan bukti implementasi',
-      'Pelacakan perbaikan dari temuan hingga penutupan dengan akuntabilitas',
+      'Cross-functional governance workflows with clear owners',
+      'Audit & management review readiness without panic',
+      'Centralized evidence: decisions, approvals, and implementation proof',
+      'Remediation tracking from finding to closure with accountability',
     ],
     href: '/layanan/risk-orchestration-readiness',
   },
@@ -48,12 +48,12 @@ const services = [
     icon: UserCheck,
     title: 'DPO as a Service',
     summary:
-      'Layanan Data Protection Officer eksternal untuk mendampingi kepatuhan perlindungan data pribadi secara berkelanjutan tanpa harus merekrut tim purna waktu.',
+      'An outsourced Data Protection Officer to support ongoing personal data protection compliance—without hiring a full-time team.',
     items: [
-      'Pendampingan tata kelola dan kepatuhan harian',
-      'Tinjauan dampak pelindungan data (DPIA)',
-      'Manajemen respons insiden dan permintaan subjek data',
-      'Penghubung dengan otoritas pengawas',
+      'Day-to-day governance and compliance guidance',
+      'Data Protection Impact Assessment (DPIA) review',
+      'Incident response and data subject request management',
+      'Liaison with supervisory authorities',
     ],
     href: '/layanan/dpo-as-a-service',
   },
@@ -65,13 +65,13 @@ export default function Services() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Layanan
+            Services
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Layanan untuk institusi keuangan
+            Built for regulated industries
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Vendor, UU PDP, risiko operasional—dirancang untuk bank, BPR, fintech, dan multifinance.
+            Vendor governance, UU PDP compliance, and operational risk—designed for banks, fintech, health-tech, and enterprise SaaS.
           </p>
         </FadeIn>
 
@@ -96,7 +96,7 @@ export default function Services() {
                   href={service.href}
                   className="group mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-slate-900 transition-colors hover:text-brand-600"
                 >
-                  Selengkapnya
+                  Learn more
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </article>

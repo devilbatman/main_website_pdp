@@ -19,10 +19,10 @@ export default function Footer({ variant = 'full' }: FooterProps) {
           </div>
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm sm:justify-end">
             <Link href="/layanan" className="text-slate-600 transition-colors hover:text-brand-700">
-              Layanan
+              Services
             </Link>
             <Link href="/template-gratis" className="text-slate-600 transition-colors hover:text-brand-700">
-              Template gratis
+              Free Templates
             </Link>
             <Link href="/faq" className="text-slate-600 transition-colors hover:text-brand-700">
               FAQ
@@ -65,7 +65,7 @@ export default function Footer({ variant = 'full' }: FooterProps) {
               Services
             </Link>
             <Link href="/template-gratis" className="text-slate-600 hover:text-ocean-950">
-              Template gratis
+              Free Templates
             </Link>
             <Link href="/blog" className="text-slate-600 hover:text-ocean-950">
               Insights

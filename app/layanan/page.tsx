@@ -12,7 +12,7 @@ const DISPLAY_ORDER = [
   'ropa',
   'dpia',
   'dpo-as-a-service',
-  'caas-platform',
+  'corporate-governance-training',
 ] as const;
 
 export const metadata = createPageMetadata({

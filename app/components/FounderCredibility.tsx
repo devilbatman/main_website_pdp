@@ -5,10 +5,10 @@ import { ArrowUpRight } from 'lucide-react';
 import FadeIn from './motion/FadeIn';
 
 const credentials = [
-  'Tech Lead — delivery, arsitektur, dan keamanan operasional',
-  'Tata kelola (governance), risk & data controls',
-  'Pengalaman di perusahaan bersertifikasi ISO 27001',
-  'Gap assessment, vendor, dan bukti audit untuk sektor finansial',
+  'Tech Lead — delivery, architecture, and operational security',
+  'Governance, risk & data controls',
+  'Experience in ISO 27001-certified environments',
+  'Gap assessment, vendor management & audit evidence for the financial sector',
 ];
 
 export default function FounderCredibility() {
@@ -18,11 +18,11 @@ export default function FounderCredibility() {
         <FadeIn>
           <div className="card-premium overflow-hidden lg:grid lg:grid-cols-[1fr_1.4fr]">
             <div className="border-b border-slate-200 bg-slate-900 p-8 text-white lg:border-b-0 lg:border-r">
-              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Tim inti</p>
+              <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">Core Team</p>
               <h2 className="mt-3 text-2xl font-semibold md:text-3xl">Richard Rusli</h2>
               <p className="mt-1 text-sm text-slate-300">Founder, Patuhdata</p>
               <p className="mt-2 text-sm text-slate-400">
-                Tech Lead · Governance · lingkungan ISO 27001
+                Tech Lead · Governance · ISO 27001 environments
               </p>
               <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:gap-4">
                 <Link
@@ -48,10 +48,7 @@ export default function FounderCredibility() {
 
             <div className="p-8 md:p-10">
               <p className="text-base leading-relaxed text-slate-600">
-                Richard membangun Patuhdata setelah bertahun-tahun sebagai Tech Lead di lingkungan tata kelola
-                dan keamanan—termasuk perusahaan bersertifikasi ISO 27001. Fokusnya memindahkan regulasi
-                (UU PDP) ke kontrol operasional yang bisa dijalankan tim: gap assessment, vendor, audit trail,
-                dan bukti yang dapat dipertanggungjawabkan ke manajemen dan mitra institusi keuangan.
+                Richard built Patuhdata after years as a Tech Lead in governance and security environments—including ISO 27001-certified companies. His focus: translating UU PDP regulation into operational controls that teams can actually run—gap assessments, vendor management, audit trails, and evidence that stands up to management scrutiny and institutional financial partners.
               </p>
               <ul className="mt-6 grid gap-2 sm:grid-cols-2">
                 {credentials.map((item) => (
@@ -62,8 +59,7 @@ export default function FounderCredibility() {
                 ))}
               </ul>
               <p className="mt-6 text-xs text-slate-500">
-                Kami mengakui keterbatasan: bukan firma hukum dan tidak mewakili otoritas regulator. Nilai
-                kami ada pada eksekusi operasional dan deliverable yang jelas.
+                We acknowledge our boundaries: we are not a law firm and do not represent regulatory authority. Our value lies in operational execution and clear, deliverable outcomes.
               </p>
             </div>
           </div>

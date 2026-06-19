@@ -6,24 +6,23 @@ import FadeIn from './motion/FadeIn';
 const steps = [
   {
     number: '01',
-    title: 'Tinjau',
-    description:
-      'Kami menilai kematangan tata kelola, eksposur vendor, dan risiko operasional.',
+    title: 'Assess',
+    description: 'We evaluate governance maturity, vendor exposure, and operational risk.',
   },
   {
     number: '02',
-    title: 'Prioritaskan',
-    description: 'Kami mengidentifikasi kesenjangan kritis dan prioritas perbaikan.',
+    title: 'Prioritize',
+    description: 'We identify critical gaps and rank remediation priorities.',
   },
   {
     number: '03',
-    title: 'Operasionalkan',
-    description: 'Kami menerapkan alur kerja dan kontrol tata kelola yang praktis.',
+    title: 'Operationalize',
+    description: 'We implement practical governance workflows and controls.',
   },
   {
     number: '04',
-    title: 'Pertahankan',
-    description: 'Dukungan tata kelola berkelanjutan dan pemantauan kesiapan.',
+    title: 'Sustain',
+    description: 'Ongoing governance support and compliance readiness monitoring.',
   },
 ];
 
@@ -35,14 +34,13 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <FadeIn className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-            Proses
+            Process
           </p>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-            Cara Kami Bekerja
+            How We Work
           </h2>
           <p className="mt-4 text-lg text-slate-600">
-            Jalur terstruktur dari gap assessment hingga remediasi—dirancang untuk tim legal, IT, dan
-            operasional institusi keuangan.
+            A structured path from gap assessment to remediation—built for legal, IT, and operations teams.
           </p>
         </FadeIn>
 

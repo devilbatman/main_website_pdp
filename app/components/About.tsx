@@ -10,20 +10,16 @@ export default function About() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn>
             <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
-              Tentang
+              About
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900 sm:text-4xl">
-              Infrastruktur kepercayaan operasional untuk ekonomi digital Indonesia
+              Operational trust infrastructure for Indonesia's digital economy
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-slate-600">
-              Patuhdata bermitra dengan perusahaan SaaS berkembang, vendor fintech, platform HR, dan
-              penyedia layanan digital untuk mengoperasionalkan tata kelola—bukan sekadar
-              mendokumentasikannya. Kami menggabungkan pengalaman praktisi dengan alur kerja terstruktur
-              agar tim Anda dapat berkembang dengan percaya diri.
+              Patuhdata partners with growing SaaS companies, fintech vendors, HR platforms, and digital service providers to operationalize governance—not just document it. We combine practitioner experience with structured workflows so your team can scale with confidence.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-slate-600">
-              Dari penilaian risiko vendor hingga kesiapan UU PDP dan pelacakan perbaikan, kami membantu
-              Anda membangun lapisan operasional yang diharapkan pembeli enterprise dan regulator.
+              From vendor risk assessments to UU PDP readiness and remediation tracking, we help you build the operational layer that enterprise buyers and regulators expect.
             </p>
 
             <div className="mt-8 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
@@ -36,9 +32,9 @@ export default function About() {
                 />
               </div>
               <div>
-                <p className="font-semibold text-slate-900">Dipimpin praktisi bersertifikat</p>
+                <p className="font-semibold text-slate-900">Led by certified practitioners</p>
                 <p className="text-sm text-slate-600">
-                  Lead Auditor ISO 27001 · Pengalaman tata kelola enterprise
+                  Lead Auditor ISO 27001 · Enterprise governance experience
                 </p>
               </div>
             </div>
@@ -47,10 +43,10 @@ export default function About() {
           <FadeIn delay={0.1}>
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: 'Fokus', value: 'Tata kelola operasional' },
-                { label: 'Klien', value: 'Bisnis digital berkembang' },
-                { label: 'Wilayah', value: 'Indonesia' },
-                { label: 'Pendekatan', value: 'Tinjau → Operasi → Pertahankan' },
+                { label: 'Focus', value: 'Operational Governance' },
+                { label: 'Clients', value: 'Growing Digital Businesses' },
+                { label: 'Region', value: 'Indonesia' },
+                { label: 'Approach', value: 'Assess → Operate → Sustain' },
               ].map((item) => (
                 <div
                   key={item.label}

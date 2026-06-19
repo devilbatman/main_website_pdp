@@ -62,7 +62,7 @@ export default function Navigation() {
                 <Link href="/layanan/dpo-as-a-service" className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
                   DPO-as-a-Service
                 </Link>
-                <Link href="/layanan/caas-platform" className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
+                <Link href="/layanan/corporate-governance-training" className="block rounded-lg px-4 py-3 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-white">
                   Corporate Governance & Training
                 </Link>
               </div>
@@ -78,10 +78,10 @@ export default function Navigation() {
             <TrackedLink
               href="#assessment"
               eventName="cta_click"
-              eventParams={{ location: 'navbar', label: 'request_proposal' }}
+              eventParams={{ location: 'navbar', label: 'request_consultation' }}
               className="inline-flex h-10 items-center justify-center rounded bg-[#00B4D8] px-6 text-sm font-bold uppercase tracking-wider text-[#0B132B] transition-all hover:bg-white hover:shadow-[0_0_20px_rgba(0,180,216,0.4)] ml-4"
             >
-              Request Proposal
+              Request Consultation
             </TrackedLink>
           </div>
 
@@ -109,7 +109,7 @@ export default function Navigation() {
                 <Link href="/layanan/ropa" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">ROPA</Link>
                 <Link href="/layanan/dpia" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">DPIA</Link>
                 <Link href="/layanan/dpo-as-a-service" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">DPO-as-a-Service</Link>
-                <Link href="/layanan/caas-platform" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">Corporate Governance & Training</Link>
+                <Link href="/layanan/corporate-governance-training" onClick={() => setIsOpen(false)} className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800">Corporate Governance & Training</Link>
               </div>
             </div>
 
@@ -132,11 +132,11 @@ export default function Navigation() {
               <TrackedLink
                 href="#assessment"
                 eventName="cta_click"
-                eventParams={{ location: 'navbar_mobile', label: 'request_proposal' }}
+                eventParams={{ location: 'navbar_mobile', label: 'request_consultation' }}
                 onClick={() => setIsOpen(false)}
                 className="flex w-full items-center justify-center rounded bg-[#00B4D8] px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-[#0B132B] hover:bg-white transition-colors"
               >
-                Request Proposal
+                Request Consultation
               </TrackedLink>
             </div>
           </div>
