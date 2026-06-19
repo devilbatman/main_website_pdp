@@ -122,7 +122,7 @@ export default function TermsConditionsPage() {
         <p className="mt-2 text-sm leading-relaxed">INFINITI OFFICE, Jakarta Barat 11630, Indonesia</p>
         <p className="mt-3 text-sm">
           <a href="mailto:support@patuhdata.id">support@patuhdata.id</a> ·{' '}
-          <a href="tel:+6285183064580">+62 851 8306 4580</a>
+          <a href="tel:+6281903378000">+62 819 0337 8000</a>
         </p>
       </div>
     </LegalPageLayout>

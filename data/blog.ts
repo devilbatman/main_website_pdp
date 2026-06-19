@@ -12,6 +12,9 @@ import { content as dataBreachContent } from './blog/content/data-breach-respons
 import { content as vendorRiskContent } from './blog/content/vendor-risk-assessment-pdp';
 import { content as employeeTrainingContent } from './blog/content/employee-privacy-training-pdp';
 import { content as privacyByDesignContent } from './blog/content/privacy-by-design-pdp';
+import { content as panduanDpoContent } from './blog/content/panduan-lengkap-dpo-2025';
+import { content as kasusUuPdpContent } from './blog/content/56-kasus-pelanggaran-uu-pdp-2025';
+import { content as checklistUmkmContent } from './blog/content/checklist-kepatuhan-uu-pdp-umkm';
 
 export interface Article {
   slug: string;
@@ -41,6 +44,39 @@ function buildArticle(
 }
 
 const articleData: Omit<Article, 'readTimeMinutes'>[] = [
+  {
+    slug: 'panduan-lengkap-dpo-2025',
+    title: 'Panduan Lengkap DPO 2025: Siapa Wajib, Kualifikasi & Langkah Penunjukan',
+    description:
+      'Putusan MK Juli 2025 mengklarifikasi siapa yang wajib menunjuk Data Protection Officer. Panduan lengkap kualifikasi DPO, langkah penunjukan, dan opsi DPO as a Service untuk UMKM dan scale-up.',
+    date: '19 Juni 2026',
+    publishedAt: '2026-06-19',
+    image: '/blog/dpo-cybersecurity.png',
+    category: 'Kepatuhan',
+    content: panduanDpoContent,
+  },
+  {
+    slug: '56-kasus-pelanggaran-uu-pdp-2025',
+    title: '56 Kasus Pelanggaran UU PDP 2025: Pola, Pelajaran & Cara Menghindarinya',
+    description:
+      'Analisis mendalam 56 dugaan pelanggaran UU PDP yang tercatat Komdigi hingga Juli 2025. Pola berulang, root cause terbesar, dan checklist praktis agar organisasi Anda tidak menjadi kasus ke-57.',
+    date: '19 Juni 2026',
+    publishedAt: '2026-06-19',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'Keamanan',
+    content: kasusUuPdpContent,
+  },
+  {
+    slug: 'checklist-kepatuhan-uu-pdp-umkm',
+    title: 'Checklist Kepatuhan UU PDP untuk UMKM: 10 Langkah Praktis dalam 60 Hari',
+    description:
+      'Panduan compliance UU PDP khusus UMKM berkembang. Mulai dari ROPA sederhana, privacy policy, vendor DPA, hingga breach response plan—tanpa budget besar atau tim legal penuh.',
+    date: '19 Juni 2026',
+    publishedAt: '2026-06-19',
+    image: '/blog/audit-kepatuhan.png',
+    category: 'UMKM',
+    content: checklistUmkmContent,
+  },
   {
     slug: 'data-breach-response-plan-pdp',
     title: '3x24 Jam: Mengapa Anda Membutuhkan Data Breach Response Plan?',

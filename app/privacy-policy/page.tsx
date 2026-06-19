@@ -140,7 +140,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <p className="text-sm">
           <strong>Telepon:</strong>{' '}
-          <a href="tel:+6285183064580">+62 851 8306 4580</a>
+          <a href="tel:+6281903378000">+62 819 0337 8000</a>
         </p>
       </div>
     </LegalPageLayout>

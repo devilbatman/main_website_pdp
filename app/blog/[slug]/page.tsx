@@ -12,6 +12,8 @@ import Footer from '../../components/Footer';
 import BlogCard from '../../components/BlogCard';
 import type { Metadata } from 'next';
 import { getArticleJsonLd, getArticleMetadata } from '@/lib/blogMetadata';
+import { getBreadcrumbJsonLd } from '@/lib/seo';
+import JsonLd from '@/app/components/JsonLd';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -48,9 +50,13 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <div className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      <JsonLd data={articleJsonLd} />
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: 'Beranda', url: '/' },
+          { name: 'Wawasan', url: '/blog' },
+          { name: article.title, url: `/blog/${article.slug}` },
+        ])}
       />
       <Navigation />
 

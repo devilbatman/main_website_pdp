@@ -26,7 +26,7 @@ export default function About() {
               <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl bg-white ring-1 ring-slate-200">
                 <Image
                   src="/iso27001lead.png"
-                  alt="Lead Auditor ISO 27001"
+                  alt="Sertifikasi Lead Auditor ISO 27001 - Keamanan Informasi"
                   fill
                   className="object-contain p-1.5"
                 />

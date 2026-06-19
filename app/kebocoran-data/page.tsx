@@ -15,6 +15,14 @@ export const metadata = createPageMetadata({
     'Daftar insiden kebocoran data Indonesia — Have I Been Pwned, media, dan threat intelligence. Dikurasi Patuhdata untuk sektor keuangan.',
   path: '/kebocoran-data',
   ogTitle: 'Pemantauan Kebocoran Data Indonesia | Patuhdata',
+  keywords: [
+    'kebocoran data Indonesia',
+    'data breach Indonesia 2025',
+    'pemantauan insiden data',
+    'have I been pwned Indonesia',
+    'keamanan data Indonesia',
+    'pelanggaran data pribadi',
+  ],
 });
 
 export default async function KebocoranDataPage() {

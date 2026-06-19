@@ -13,7 +13,15 @@ export const metadata = createPageMetadata({
   description:
     'Jawaban tentang Patuhdata, UU PDP, Badan PDP, program kepercayaan vendor, DPO, dan siapa yang kami layani—bank, fintech, multifinance, SaaS, dan UMKM.',
   path: '/faq',
-  ogTitle: 'FAQ Patuhdata | Operational Trust & Vendor Governance',
+  ogTitle: 'FAQ Patuhdata | Kepercayaan Operasional & Tata Kelola Vendor',
+  keywords: [
+    'FAQ UU PDP',
+    'pertanyaan kepatuhan data pribadi',
+    'Badan PDP Indonesia',
+    'DPO Indonesia',
+    'vendor governance',
+    'konsultan kepatuhan Indonesia',
+  ],
 });
 
 const featuredIds = [4, 5, 6];

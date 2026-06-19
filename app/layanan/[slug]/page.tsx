@@ -11,7 +11,7 @@ import WhatsAppButton from '@/app/components/WhatsAppButton';
 import { getServiceBySlug, services } from '@/data/services';
 import { getServiceImagery } from '@/lib/serviceImagery';
 import { getServiceCta } from '@/lib/serviceCta';
-import { createPageMetadata, getServiceJsonLd } from '@/lib/seo';
+import { createPageMetadata, getServiceJsonLd, getBreadcrumbJsonLd } from '@/lib/seo';
 
 const defaultFaqs = [
   {
@@ -74,6 +74,13 @@ export default async function ServicePage({ params }: Props) {
           title: service.title,
           description: service.description,
         })}
+      />
+      <JsonLd
+        data={getBreadcrumbJsonLd([
+          { name: 'Beranda', url: '/' },
+          { name: 'Layanan', url: '/layanan' },
+          { name: service.title, url: `/layanan/${service.slug}` },
+        ])}
       />
       <Navigation />
       <ServicePageTracker service={service.slug} />

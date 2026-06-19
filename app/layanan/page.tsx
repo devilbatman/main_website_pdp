@@ -18,9 +18,17 @@ const DISPLAY_ORDER = [
 export const metadata = createPageMetadata({
   title: 'Layanan',
   description:
-    'Gap Assessment UU PDP, ROPA, DPIA, DPO as a Service, dan platform kepatuhan CaaS dari Patuhdata.',
+    'Gap Assessment UU PDP, ROPA, DPIA, DPO as a Service, dan pelatihan tata kelola korporat dari Patuhdata untuk kepatuhan data pribadi Indonesia.',
   path: '/layanan',
-  ogTitle: 'Layanan Patuhdata | Enterprise RegTech Solutions',
+  ogTitle: 'Layanan Patuhdata | Solusi Kepatuhan UU PDP',
+  keywords: [
+    'layanan kepatuhan UU PDP',
+    'gap assessment Indonesia',
+    'DPO as a service',
+    'ROPA Indonesia',
+    'DPIA Indonesia',
+    'konsultan perlindungan data',
+  ],
 });
 
 export default function ServicesLandingPage() {

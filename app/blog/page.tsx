@@ -13,6 +13,14 @@ export const metadata = createPageMetadata({
     'Artikel dan panduan praktis tentang UU PDP, tata kelola vendor, dan kepatuhan operasional untuk bisnis berkembang di Indonesia.',
   path: '/blog',
   ogTitle: 'Wawasan | Tata Kelola & Kesiapan UU PDP',
+  keywords: [
+    'artikel UU PDP',
+    'panduan kepatuhan data pribadi',
+    'tata kelola vendor Indonesia',
+    'kepatuhan operasional',
+    'wawasan regulasi Indonesia',
+    'blog perlindungan data',
+  ],
 });
 
 export default function BlogIndex() {

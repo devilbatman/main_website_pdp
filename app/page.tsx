@@ -14,17 +14,20 @@ import { createPageMetadata, getFaqPageJsonLd } from '@/lib/seo';
 import { faqsForSchema } from '@/data/faqs';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Patuhdata — UU PDP Compliance Consultancy Indonesia',
+  title: 'Patuhdata — Konsultan Kepatuhan UU PDP Indonesia',
   description:
-    'Patuhdata provides professional UU PDP compliance advisory for banks, fintech, multifinance, and digital businesses in Indonesia. Gap assessment, DPO as a Service, and audit support.',
+    'Konsultan profesional kepatuhan UU PDP untuk bank, fintech, multifinance, dan bisnis digital di Indonesia. Gap Assessment, DPO as a Service, dan dukungan audit.',
   path: '',
   absoluteTitle: true,
   keywords: [
-    'UU PDP consultant',
-    'UU PDP gap assessment',
-    'Indonesia personal data protection compliance',
-    'DPO as a service',
-    'data compliance consultant',
+    'konsultan UU PDP',
+    'kepatuhan UU PDP',
+    'gap assessment UU PDP',
+    'konsultan perlindungan data pribadi',
+    'DPO as a service Indonesia',
+    'kepatuhan data pribadi',
+    'UU PDP compliance',
+    'data protection consultant Indonesia',
     'Patuhdata',
   ],
 });

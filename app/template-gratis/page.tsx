@@ -13,6 +13,13 @@ export const metadata = createPageMetadata({
     'Unduh ceklist kesiapan operasional UU PDP (PDF) dan template ROPA starter (Excel) dari Patuhdata—dengan petunjuk dan contoh.',
   path: TEMPLATE_GRATIS_PATH,
   ogTitle: 'Template Gratis | Patuhdata',
+  keywords: [
+    'template UU PDP gratis',
+    'checklist kepatuhan UU PDP',
+    'template ROPA Indonesia',
+    'dokumen perlindungan data gratis',
+    'template compliance Indonesia',
+  ],
 });
 
 export default function TemplateGratisPage() {

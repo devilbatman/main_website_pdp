@@ -101,7 +101,7 @@ export default function CookiesPolicyPage() {
       <p>
         Pertanyaan tentang cookie? Email{' '}
         <a href="mailto:support@patuhdata.id">support@patuhdata.id</a> atau telepon{' '}
-        <a href="tel:+6285183064580">+62 851 8306 4580</a>.
+        <a href="tel:+6281903378000">+62 819 0337 8000</a>.
       </p>
     </LegalPageLayout>
   );

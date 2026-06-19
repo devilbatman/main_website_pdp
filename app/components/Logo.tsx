@@ -26,7 +26,7 @@ export default function Logo({
     >
       <Image
         src="/logo.png"
-        alt="Patuhdata — Kedalaman regulasi. Kontrol terlindungi."
+        alt="Patuhdata — Konsultan Kepatuhan UU PDP Indonesia"
         width={LOGO_WIDTH}
         height={LOGO_HEIGHT}
         className={`h-full w-auto object-contain object-left ${inverted ? 'brightness-0 invert' : ''}`}

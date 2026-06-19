@@ -10,7 +10,7 @@ export const defaultOgImages = [
     url: DEFAULT_OG_IMAGE,
     width: 1200,
     height: 630,
-    alt: 'Patuhdata — Tata kelola data & UU PDP untuk sektor keuangan Indonesia',
+    alt: 'Patuhdata — Konsultan Kepatuhan UU PDP & Tata Kelola Data untuk Sektor Keuangan Indonesia',
   },
 ];
 
@@ -124,7 +124,7 @@ export function getOrganizationJsonLd() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+62-851-8306-4580',
+      telephone: '+62-819-0337-8000',
       contactType: 'customer service',
       areaServed: 'ID',
       availableLanguage: ['Indonesian', 'English'],
@@ -169,5 +169,57 @@ export function getServiceJsonLd(service: {
     },
     areaServed: { '@type': 'Country', name: 'Indonesia' },
     serviceType: service.title,
+  };
+}
+
+export type BreadcrumbItem = {
+  name: string;
+  url: string;
+};
+
+export function getBreadcrumbJsonLd(items: BreadcrumbItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: `${SITE_URL}${item.url}`,
+    })),
+  };
+}
+
+export function getFounderPersonJsonLd() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Richard Rusli',
+    jobTitle: 'Founder & Lead Consultant',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'PT Patuhdata Solusi Nusantara',
+      url: SITE_URL,
+    },
+    url: 'https://www.linkedin.com/in/richard-r-b51120129/',
+    sameAs: [
+      'https://www.linkedin.com/in/richard-r-b51120129/',
+      'https://www.linkedin.com/company/patuhdata-id',
+    ],
+    description:
+      'Lead Consultant untuk kepatuhan UU PDP dan tata kelola data. Lead Auditor ISO 27001 dengan pengalaman governance dan operational security di sektor keuangan Indonesia.',
+    knowsAbout: [
+      'UU PDP Indonesia',
+      'Data Protection',
+      'ISO 27001',
+      'Compliance Management',
+      'Vendor Risk Assessment',
+      'Data Governance',
+      'Gap Assessment',
+    ],
+    alumniOf: {
+      '@type': 'EducationalOrganization',
+      name: 'Lead Auditor ISO 27001',
+    },
   };
 }
